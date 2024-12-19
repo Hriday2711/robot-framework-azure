@@ -15,10 +15,7 @@ steps:
   condition: always()
 
 - script: |
-   pip install --upgrade  robotframework
-   pip install --upgrade robotframework-seleniumlibrary
-   pip install --upgrade robotframework-requests
-   pip install --upgrade robotframework-jsonlibrary
+   pip install -r Requirements.txt
   displayName: 'Install Robot Dependencies'
   continueOnError: true
   condition: always()
