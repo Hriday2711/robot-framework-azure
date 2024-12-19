@@ -19,7 +19,6 @@ steps:
    pip install --upgrade robotframework-seleniumlibrary
    pip install --upgrade robotframework-requests
    pip install --upgrade robotframework-jsonlibrary
-  workingDirectory: '${System.DefaultWorkingDirectory}'
   displayName: 'Install Robot Dependencies'
   continueOnError: true
   condition: always()
@@ -56,7 +55,7 @@ steps:
     testResultsFiles: |
      outputxunit.xml
     
-    searchFolder: '${System.DefaultWorkingDirectory}'
+    searchFolder: 'D:\a\1\s\'
     testRunTitle: 'Automation Results'
   continueOnError: true
   condition: always()
