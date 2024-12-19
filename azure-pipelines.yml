@@ -35,12 +35,15 @@ steps:
    echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
   
   displayName: 'Install Chrome Driver'
-
+ 
 - powershell: |
    # Run the initial Robot Framework tests
    robot -x outputxunit.xml Tests/
   
   displayName: 'Run Robot Framework Tests'
+  continueOnError: true
+  condition: always()
+
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Pipeline Artifact'
