@@ -14,13 +14,6 @@ steps:
   displayName: 'Use Python 3.x'
   condition: always()
 
-- task: ms-autotest.screen-resolution-utility-task.screen-resolution-utility-task.ScreenResolutionUtility@1
-  displayName: 'Set Screen Resolution'
-  inputs:
-    displaySettings: specific
-    width: 1920
-    height: 1080
-
 - script: |
    pip install -r Requirements.txt
   workingDirectory: '${System.DefaultWorkingDirectory}'
