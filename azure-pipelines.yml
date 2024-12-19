@@ -1,0 +1,66 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: UsePythonVersion@0
+  displayName: 'Use Python 3.x'
+  condition: always()
+
+- task: ms-autotest.screen-resolution-utility-task.screen-resolution-utility-task.ScreenResolutionUtility@1
+  displayName: 'Set Screen Resolution'
+  inputs:
+    displaySettings: specific
+    width: 1920
+    height: 1080
+
+- script: |
+   pip install -r Requirements.txt
+  workingDirectory: '${System.DefaultWorkingDirectory}'
+  displayName: 'Install Robot Dependencies'
+  continueOnError: true
+  condition: always()
+
+- script: |
+   npm install @puppeteer/browsers@latest
+   npx @puppeteer/browsers install chrome@121.0.6167.86
+   echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
+  
+  displayName: 'Install Chrome'
+
+- script: |
+   npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
+   echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
+  
+  displayName: 'Install Chrome Driver'
+
+- powershell: |
+   # Run the initial Robot Framework tests
+   robot -x outputxunit.xml Tests/
+  
+  displayName: 'Run Robot Framework Tests'
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Pipeline Artifact'
+  inputs:
+   artifact: 'Robot Test Execution Results'
+  continueOnError: true
+  condition: always()
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results'
+  inputs:
+    testResultsFiles: |
+     outputxunit.xml
+    
+    searchFolder: '${System.DefaultWorkingDirectory}'
+    testRunTitle: 'Automation Results'
+  continueOnError: true
+  condition: always()
