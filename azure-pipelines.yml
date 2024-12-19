@@ -15,7 +15,10 @@ steps:
   condition: always()
 
 - script: |
-   pip install -r Requirements.txt
+   pip install --upgrade  robotframework
+   pip install --upgrade robotframework-seleniumlibrary
+   pip install --upgrade robotframework-requests
+   pip install --upgrade robotframework-jsonlibrary
   workingDirectory: '${System.DefaultWorkingDirectory}'
   displayName: 'Install Robot Dependencies'
   continueOnError: true
