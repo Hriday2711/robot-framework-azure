@@ -46,18 +46,72 @@ steps:
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Pipeline Artifact'
   inputs:
+   targetPath: 'results'
    artifact: 'Robot Test Execution Results'
   continueOnError: true
   condition: always()
 
-- task: PublishTestResults@2
-  displayName: 'Publish Test Results'
-  inputs:
-    testResultsFiles: |
-     report.html
-     log.html
+# - task: PublishTestResults@2
+#   displayName: 'Publish Test Results'
+#   inputs:
+#     testResultsFiles: |
+#      report.html
+#      log.html
     
-    searchFolder: 'D:\a\1\s\results\'
-    testRunTitle: 'Automation Results'
-  continueOnError: true
-  condition: always()
+#     searchFolder: 'D:\a\1\s\results\'
+#     testRunTitle: 'Automation Results'
+#   continueOnError: true
+#   condition: always()
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+     #  Gmail SMTP Configuration
+     $smtpServer = 'smtp.gmail.com'
+     $smtpPort = 587
+     $username = "hridaybhogayata4@gmail.com"
+     $password = "Hab@271197"
+
+     #  Email Details
+     $to = "hridaybhogayata4@gmail.com"
+     $subject = "Azure CI Test Execution Report"
+     $body = @"
+     <html>
+     <body>
+     <h2>Azure CI Test Execution Report</h2>
+     <p>Hello,</p>
+     <p>The latest test execution has completed. Please find the attached report and logs. </p>
+     <p><a href="https://dev.azure.com/hridaybhogayata4/Azure%20Demo%20Project/_build/results?buildId=$(Build.BuildID)">View Pipeline Details</a></p>
+     </body>
+     </html>
+     "@
+
+     # Attachments (report and log files)
+     ${attachments} = @("$(Pipeline.Workspace")/results/report.html", "$(Pipeline.Workspace)/results/log.html")
+
+     #  Create email message
+     $msg = New-object System.Net.Mail.MailMessage
+     $msg.From = $username
+     $msg.To.Add($to)
+     $msg.Subject = $subject
+     $msg.IsBodyHtml = $true
+     $msg.Body = $body
+
+     foreach ($attachment in $attachments) {
+        $msg.Attachments.Add((New-Object System.Net.Mail.Attachment $attachment))
+      }
+
+     # Configure SMTP client
+     $smtp = New-Object System.Net.Mail.SmtpClient($smtpServer, $smtpPort)
+     $smtp.EnableSsl = $true
+     $smtp.Credentials = New-Object System.Net.NetworkCredential($username, $password)
+
+     # Send email
+     try {
+       $smtp.Send($msg)
+       Write-Host "Email sent successfully to $to."
+     } catch {
+       Write-Error "Failed to send email: $_"
+     }
+     
