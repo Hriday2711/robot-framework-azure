@@ -58,7 +58,7 @@ steps:
 #      report.html
 #      log.html
     
-#     searchFolder: 'D:\a\1\s\results\'
+#     searchFolder: '
 #     testRunTitle: 'Automation Results'
 #   continueOnError: true
 #   condition: always()
@@ -68,11 +68,25 @@ steps:
     SendGridApiKey: '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'
     FromAddress: 'hridaybhogayata4@gmail.com'
     ToAddresses: 'hridaybhogayata@gmail.com'
-    Subject: 'Azure CI Test execution report'
+    Subject: 'Azure CI Test execution report from Send Grid'
     emailBodyFormat: 'InLine'
     EmailBody: |
       Hello,
       
       Please check the attached reports for Azure CI Automation pipeline run
+
+- task: SendEmail@1
+  inputs:
+    To: 'hridaybhogayata@gmail.com'
+    From: 'hridaybhogayata4@gmail.com'
+    Subject: 'Azure CI Test email from Send Email'
+    Body: 'Please check the below reports for Azure CI Run'
+    BodyAsHtml: false
+    AddAttachment: false
+    Attachment: 'D:\a\1\s\results\report.html'
+    SmtpServer: 'smtp.gmail.com'
+    SmtpUsername: 'hridaybhogayata@gmail.com'
+    SmtpPassword: 'Hab@271197'
+    UseSSL: false'
 
 
