@@ -82,11 +82,11 @@ steps:
     Subject: 'Azure CI Test email from Send Email'
     Body: 'Please check the below reports for Azure CI Run'
     BodyAsHtml: false
-    AddAttachment: false
+    AddAttachment: true
     Attachment: 'D:\a\1\s\results\report.html'
     SmtpServer: 'smtp.gmail.com'
     SmtpUsername: 'hridaybhogayata@gmail.com'
     SmtpPassword: 'Hab@271197'
-    UseSSL: false'
+    UseSSL: false
 
 
