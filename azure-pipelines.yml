@@ -84,7 +84,7 @@ steps:
     BodyAsHtml: false
     AddAttachment: true
     Attachment: 'D:\a\1\s\results\report.html'
-    SmtpServer: 'smtp-mail.outlook.com'
+    SmtpServer: 'smtp.gmail.com'
     SmtpPort: '587'
     SmtpUsername: 'hridaybhogayata4@gmail.com'
     SmtpPassword: 'zqoo jkop pexe agrb'
