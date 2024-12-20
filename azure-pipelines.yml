@@ -51,50 +51,13 @@ steps:
   continueOnError: true
   condition: always()
 
-# - task: PublishTestResults@2
-#   displayName: 'Publish Test Results'
-#   inputs:
-#     testResultsFiles: |
-#      report.html
-#      log.html
-    
-#     searchFolder: '
-#     testRunTitle: 'Automation Results'
-#   continueOnError: true
-#   condition: always()
-
-# - task: SendGridEmail@2
-#   inputs:
-#     SendGridApiKey: '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'
-#     FromAddress: 'hridaybhogayata4@gmail.com'
-#     ToAddresses: 'hridaybhogayata@gmail.com'
-#     Subject: 'Azure CI Test execution report from Send Grid'
-#     emailBodyFormat: 'InLine'
-#     EmailBody: |
-#       Hello,
-      
-#       Please check the attached reports for Azure CI Automation pipeline run
-
-# - task: SendEmail@1
-#   inputs:
-#     To: 'hridaybhogayata@gmail.com'
-#     From: 'hridaybhogayata4@gmail.com'
-#     Subject: 'Azure CI Test email from Send Email'
-#     Body: 'Please check the below reports for Azure CI Run'
-#     BodyAsHtml: false
-#     AddAttachment: true
-#     Attachment: 'D:\a\1\s\results\report.html'
-#     SmtpServer: 'smtp.gmail.com'
-#     SmtpPort: '587'
-#     SmtpUsername: 'hridaybhogayata4@gmail.com'
-#     SmtpPassword: 'zqoo jkop pexe agrb'
-#     UseSSL: true
 
 - task: SendGrid@1
   inputs:
     sendgridkey: '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'
     to: 'hridaybhogayata@gmail.com'
     from: 'hridaybhogayata4@gmail.com'
+    cc: 'hridaybhogayata4@outlook.com'
     subject: 'Azure CI Test Report by Send grid'
     htmlbody: |
       Hello,
