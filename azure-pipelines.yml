@@ -63,55 +63,16 @@ steps:
 #   continueOnError: true
 #   condition: always()
 
-- task: PowerShell@2
+- task: SendGridEmail@2
   inputs:
-    targetType: 'inline'
-    script: |
-     #  Gmail SMTP Configuration
-     $smtpServer = 'smtp.gmail.com'
-     $smtpPort = 587
-     $username = "hridaybhogayata4@gmail.com"
-     $password = "Hab@271197"
+    SendGridApiKey: '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'
+    FromAddress: 'hridaybhogayata4@gmail.com'
+    ToAddresses: 'hridaybhogayata@gmail.com'
+    Subject: 'Azure CI Test execution report'
+    emailBodyFormat: 'InLine'
+    EmailBody: |
+      Hello,
+      
+      Please check the attached reports for Azure CI Automation pipeline run
 
-     #  Email Details
-     $to = "hridaybhogayata4@gmail.com"
-     $subject = "Azure CI Test Execution Report"
-     $body = @"
-     <html>
-     <body>
-     <h2>Azure CI Test Execution Report</h2>
-     <p>Hello,</p>
-     <p>The latest test execution has completed. Please find the attached report and logs. </p>
-     <p><a href="https://dev.azure.com/hridaybhogayata4/Azure%20Demo%20Project/_build/results?buildId=$(Build.BuildID)">View Pipeline Details</a></p>
-     </body>
-     </html>
-     "@
 
-     # Attachments (report and log files)
-     ${attachments} = @("$(Pipeline.Workspace")/results/report.html", "$(Pipeline.Workspace)/results/log.html")
-
-     #  Create email message
-     $msg = New-object System.Net.Mail.MailMessage
-     $msg.From = $username
-     $msg.To.Add($to)
-     $msg.Subject = $subject
-     $msg.IsBodyHtml = $true
-     $msg.Body = $body
-
-     foreach ($attachment in $attachments) {
-        $msg.Attachments.Add((New-Object System.Net.Mail.Attachment $attachment))
-      }
-
-     # Configure SMTP client
-     $smtp = New-Object System.Net.Mail.SmtpClient($smtpServer, $smtpPort)
-     $smtp.EnableSsl = $true
-     $smtp.Credentials = New-Object System.Net.NetworkCredential($username, $password)
-
-     # Send email
-     try {
-       $smtp.Send($msg)
-       Write-Host "Email sent successfully to $to."
-     } catch {
-       Write-Error "Failed to send email: $_"
-     }
-     
