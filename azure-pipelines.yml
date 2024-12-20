@@ -88,4 +88,4 @@ steps:
     SmtpPort: '587'
     SmtpUsername: 'hridaybhogayata4@gmail.com'
     SmtpPassword: 'zqoo jkop pexe agrb'
-    UseSSL: false
+    UseSSL: true
