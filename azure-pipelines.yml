@@ -30,14 +30,12 @@ steps:
 - script: |
    npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
    echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
-  
   displayName: 'Install Chrome Driver'
  
 - powershell: |
    # Run the initial Robot Framework tests
    robot --outputdir results Tests/
    exit 0
-  
   displayName: 'Run Robot Framework Tests'
   continueOnError: true
   condition: always()
@@ -57,7 +55,6 @@ steps:
     sendgridkey: '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'
     to: 'hridaybhogayata@gmail.com'
     from: 'hridaybhogayata4@gmail.com'
-    cc: 'hridaybhogayata4@outlook.com'
     subject: 'Azure CI Test Report by Send grid'
     htmlbody: |
       Hello,
@@ -65,3 +62,8 @@ steps:
       Please check the attached reports for Azure CI Automation pipeline run.
     addattachment: true
     attachment: 'D:\a\1\s\results\report.html'
+  
+  displayName: 'Send Email Notifications'
+  condition: always()
+
+
