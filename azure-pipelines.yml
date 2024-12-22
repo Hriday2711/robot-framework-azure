@@ -66,15 +66,15 @@ steps:
 #   displayName: 'Send Email Notifications'
 #   condition: always()
 
-- task: GitHubPagesPublish@1
-  inputs:
-    docPath: 'D:\a\1\s\results\report.html'
-    githubusername: 'Hriday2711'
-    githubemail: 'hridaybhogayata4@gmail.com'
-    githubaccesstoken: '$(GITHUB_PAT)'
-    repositoryname: 'robot-framework-azure'
-    branchname: 'main'
-    commitmessage: 'Azure CI Test execution reports for $(Build.BuildId)'
+# - task: GitHubPagesPublish@1
+#   inputs:
+#     docPath: 'D:\a\1\s\results\report.html'
+#     githubusername: 'Hriday2711'
+#     githubemail: 'hridaybhogayata4@gmail.com'
+#     githubaccesstoken: '$(GITHUB_PAT)'
+#     repositoryname: 'robot-framework-azure'
+#     branchname: 'main'
+#     commitmessage: 'Azure CI Test execution reports for $(Build.BuildId)'
   
 
 
