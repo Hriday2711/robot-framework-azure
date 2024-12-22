@@ -45,6 +45,7 @@ steps:
   inputs:
    targetPath: 'results'
    artifact: 'Robot Test Execution Results'
+   publishLocation: pipeline
   continueOnError: true
   condition: always()
 
@@ -53,7 +54,7 @@ steps:
     buildType: 'current'
     downloadType: 'single'
     artifactName: 'Robot Test Execution Results'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    downloadPath: './'
 
 - task: PowerShell@2
   displayName: 'Trigger GitHub Actions Workflow from Azure'
