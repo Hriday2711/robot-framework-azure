@@ -3,7 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger: none
+trigger:
+ branches: 
+  include:
+    - main
 
 pool:
   vmImage: windows-latest
@@ -54,7 +57,7 @@ steps:
     buildType: 'current'
     downloadType: 'single'
     artifactName: 'Robot Test Execution Results'
-    downloadPath: './'
+    downloadPath: ''
 
 - task: PowerShell@2
   displayName: 'Trigger GitHub Actions Workflow from Azure'
@@ -104,7 +107,7 @@ steps:
             
 #       Please check the attached reports for Azure CI Automation pipeline run.
 #     addattachment: true
-#     attachment: ''
+#     attachment: 'D:/'
   
 #   displayName: 'Send Email Notifications'
 #   condition: always()
