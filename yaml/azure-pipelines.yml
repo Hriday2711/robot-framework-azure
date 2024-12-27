@@ -54,7 +54,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'D/1/a/s/results'
+    SourceFolder: 'results'
     Contents: '**.html'
     TargetFolder: 'robot-framework-azure/results/'
     OverWrite: true
