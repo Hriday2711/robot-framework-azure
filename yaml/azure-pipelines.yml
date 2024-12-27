@@ -52,22 +52,40 @@ steps:
   continueOnError: true
   condition: always()
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'results'
-    Contents: '**.html'
-    TargetFolder: 'robot-framework-azure/results/'
-    OverWrite: true
-    retryCount: '3'
-    delayBetweenRetries: '5000'
-    ignoreMakeDirErrors: true
-
-# - task: DownloadBuildArtifacts@1
+# - task: CopyFiles@2
 #   inputs:
-#     buildType: 'current'
-#     downloadType: 'single'
-#     artifactName: 'Robot Test Execution Results'
-#     downloadPath: './results'
+#     SourceFolder: 'results'
+#     Contents: '**.html'
+#     TargetFolder: 'robot-framework-azure/results/'
+#     OverWrite: true
+#     retryCount: '3'
+#     delayBetweenRetries: '5000'
+#     ignoreMakeDirErrors: true
+
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'Robot Test Execution Results'
+    downloadPath: './results'
+
+- task: PowerShell@2
+  displayName: 'Pushing Results to GitHub Repository'
+  inputs:
+    script: |
+      cd D/1/a/s/
+      git config --global user.email "hridaybhogayata4@gmail.com"
+      git config --global user.name "Hriday2711"
+      git init
+      git add .
+      git commit -m "Uploading Azure build artifacts to GitHub Repository"
+      git remote add origin https://github.com/Hriday2711/robot-framework-azure.git
+      git push -f origin https://github.com/Hriday2711/robot-framework-azure.git
+      exit 0
+  continueOnError: true
+  condition: always()
+  
+
 
 # - task: PowerShell@2
 #   displayName: 'Trigger GitHub Actions Workflow from Azure'
