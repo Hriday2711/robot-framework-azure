@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 # trigger:
-#  branches: 
+#  branches:
 #   include:
 #     - main
 
@@ -12,64 +12,63 @@ pool:
   vmImage: windows-latest
 
 steps:
-- task: UsePythonVersion@0
-  displayName: 'Use Python 3.x'
-  condition: always()
+  - task: UsePythonVersion@0
+    displayName: "Use Python 3.x"
+    condition: always()
 
-- script: |
-   pip install -r Requirements.txt
-  displayName: 'Install Robot Dependencies'
-  continueOnError: true
-  condition: always()
+  - script: |
+      pip install -r Requirements.txt
+    displayName: "Install Robot Dependencies"
+    continueOnError: true
+    condition: always()
 
-- script: |
-   npm install @puppeteer/browsers@latest
-   npx @puppeteer/browsers install chrome@121.0.6167.86
-   echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
-  
-  displayName: 'Install Chrome'
+  - script: |
+      npm install @puppeteer/browsers@latest
+      npx @puppeteer/browsers install chrome@121.0.6167.86
+      echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
 
-- script: |
-   npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
-   echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
-  displayName: 'Install Chrome Driver'
- 
-- powershell: |
-   # Run the initial Robot Framework tests
-   robot --outputdir results Tests/
-   exit 0
-  displayName: 'Run Robot Framework Tests'
-  continueOnError: true
-  condition: always()
+    displayName: "Install Chrome"
 
+  - script: |
+      npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
+      echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
+    displayName: "Install Chrome Driver"
 
-- task: PublishPipelineArtifact@1
-  displayName: 'Publish Pipeline Artifact'
-  inputs:
-   targetPath: 'results'
-   artifact: 'Robot Test Execution Results'
-   publishLocation: pipeline
-  continueOnError: true
-  condition: always()
+  - powershell: |
+      # Run the initial Robot Framework tests
+      robot --outputdir results Tests/
+      exit 0
+    displayName: "Run Robot Framework Tests"
+    continueOnError: true
+    condition: always()
 
-# - task: CopyFiles@2
-#   inputs:
-#     SourceFolder: 'results'
-#     Contents: '**.html'
-#     TargetFolder: 'robot-framework-azure/results/'
-#     OverWrite: true
-#     retryCount: '3'
-#     delayBetweenRetries: '5000'
-#     ignoreMakeDirErrors: true
+  - task: PublishPipelineArtifact@1
+    displayName: "Publish Pipeline Artifact"
+    inputs:
+      targetPath: "results"
+      artifact: "Robot Test Execution Results"
+      publishLocation: pipeline
+    continueOnError: true
+    condition: always()
 
-- task: DownloadBuildArtifacts@1
-  inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    artifactName: 'Robot Test Execution Results'
-    downloadPath: './results'
+  # - task: CopyFiles@2
+  #   inputs:
+  #     SourceFolder: 'results'
+  #     Contents: '**.html'
+  #     TargetFolder: 'robot-framework-azure/results/'
+  #     OverWrite: true
+  #     retryCount: '3'
+  #     delayBetweenRetries: '5000'
+  #     ignoreMakeDirErrors: true
 
-- powershell: |
+  - task: DownloadBuildArtifacts@1
+    inputs:
+      buildType: "current"
+      downloadType: "single"
+      artifactName: "Robot Test Execution Results"
+      downloadPath: "./results"
+
+  - powershell: |
       cd results
       git config --global user.email "hridaybhogayata4@gmail.com"
       git config --global user.name "Hriday2711"
@@ -84,22 +83,18 @@ steps:
       # Check out or create the 'main' branch
       if (!(git branch --list main)) {
       git checkout -b main
-      # Ensure there is at least one commit
-      git commit --allow-empty -m "Initial commit" 2>$null
+      git rm -r --cached results
       }
-      
+
       git add .
       git commit -m "Uploading Azure build artifacts to GitHub Repository"
 
       # Pushing the update to GitHub Repository
       git push -u origin main -f
 
-  displayName: 'Pushing Results to GitHub Repository'
-  continueOnError: true
-  condition: always()
-  
-
-
+    displayName: "Pushing Results to GitHub Repository"
+    continueOnError: true
+    condition: always()
 # - task: PowerShell@2
 #   displayName: 'Trigger GitHub Actions Workflow from Azure'
 #   inputs:
@@ -111,24 +106,24 @@ steps:
 #       $repo = "robot-framework-azure" # Replace with your GitHub repository name
 #       $workflowFileName = "deploy.yml" # Replace with your workflow file name
 #       $branch = "main" # Replace with the branch you want to trigger the workflow on
-      
+
 #       # GitHub API URL to trigger a workflow
 #       $uri = "https://api.github.com/repos/$owner/$repo/actions/workflows/$workflowFileName/dispatches"
-      
+
 #       # Request Body
 #       $body = @{
 #           ref = $branch
 #       } | ConvertTo-Json -Depth 1
-      
+
 #       # Headers
 #       $headers = @{
 #           Authorization = "token $token"
 #           Accept        = "application/vnd.github.v3+json"
 #       }
-      
+
 #       # Trigger the workflow
 #       $response = Invoke-RestMethod -Uri $uri -Method POST -Headers $headers -Body $body
-      
+
 #       # Check Response
 #       if ($response -eq $null) {
 #           Write-Host "GitHub Actions workflow triggered successfully."
@@ -145,11 +140,11 @@ steps:
 #     subject: 'Azure CI Test Report by Send grid'
 #     htmlbody: |
 #       Hello,
-            
+
 #       Please check the attached reports for Azure CI Automation pipeline run.
 #     addattachment: true
 #     attachment: 'D:/'
-  
+
 #   displayName: 'Send Email Notifications'
 #   condition: always()
 
@@ -162,7 +157,4 @@ steps:
 #     repositoryname: 'robot-framework-azure'
 #     branchname: 'main'
 #     commitmessage: 'Azure CI Test execution reports for $(Build.BuildId)'
-  
-
-
 
