@@ -77,8 +77,7 @@ steps:
       git add .
       git commit -m "Uploading Azure build artifacts to GitHub Repository"
       git remote add origin https://github.com/Hriday2711/robot-framework-azure.git
-      git push -f origin https://github.com/Hriday2711/robot-framework-azure.git
-      exit 0
+      git push -f origin main
   displayName: 'Pushing Results to GitHub Repository'
   continueOnError: true
   condition: always()
