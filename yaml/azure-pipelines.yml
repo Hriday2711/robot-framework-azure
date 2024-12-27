@@ -44,7 +44,7 @@ steps:
 
   - powershell: |
       # Generate the Robot-Metrics Azure CI Test Execution Report
-      robotmetrics [-I ./results/] [-O output.xml] [-M Azure CI Test Execution Results]
+      robotmetrics --inputpath ./results --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results
       exit 0
     displayName: "Generate Robot-Metrics Azure CI Test Execution Report"
     continueOnError: true
@@ -53,7 +53,7 @@ steps:
   - task: PublishPipelineArtifact@1
     displayName: "Publish Pipeline Artifact"
     inputs:
-      targetPath: "results/Azure CI Test Execution Reports.html"
+      targetPath: "./results/Azure_CI_Test_Execution_Results.html"
       artifact: "Azure CI Test Execution Results"
       publishLocation: pipeline
     continueOnError: true
