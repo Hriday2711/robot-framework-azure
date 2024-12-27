@@ -52,12 +52,22 @@ steps:
   continueOnError: true
   condition: always()
 
-- task: DownloadBuildArtifacts@1
+- task: CopyFiles@2
   inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    artifactName: 'Robot Test Execution Results'
-    downloadPath: './results'
+    SourceFolder: 'D/1/a/s/results'
+    Contents: '**.html'
+    TargetFolder: 'robot-framework-azure/results/'
+    OverWrite: true
+    retryCount: '3'
+    delayBetweenRetries: '5000'
+    ignoreMakeDirErrors: true
+
+# - task: DownloadBuildArtifacts@1
+#   inputs:
+#     buildType: 'current'
+#     downloadType: 'single'
+#     artifactName: 'Robot Test Execution Results'
+#     downloadPath: './results'
 
 # - task: PowerShell@2
 #   displayName: 'Trigger GitHub Actions Workflow from Azure'
