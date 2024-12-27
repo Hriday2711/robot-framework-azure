@@ -73,10 +73,9 @@ steps:
       cd results
       git config --global user.email "hridaybhogayata4@gmail.com"
       git config --global user.name "Hriday2711"
-      git init
       git add .
       git commit -m "Uploading Azure build artifacts to GitHub Repository"
-      git remote add origin https://github.com/Hriday2711/robot-framework-azure.git
+      git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
       git push -f origin main
   displayName: 'Pushing Results to GitHub Repository'
   continueOnError: true
