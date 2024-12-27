@@ -73,7 +73,6 @@ steps:
   displayName: 'Pushing Results to GitHub Repository'
   inputs:
     script: |
-      cd D/1/a/s/
       git config --global user.email "hridaybhogayata4@gmail.com"
       git config --global user.name "Hriday2711"
       git init
