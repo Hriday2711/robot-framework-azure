@@ -74,17 +74,26 @@ steps:
       git config --global user.email "hridaybhogayata4@gmail.com"
       git config --global user.name "Hriday2711"
 
+      # Set or update the remote URL
+      if (git remote | findstr origin) {
+        git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+      } else {
+        git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+      }
+
       # Check out or create the 'main' branch
       if (!(git branch --list main)) {
       git checkout -b main
-      }
       # Ensure there is at least one commit
-      # git commit --allow-empty -m "Initial commit" 2>$null
-
+      git commit --allow-empty -m "Initial commit" 2>$null
+      }
+      
       git add .
       git commit -m "Uploading Azure build artifacts to GitHub Repository"
-      git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      git push -f origin main
+
+      # Pushing the update to GitHub Repository
+      git push -u origin main -f
+
   displayName: 'Pushing Results to GitHub Repository'
   continueOnError: true
   condition: always()
