@@ -106,7 +106,8 @@ steps:
       git checkout -b main
       }
 
-      git add ./Azure_CI_Test Execution_Results.html
+      git status
+      git add .
       git commit -m "Pushing Azure build Pipeline artifacts to GitHub Repository"
 
       # Pushing the update to GitHub Repository
