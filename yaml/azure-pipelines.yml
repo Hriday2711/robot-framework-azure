@@ -80,7 +80,6 @@ steps:
       SourceFolder: 'results'
       Contents: "**.html"
       TargetFolder: './'
-      CleanTargetFolder: true
       OverWrite: true
 
   # - task: DownloadBuildArtifacts@1
