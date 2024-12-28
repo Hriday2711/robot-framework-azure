@@ -74,6 +74,15 @@ steps:
   #     delayBetweenRetries: "5000"
   #     ignoreMakeDirErrors: true
 
+  - task: CopyFiles@2
+    displayName: "Copying the Published Pipeline Artifact"
+    inputs:
+      SourceFolder: 'results'
+      Contents: 'Azure_CI_Test_Execution_Results.html'
+      TargetFolder: './artifact/'
+      CleanTargetFolder: true
+      OverWrite: true
+
   # - task: DownloadBuildArtifacts@1
   #   inputs:
   #     buildType: "current"
@@ -98,8 +107,8 @@ steps:
       git checkout -b main
       }
 
-      git add ./Azure_CI_Test Execution_Results.html
-      git commit -m "Uploading Azure build artifacts to GitHub Repository"
+      git add ./artifact/Azure_CI_Test Execution_Results.html
+      git commit -m "Pushing Azure build Pipeline artifacts to GitHub Repository"
 
       # Pushing the update to GitHub Repository
       git push -u origin main -f
