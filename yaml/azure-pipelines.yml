@@ -44,7 +44,7 @@ steps:
 
   - powershell: |
       # Generate the Robot-Metrics Azure CI Test Execution Report
-      robotmetrics --inputpath ./results --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results
+      robotmetrics --inputpath ./results --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results.html
       exit 0
     displayName: "Generate Robot-Metrics Azure CI Test Execution Report"
     continueOnError: true
