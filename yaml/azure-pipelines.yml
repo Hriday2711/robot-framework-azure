@@ -56,23 +56,23 @@ steps:
     continueOnError: true
     condition: always()
 
-  - task: DownloadPipelineArtifact@2
-    displayName: "Download the Pipeline Artifact"
-    inputs:
-      buildType: "current"
-      artifactName: "Azure CI Test Execution Results"
-      targetPath: "./"
+  # - task: DownloadPipelineArtifact@2
+  #   displayName: "Download the Pipeline Artifact"
+  #   inputs:
+  #     buildType: "current"
+  #     artifactName: "Azure CI Test Execution Results"
+  #     targetPath: "./"
 
-  - task: CopyFiles@2
-    displayName: "Copying the Published Pipeline Artifact"
-    inputs:
-      SourceFolder: "results"
-      Contents: "**.html"
-      TargetFolder: "./results/"
-      OverWrite: true
-      retryCount: "3"
-      delayBetweenRetries: "5000"
-      ignoreMakeDirErrors: true
+  # - task: CopyFiles@2
+  #   displayName: "Copying the Published Pipeline Artifact"
+  #   inputs:
+  #     SourceFolder: "results"
+  #     Contents: "**.html"
+  #     TargetFolder: "./results/"
+  #     OverWrite: true
+  #     retryCount: "3"
+  #     delayBetweenRetries: "5000"
+  #     ignoreMakeDirErrors: true
 
   # - task: CopyFiles@2
   #   displayName: "Copying the Published Pipeline Artifact"
