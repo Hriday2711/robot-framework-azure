@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: "./results/Azure_CI_Test_Execution_Results_${{github.event.inputs.azure_build_number}}.html"
+          path: "results/Azure_CI_Test_Execution_Results_${{github.event.inputs.azure_build_number}}.html"
           overwrite: true
       - name: Deploy to GitHub Pages
         id: deployment
