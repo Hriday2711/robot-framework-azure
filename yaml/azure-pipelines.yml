@@ -121,7 +121,7 @@ steps:
       $workflowFile = "deploy.yml"
       $ref = "main"
       $githubToken = "$(GITHUB_PAT)"
-      $azureBuildID = $(Build.BuildID)'
+      $azureBuildID = "$(Build.BuildID)"
 
       $headers = @{
           Authorization = "token $githubToken"
