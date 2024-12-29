@@ -50,7 +50,7 @@ steps:
   - task: PublishPipelineArtifact@1
     displayName: "Publish Pipeline Artifact"
     inputs:
-      targetPath: "./results/Azure_CI_Test_Execution_Results.html"
+      targetPath: "./results/Azure_CI_Test_Execution_Results_$(Build.BuildNumber).html"
       artifact: "Azure CI Test Execution Results"
       publishLocation: pipeline
     continueOnError: true
