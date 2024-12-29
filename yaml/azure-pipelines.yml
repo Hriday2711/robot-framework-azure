@@ -90,7 +90,7 @@ steps:
   #     downloadPath: "./results"
 
   - powershell: |
-      cd ./results
+      cd .
       git config --global user.email "hridaybhogayata4@gmail.com"
       git config --global user.name "Hriday2711"
 
@@ -107,7 +107,7 @@ steps:
       }
 
       git status
-      git add ./results/Azure_CI_Test_Execution_Results_$(Build.BuildID).html -f
+      git add ./Azure_CI_Test_Execution_Results_$(Build.BuildID).html -f
       git commit -m "Pushing Azure build Pipeline artifacts to GitHub Repository"
 
       # Pushing the update to GitHub Repository
