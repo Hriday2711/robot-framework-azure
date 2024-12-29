@@ -4,6 +4,11 @@ name: Deploy static content to Pages
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      azure_build_number:
+        description: "Azure Build ID Number"
+        required: true
+        default: N/A
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -33,7 +38,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: "./Azure_CI_Test_Execution_Results.html"
+          path: "./results/Azure_CI_Test_Execution_Results_${{github.event.inputs.azure_build_number}}.html"
           overwrite: true
       - name: Deploy to GitHub Pages
         id: deployment
