@@ -107,7 +107,7 @@ steps:
       }
 
       git status
-      git add ./Azure_CI_Test_Execution_Results_$(Build.BuildID).html -f
+      git add ./results/Azure_CI_Test_Execution_Results_$(Build.BuildID).html -f
       git commit -m "Pushing Azure build Pipeline artifacts to GitHub Repository"
 
       # Pushing the update to GitHub Repository
