@@ -41,7 +41,7 @@ steps:
 
   - powershell: |
       # Generate the Robot-Metrics Azure CI Test Execution Report
-      robotmetrics --inputpath ./results --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results.html
+      robotmetrics --inputpath ./results --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results_$(Build.BuildNumber).html
       exit 0
     displayName: "Generate Robot-Metrics Azure CI Test Execution Report"
     continueOnError: true
@@ -52,17 +52,16 @@ steps:
     inputs:
       targetPath: "./results/Azure_CI_Test_Execution_Results.html"
       artifact: "Azure CI Test Execution Results"
-      publishLocation: filepath
-      fileSharePath: './'
+      publishLocation: pipeline
     continueOnError: true
     condition: always()
 
   - task: DownloadPipelineArtifact@2
-    displayName: 'Download the Pipeline Artifact'
+    displayName: "Download the Pipeline Artifact"
     inputs:
-      buildType: 'current'
-      artifactName: 'Azure CI Test Execution Results'
-      targetPath: './'
+      buildType: "current"
+      artifactName: "Azure CI Test Execution Results"
+      targetPath: "./"
 
   # - task: CopyFiles@2
   #   displayName: "Copying the Published Pipeline Artifact"
@@ -78,9 +77,9 @@ steps:
   - task: CopyFiles@2
     displayName: "Copying the Published Pipeline Artifact"
     inputs:
-      SourceFolder: 'results'
+      SourceFolder: "results"
       Contents: "**.html"
-      TargetFolder: './'
+      TargetFolder: "./"
       OverWrite: true
 
   # - task: DownloadBuildArtifacts@1
@@ -108,7 +107,7 @@ steps:
       }
 
       git status
-      git add .
+      git add ./Azure_CI_Test_Execution_Results_$(Build.BuildNumber).html
       git commit -m "Pushing Azure build Pipeline artifacts to GitHub Repository"
 
       # Pushing the update to GitHub Repository
