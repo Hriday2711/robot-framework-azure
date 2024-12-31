@@ -32,14 +32,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy Static HTML
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          # Upload entire repository
-          path: "results/Azure_CI_Test_Execution_Results_${{github.event.inputs.azure_build_number}}.html"
-          overwrite: true
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish_dir: ./results
