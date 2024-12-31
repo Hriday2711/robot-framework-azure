@@ -87,20 +87,20 @@ steps:
   # Task to Upload the Latest Azure CI Test Execution Results to GitHub Repository
   - powershell: |
       cd .
-      # git config --global user.email "hridaybhogayata4@gmail.com"
-      # git config --global user.name "Hriday2711"
+      git config --global user.email "hridaybhogayata4@gmail.com"
+      git config --global user.name "Hriday2711"
 
-      # # Set or update the remote URL
-      # if (git remote | findstr origin) {
-      #   git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      # } else {
-      #   git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      # }
+      # Set or update the remote URL
+      if (git remote | findstr origin) {
+        git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+      } else {
+        git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+      }
 
-      # # Check out or create the 'main' branch
-      # if (!(git branch --list main)) {
-      # git checkout -b main
-      # }
+      # Check out or create the 'main' branch
+      if (!(git branch --list main)) {
+      git checkout -b main
+      }
 
       git status
       git add ./docs/Azure_CI_Test_Execution_Results_$(Build.BuildID).html -f
