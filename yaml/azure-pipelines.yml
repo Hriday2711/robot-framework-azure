@@ -26,7 +26,7 @@ steps:
        git checkout -b main
        }
        git status
-       git rm -r ./docs/*
+       git rm -r ./docs/**.html
 
     displayName: "Removing old Test Results from the GitHub Repository"
 
