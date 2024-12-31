@@ -9,16 +9,44 @@ pool:
   vmImage: windows-latest
 
 steps:
+
+# Task to Remove the Old CI Test Execution results from the Results folder in the GitHub Repository
+  - powershell: |
+     cd .
+     git config --global user.email "hridaybhogayata4@gmail.com"
+     git config --global user.name "Hriday2711"
+
+     # Set or update the remote URL
+     if (git remote | findstr origin) {
+       git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+     } else {
+       git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+     }
+     # Check out or create the 'main' branch
+      if (!(git branch --list main)) {
+      git checkout -b main
+      }
+      git status
+      git rm -r ./results/*
+
+     displayName: "Removing old Test Results from the GitHub Repository"
+     
+
+# Task to Install and Use the Latest Python version on the Agent Machine
   - task: UsePythonVersion@0
     displayName: "Use Python 3.x"
     condition: always()
 
+
+# Task to Install the Robot framework libraries and dependencies on the Agent machine
   - script: |
       pip install -r Requirements.txt
     displayName: "Install Robot Dependencies"
     continueOnError: true
     condition: always()
 
+
+# Task to Install the Chrome Browser on Agent Machine
   - script: |
       npm install @puppeteer/browsers@latest
       npx @puppeteer/browsers install chrome@121.0.6167.86
@@ -26,11 +54,15 @@ steps:
 
     displayName: "Install Chrome"
 
+
+# Task to Install the Chrome Driver required for CI Test execution Run
   - script: |
       npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
       echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
     displayName: "Install Chrome Driver"
 
+
+# Task to Run the Automation tests located in the Robot Framework
   - powershell: |
       # Run the initial Robot Framework tests
       robot --outputdir results Tests/
@@ -39,6 +71,8 @@ steps:
     continueOnError: true
     condition: always()
 
+
+# Task to Generate the Robot-Metrics Test Report for the CI Test Execution Run
   - powershell: |
       # Generate the Robot-Metrics Azure CI Test Execution Report
       robotmetrics --inputpath ./results --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results_$(Build.BuildID).html
@@ -47,6 +81,8 @@ steps:
     continueOnError: true
     condition: always()
 
+
+# Task to Publish the Pipeline Artifact generated after the completion of Azure CI Test Execution Run
   - task: PublishPipelineArtifact@1
     displayName: "Publish Pipeline Artifact"
     inputs:
@@ -56,59 +92,28 @@ steps:
     continueOnError: true
     condition: always()
 
-  # - task: DownloadPipelineArtifact@2
-  #   displayName: "Download the Pipeline Artifact"
-  #   inputs:
-  #     buildType: "current"
-  #     artifactName: "Azure CI Test Execution Results"
-  #     targetPath: "./"
 
-  # - task: CopyFiles@2
-  #   displayName: "Copying the Published Pipeline Artifact"
-  #   inputs:
-  #     SourceFolder: "results"
-  #     Contents: "**.html"
-  #     TargetFolder: "./results/"
-  #     OverWrite: true
-  #     retryCount: "3"
-  #     delayBetweenRetries: "5000"
-  #     ignoreMakeDirErrors: true
-
-  # - task: CopyFiles@2
-  #   displayName: "Copying the Published Pipeline Artifact"
-  #   inputs:
-  #     SourceFolder: "results"
-  #     Contents: "**.html"
-  #     TargetFolder: "./"
-  #     OverWrite: true
-
-  # - task: DownloadBuildArtifacts@1
-  #   inputs:
-  #     buildType: "current"
-  #     downloadType: "single"
-  #     artifactName: "Robot Test Execution Results"
-  #     downloadPath: "./results"
-
+# Task to Upload the Latest Azure CI Test Execution Results to GitHub Repository
   - powershell: |
       cd .
-      git config --global user.email "hridaybhogayata4@gmail.com"
-      git config --global user.name "Hriday2711"
+      # git config --global user.email "hridaybhogayata4@gmail.com"
+      # git config --global user.name "Hriday2711"
 
-      # Set or update the remote URL
-      if (git remote | findstr origin) {
-        git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      } else {
-        git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      }
+      # # Set or update the remote URL
+      # if (git remote | findstr origin) {
+      #   git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+      # } else {
+      #   git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+      # }
 
-      # Check out or create the 'main' branch
-      if (!(git branch --list main)) {
-      git checkout -b main
-      }
+      # # Check out or create the 'main' branch
+      # if (!(git branch --list main)) {
+      # git checkout -b main
+      # }
 
       git status
       git add ./results/Azure_CI_Test_Execution_Results_$(Build.BuildID).html -f
-      git commit -m "Pushing Azure build Pipeline artifacts to GitHub Repository"
+      git commit -m "Azure_CI_Test_Execution_Results_$(Build.BuildID).html"
 
       # Pushing the update to GitHub Repository
       git push -u origin main -f
@@ -144,68 +149,4 @@ steps:
           Write-Output "Response from GitHub: $response"
       }
     displayName: "Trigger GitHub Actions Deployment Workflow"
-    continueOnError: true
-    condition: always()
-# - task: PowerShell@2
-#   displayName: 'Trigger GitHub Actions Workflow from Azure'
-#   inputs:
-#     targetType: 'inline'
-#     script: |
-#       # Variables
-#       $token = "$(GITHUB_PAT)" # Replace with your GitHub Personal Access Token (Securely stored in Azure Pipeline)
-#       $owner = "Hriday2711" # Replace with your GitHub username or organization
-#       $repo = "robot-framework-azure" # Replace with your GitHub repository name
-#       $workflowFileName = "deploy.yml" # Replace with your workflow file name
-#       $branch = "main" # Replace with the branch you want to trigger the workflow on
-
-#       # GitHub API URL to trigger a workflow
-#       $uri = "https://api.github.com/repos/$owner/$repo/actions/workflows/$workflowFileName/dispatches"
-
-#       # Request Body
-#       $body = @{
-#           ref = $branch
-#       } | ConvertTo-Json -Depth 1
-
-#       # Headers
-#       $headers = @{
-#           Authorization = "token $token"
-#           Accept        = "application/vnd.github.v3+json"
-#       }
-
-#       # Trigger the workflow
-#       $response = Invoke-RestMethod -Uri $uri -Method POST -Headers $headers -Body $body
-
-#       # Check Response
-#       if ($response -eq $null) {
-#           Write-Host "GitHub Actions workflow triggered successfully."
-#       } else {
-#           Write-Host "Failed to trigger workflow."
-#           Write-Output $response
-#       }
-
-# - task: SendGrid@1
-#   inputs:
-#     sendgridkey: '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'
-#     to: 'hridaybhogayata@gmail.com'
-#     from: 'hridaybhogayata4@gmail.com'
-#     subject: 'Azure CI Test Report by Send grid'
-#     htmlbody: |
-#       Hello,
-
-#       Please check the attached reports for Azure CI Automation pipeline run.
-#     addattachment: true
-#     attachment: 'D:/'
-
-#   displayName: 'Send Email Notifications'
-#   condition: always()
-
-# - task: GitHubPagesPublish@1
-#   inputs:
-#     docPath: 'D:\a\1\s\results\report.html'
-#     githubusername: 'Hriday2711'
-#     githubemail: 'hridaybhogayata4@gmail.com'
-#     githubaccesstoken: '$(GITHUB_PAT)'
-#     repositoryname: 'robot-framework-azure'
-#     branchname: 'main'
-#     commitmessage: 'Azure CI Test execution reports for $(Build.BuildId)'
 
