@@ -29,7 +29,7 @@ steps:
       git status
       git rm -r ./results/*
 
-     displayName: "Removing old Test Results from the GitHub Repository"
+    displayName: "Removing old Test Results from the GitHub Repository"
      
 
 # Task to Install and Use the Latest Python version on the Agent Machine
