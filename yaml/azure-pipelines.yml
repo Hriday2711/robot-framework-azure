@@ -3,7 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger: none
+trigger:
+  branches:
+    include:
+      - main
 
 pool:
   vmImage: windows-latest
@@ -104,7 +107,7 @@ steps:
 
       git status
       git add ./docs/Azure_CI_Test_Execution_Results.html -f
-      git commit -m "Azure_CI_Test_Execution_Results.html"
+      git commit -m "Azure CI Test Results $(Build.BuildID) [skip ci]"
 
       # Pushing the update to GitHub Repository
       git push -u origin main -f
