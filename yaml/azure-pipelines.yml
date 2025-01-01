@@ -68,7 +68,7 @@ steps:
   # Task to Generate the Robot-Metrics Test Report for the CI Test Execution Run
   - powershell: |
       # Generate the Robot-Metrics Azure CI Test Execution Report
-      robotmetrics --inputpath ./docs --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results_$(Build.BuildID).html
+      robotmetrics --inputpath ./docs --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results.html
       exit 0
     displayName: "Generate Robot-Metrics Azure CI Test Execution Report"
     continueOnError: true
@@ -78,7 +78,7 @@ steps:
   - task: PublishPipelineArtifact@1
     displayName: "Publish Pipeline Artifact"
     inputs:
-      targetPath: "./docs/Azure_CI_Test_Execution_Results_$(Build.BuildID).html"
+      targetPath: "./docs/Azure_CI_Test_Execution_Results.html"
       artifact: "Azure CI Test Execution Results"
       publishLocation: pipeline
     continueOnError: true
@@ -103,40 +103,10 @@ steps:
       # }
 
       git status
-      git add ./docs/Azure_CI_Test_Execution_Results_$(Build.BuildID).html -f
-      git commit -m "Azure_CI_Test_Execution_Results_$(Build.BuildID).html"
+      git add ./docs/Azure_CI_Test_Execution_Results.html -f
+      git commit -m "Azure_CI_Test_Execution_Results.html"
 
       # Pushing the update to GitHub Repository
       git push -u origin main -f
 
-    displayName: "Pushing Results to GitHub Repository"
-
-  # - powershell: |
-  #     $githubOwner = "Hriday2711"
-  #     $githubRepo = "robot-framework-azure"
-  #     $workflowFile = "deploy.yml"
-  #     $ref = "main"
-  #     $githubToken = "$(GITHUB_PAT)"
-  #     $azureBuildID = "$(Build.BuildID)"
-
-  #     $headers = @{
-  #         Authorization = "token $githubToken"
-  #         Accept        = "application/vnd.github.v3+json"
-  #     }
-
-  #     $apiUrl = "https://api.github.com/repos/$githubOwner/$githubRepo/actions/workflows/$workflowFile/dispatches"
-  #     $body = @{
-  #         ref = $ref
-  #         inputs = @{
-  #             azure_build_number = $azureBuildID
-  #         }
-  #     } | ConvertTo-Json -Depth 10
-
-  #     $response = Invoke-RestMethod -Uri $apiUrl -Method Post -Headers $headers -Body $body
-
-  #     if ($response -eq $null) {
-  #         Write-Output "GitHub Actions workflow triggered successfully."
-  #     } else {
-  #         Write-Output "Response from GitHub: $response"
-  #     }
-  #   displayName: "Trigger GitHub Actions Deployment Workflow"
+    displayName: "Pushing Azure Results to GitHub Repo"
