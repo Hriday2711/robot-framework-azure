@@ -1,3 +1,5 @@
 {
-  "robot.pythonpath": ["./", "./Tests/resources/customLibraries"]
+  "robot.pythonpath": ["./", "./Tests/resources/customLibraries"],
+  "robot.python.executable": "/Library/Frameworks/Python.framework/Versions/3.12/bin/robot/opt/homebrew/bin/robot",
+  "robot.language-server.python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3/opt/homebrew/bin/python3"
 }

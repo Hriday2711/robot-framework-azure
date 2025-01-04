@@ -41,23 +41,24 @@ steps:
   # Task to Install the Robot framework libraries and dependencies on the Agent machine
   - script: |
       pip install -r Requirements.txt
-    displayName: "Install Robot Dependencies"
+      rfbrowser init
+    displayName: "Install Robot Dependencies and Browser Library"
     continueOnError: true
     condition: always()
 
-  # Task to Install the Chrome Browser on Agent Machine
-  - script: |
-      npm install @puppeteer/browsers@latest
-      npx @puppeteer/browsers install chrome@121.0.6167.86
-      echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
+  # # Task to Install the Chrome Browser on Agent Machine
+  # - script: |
+  #     npm install @puppeteer/browsers@latest
+  #     npx @puppeteer/browsers install chrome@121.0.6167.86
+  #     echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
 
-    displayName: "Install Chrome"
+  #   displayName: "Install Chrome"
 
-  # Task to Install the Chrome Driver required for CI Test execution Run
-  - script: |
-      npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
-      echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
-    displayName: "Install Chrome Driver"
+  # # Task to Install the Chrome Driver required for CI Test execution Run
+  # - script: |
+  #     npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
+  #     echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
+  #   displayName: "Install Chrome Driver"
 
   # Task to Run the Automation tests located in the Robot Framework
   - powershell: |
