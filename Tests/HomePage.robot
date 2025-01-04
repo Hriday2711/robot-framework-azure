@@ -9,6 +9,7 @@ TC1 - Verify Page Title of Magento E-commerce Home Page
     [Documentation]    Test to Verify the Page Title of Magento E-Commerce Home Page
     [Tags]    HomePage    MEC-1    Regression
     Verify the Title of Magento E-Commerce HomePage
+    Take Screenshot
 
 # TC2 - Select Brand Logo Icon on Magento E-commerce Home Page
 #     [Documentation]    Test to Verify the Page Title of Magento E-Commerce Home Page
