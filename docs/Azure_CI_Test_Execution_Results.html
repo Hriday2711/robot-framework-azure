@@ -405,8 +405,8 @@
             <div class="col-md-12">
               <table class="card-table">
                 <tr>
-                  <td class="total">1</td>
-                  <td class="pass">1</td>
+                  <td class="total">4</td>
+                  <td class="pass">2</td>
                 </tr>
                 <tr>
                   <td>Total</td>
@@ -415,7 +415,7 @@
               </table>
               <table class="card-table">
                 <tr>
-                  <td class="fail">0</td>
+                  <td class="fail">2</td>
                   <td class="skip">0</td>
                 </tr>
                 <tr>
@@ -460,15 +460,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Suite</td>
-                <td class="suite-list">0.13</td>
-                <td class="suite-list">0.13</td>
-                <td class="suite-list">0.13</td>
+                <td class="suite-list">0.47</td>
+                <td class="suite-list">0.47</td>
+                <td class="suite-list">0.47</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Test</td>
-                <td class="suite-list">0.1</td>
-                <td class="suite-list">0.1</td>
-                <td class="suite-list">0.1</td>
+                <td class="suite-list">0.09</td>
+                <td class="suite-list">0.15</td>
+                <td class="suite-list">0.11</td>
               </tr>
             </table>
           </div>
@@ -482,15 +482,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Start Time</td>
-                <td>2025-01-05 00:17:35.666000</td>
+                <td>2025-01-05 21:05:21.534000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">End Time</td>
-                <td>2025-01-05 00:17:41.666000</td>
+                <td>2025-01-05 21:05:48.158000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Duration</td>
-                <td>0 days 00:00:06</td>
+                <td>0 days 00:00:26.624000</td>
               </tr>
             </table>
           </div>
@@ -557,13 +557,13 @@
               style="cursor: pointer; color:blue;">
               Tests.HomePage</td>
             
-            <td style="color: green">PASS</td>
+            <td style="color: red">FAIL</td>
             
-            <td>1</td>
-            <td style="color: green">1</td>
-            <td style="color: red">0</td>
+            <td>4</td>
+            <td style="color: green">2</td>
+            <td style="color: red">2</td>
             <td style="color: orange">0</td>
-            <td>7.67</td>
+            <td>28.29</td>
           </tr>
           
         </tbody>
@@ -599,16 +599,74 @@
           
           <tr>
             <td class="td_left" style="width: 200px;">robot.result.TestSuite(name='HomePage')</td>
-            <td class="td_left" data-toggle="tooltip" title="TC1 - Verify Page Title of Magento E-commerce Home Page"
+            <td class="td_left" data-toggle="tooltip" title="TC01 - Verify Page Title of Home Page"
               onclick="openInNewTab('log.html#s1-s1-t1','#s1-s1-t1')"
               style="cursor: pointer; color:blue;width: 200px;">
-              TC1 - Verify Page Title of Magento E-commerce Home Page</td>
+              TC01 - Verify Page Title of Home Page</td>
             
             <td style="color:green">PASS</td>
             
-            <td>6.0</td>
+            <td>8.87</td>
             <td class="td_left" style="font-size: 12px"></td>
-            <td class="hide td_left">[HomePage, MEC-1, Regression]
+            <td class="hide td_left">[HomePage, MEC-1]
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="td_left" style="width: 200px;">robot.result.TestSuite(name='HomePage')</td>
+            <td class="td_left" data-toggle="tooltip" title="TC02 - Select Brand Logo Icon on Home Page"
+              onclick="openInNewTab('log.html#s1-s1-t2','#s1-s1-t2')"
+              style="cursor: pointer; color:blue;width: 200px;">
+              TC02 - Select Brand Logo Icon on Home Page</td>
+            
+            <td style="color:green">PASS</td>
+            
+            <td>6.01</td>
+            <td class="td_left" style="font-size: 12px"></td>
+            <td class="hide td_left">[HomePage, MEC-2]
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="td_left" style="width: 200px;">robot.result.TestSuite(name='HomePage')</td>
+            <td class="td_left" data-toggle="tooltip" title="TC03 - Verify Navigation to Login Page"
+              onclick="openInNewTab('log.html#s1-s1-t3','#s1-s1-t3')"
+              style="cursor: pointer; color:blue;width: 200px;">
+              TC03 - Verify Navigation to Login Page</td>
+            
+            <td style="color:red">FAIL</td>
+            
+            <td>5.41</td>
+            <td class="td_left" style="font-size: 12px">Error: locator.click: Error: strict mode violation: locator('//li[@class=\'authorization-link\']//a') resolved to 2 elements:
+    1) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka getByRole('link', { name: 'Sign In' })
+    2) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka locator('[id="store\\.links"]').getByText('Sign In')
+
+Call log:
+  [2m- waiting for locator('//li[@class=\'authorization-link\']//a')[22m
+</td>
+            <td class="hide td_left">[HomePage, MEC-3]
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="td_left" style="width: 200px;">robot.result.TestSuite(name='HomePage')</td>
+            <td class="td_left" data-toggle="tooltip" title="TC04 - Verify Navigation to 'Create an Account' Page"
+              onclick="openInNewTab('log.html#s1-s1-t4','#s1-s1-t4')"
+              style="cursor: pointer; color:blue;width: 200px;">
+              TC04 - Verify Navigation to 'Create an Account' Page</td>
+            
+            <td style="color:red">FAIL</td>
+            
+            <td>5.83</td>
+            <td class="td_left" style="font-size: 12px">Error: locator.click: Error: strict mode violation: locator('text=Create an Account') resolved to 3 elements:
+    1) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka getByRole('link', { name: 'Create an Account' })
+    2) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka locator('[id="store\\.links"]').getByText('Create an Account')
+    3) <span data-bind="i18n: 'Create an Account'">Create an Account</span> aka getByLabel('Checkout as a new customer').locator('a')
+
+Call log:
+  [2m- waiting for locator('text=Create an Account')[22m
+</td>
+            <td class="hide td_left">[HomePage, MEC-4]
             </td>
           </tr>
           
@@ -635,93 +693,129 @@
           
           
           <tr>
+            <td class="td_left">Click</td>
+            <td>3</td>
+            <td>2</td>
+            <td>0.6</td>
+            <td>1.02</td>
+            <td>0.76</td>
+          </tr>
+          
+          <tr>
             <td class="td_left">Close Browser</td>
-            <td>1</td>
+            <td>4</td>
             <td>0</td>
-            <td>0.63</td>
-            <td>0.63</td>
-            <td>0.63</td>
+            <td>0.44</td>
+            <td>0.74</td>
+            <td>0.56</td>
           </tr>
           
           <tr>
             <td class="td_left">Get Title</td>
-            <td>1</td>
+            <td>2</td>
             <td>0</td>
-            <td>0.07</td>
-            <td>0.07</td>
-            <td>0.07</td>
+            <td>0.01</td>
+            <td>0.01</td>
+            <td>0.01</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch Magento Application</td>
-            <td>1</td>
+            <td>4</td>
             <td>0</td>
-            <td>4.92</td>
-            <td>4.92</td>
-            <td>4.92</td>
+            <td>3.94</td>
+            <td>7.83</td>
+            <td>5.16</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch the Magento E-Commerce HomePage</td>
-            <td>1</td>
+            <td>4</td>
             <td>0</td>
-            <td>4.93</td>
-            <td>4.93</td>
-            <td>4.93</td>
+            <td>3.94</td>
+            <td>7.83</td>
+            <td>5.16</td>
           </tr>
           
           <tr>
             <td class="td_left">New Browser</td>
-            <td>1</td>
+            <td>4</td>
             <td>0</td>
-            <td>0.7</td>
-            <td>0.7</td>
-            <td>0.7</td>
+            <td>0.29</td>
+            <td>0.83</td>
+            <td>0.46</td>
           </tr>
           
           <tr>
             <td class="td_left">New Context</td>
-            <td>1</td>
+            <td>4</td>
             <td>0</td>
-            <td>0.03</td>
-            <td>0.03</td>
-            <td>0.03</td>
+            <td>0.02</td>
+            <td>0.06</td>
+            <td>0.04</td>
           </tr>
           
           <tr>
             <td class="td_left">New Page</td>
+            <td>4</td>
+            <td>0</td>
+            <td>3.49</td>
+            <td>6.96</td>
+            <td>4.65</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Select 'Create an Account' link on Home Page</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.6</td>
+            <td>0.6</td>
+            <td>0.6</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Select Sign In link on Home Page</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.02</td>
+            <td>1.02</td>
+            <td>1.02</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Select the Brand Logo Icon on HomePage</td>
             <td>1</td>
             <td>0</td>
-            <td>4.19</td>
-            <td>4.19</td>
-            <td>4.19</td>
+            <td>0.65</td>
+            <td>0.65</td>
+            <td>0.65</td>
           </tr>
           
           <tr>
             <td class="td_left">Take Screenshot</td>
-            <td>1</td>
+            <td>4</td>
             <td>0</td>
-            <td>0.36</td>
-            <td>0.36</td>
-            <td>0.36</td>
+            <td>0.0</td>
+            <td>0.65</td>
+            <td>0.23</td>
           </tr>
           
           <tr>
             <td class="td_left">Verify Page Title</td>
-            <td>1</td>
+            <td>4</td>
             <td>0</td>
-            <td>0.07</td>
-            <td>0.07</td>
-            <td>0.07</td>
+            <td>0.0</td>
+            <td>0.01</td>
+            <td>0.01</td>
           </tr>
           
           <tr>
             <td class="td_left">Verify the Title of Magento E-Commerce HomePage</td>
-            <td>1</td>
+            <td>2</td>
             <td>0</td>
-            <td>0.07</td>
-            <td>0.07</td>
-            <td>0.07</td>
+            <td>0.01</td>
+            <td>0.01</td>
+            <td>0.01</td>
           </tr>
           
           
@@ -750,8 +844,8 @@
             
             
             
-            <div class="card suite-card pass" id="s1-s1"
-              data-status="pass" onclick="updateDetails('s1-s1')">
+            <div class="card suite-card fail" id="s1-s1"
+              data-status="fail" onclick="updateDetails('s1-s1')">
               <div class="title">Tests.HomePage</div>
             </div>
             
@@ -780,11 +874,11 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><b>1</b></td>
-                      <td class="text-success"><b>1</b></td>
-                      <td class="text-danger"><b>0</b></td>
+                      <td><b>4</b></td>
+                      <td class="text-success"><b>2</b></td>
+                      <td class="text-danger"><b>2</b></td>
                       <td class="text-warning"><b>0</b></td>
-                      <td>0:00:07.674000</td>
+                      <td>0:00:28.292000</td>
                     </tr>
                   </tbody>
                 </table>
@@ -792,10 +886,130 @@
                 
                 <div class="card test-item">
                   <div class="card-body">
-                    <h5 class="test-name pass title">TC1 - Verify Page Title of Magento E-commerce Home Page</h5>
+                    <h5 class="test-name pass title">TC01 - Verify Page Title of Home Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:06</p>
-                      <p><b>Tags:</b> HomePage, MEC-1, Regression</p>
+                      <p><b>Duration:</b> 0:00:08.865000</p>
+                      <p><b>Tags:</b> HomePage, MEC-1</p>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card test-item">
+                  <div class="card-body">
+                    <h5 class="test-name pass title">TC02 - Select Brand Logo Icon on Home Page</h5>
+                    <div class="test-details">
+                      <p><b>Duration:</b> 0:00:06.015000</p>
+                      <p><b>Tags:</b> HomePage, MEC-2</p>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card test-item">
+                  <div class="card-body">
+                    <h5 class="test-name fail title">TC03 - Verify Navigation to Login Page</h5>
+                    <div class="test-details">
+                      <p><b>Duration:</b> 0:00:05.406000</p>
+                      <p><b>Tags:</b> HomePage, MEC-3</p>
+                      
+                      <p><b>Message:</b></p>
+                      <div class="error-message-box">
+                        <p> Error: locator.click: Error: strict mode violation: locator('//li[@class=\'authorization-link\']//a') resolved to 2 elements:
+    1) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka getByRole('link', { name: 'Sign In' })
+    2) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka locator('[id="store\\.links"]').getByText('Sign In')
+
+Call log:
+  [2m- waiting for locator('//li[@class=\'authorization-link\']//a')[22m
+</p>
+                      </div>
+                      <div>
+                        <p><b>Failed Keywords:</b></p>
+                        <div class="card-body">
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          <p class="text-danger title">Select Sign In link on Home Page</p>
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          <p class="text-danger title">Select 'Create an Account' link on Home Page</p>
+                          
+                          
+                          
+                          
+                          
+                          
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card test-item">
+                  <div class="card-body">
+                    <h5 class="test-name fail title">TC04 - Verify Navigation to 'Create an Account' Page</h5>
+                    <div class="test-details">
+                      <p><b>Duration:</b> 0:00:05.832000</p>
+                      <p><b>Tags:</b> HomePage, MEC-4</p>
+                      
+                      <p><b>Message:</b></p>
+                      <div class="error-message-box">
+                        <p> Error: locator.click: Error: strict mode violation: locator('text=Create an Account') resolved to 3 elements:
+    1) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka getByRole('link', { name: 'Create an Account' })
+    2) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka locator('[id="store\\.links"]').getByText('Create an Account')
+    3) <span data-bind="i18n: 'Create an Account'">Create an Account</span> aka getByLabel('Checkout as a new customer').locator('a')
+
+Call log:
+  [2m- waiting for locator('text=Create an Account')[22m
+</p>
+                      </div>
+                      <div>
+                        <p><b>Failed Keywords:</b></p>
+                        <div class="card-body">
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          <p class="text-danger title">Select Sign In link on Home Page</p>
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          <p class="text-danger title">Select 'Create an Account' link on Home Page</p>
+                          
+                          
+                          
+                          
+                          
+                          
+                        </div>
+                      </div>
                       
                     </div>
                   </div>
@@ -928,9 +1142,9 @@
 
     <script>
       window.onload = function () {
-        barChart('#suitePie', "1", "0", "0");
-        pieChart('#testPie', "1", "0", "0");
-        barChart('#keywordPie', "10", "0", "0");
+        barChart('#suitePie', "0", "1", "0");
+        pieChart('#testPie', "2", "2", "0");
+        barChart('#keywordPie', "34", "4", "0");
       };
     </script>
     <script>
@@ -1011,6 +1225,12 @@
       var catgArray = [];
 
       
+      
+      catgArray.push("Tests.HomePage");
+      passArray.push(50.0);
+      failArray.push(2);
+      
+      
 
       var options = {
         series: [{
@@ -1081,7 +1301,7 @@
 
       
       time_group.push("0.0 - 0.0 min");
-      test_count.push(1);
+      test_count.push(4);
       
 
       var options = {
