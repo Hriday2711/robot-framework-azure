@@ -1,209 +1,461 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.8 on win32)" generated="2025-01-05T21:14:36.113479" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.8 on win32)" generated="2025-01-05T21:21:42.927080" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="D:\a\1\s\Tests">
 <suite id="s1-s1" name="HomePage" source="D:\a\1\s\Tests\HomePage.robot">
 <test id="s1-s1-t1" name="TC01 - Verify Page Title of Home Page" line="12">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="New Browser">
-<msg time="2025-01-05T21:14:37.197485" level="FAIL">No keyword with name 'New Browser' found.</msg>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-05T21:21:44.696187" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\a2a04d08-3f89-4e73-b56a-e189d261f38f"}</msg>
+<msg time="2025-01-05T21:21:45.479296" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\a2a04d08-3f89-4e73-b56a-e189d261f38f"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:21:44.695602" elapsed="0.783694"/>
 </kw>
-<kw name="New Context">
-<status status="NOT RUN" start="2025-01-05T21:14:37.197485" elapsed="0.000000"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-05T21:21:45.494927" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-05T21:21:45.510550" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-05T21:21:45.510550" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:21:45.479296" elapsed="0.031254"/>
 </kw>
-<kw name="New Page">
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-05T21:21:53.343225" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
-<status status="NOT RUN" start="2025-01-05T21:14:37.197485" elapsed="0.000000"/>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-05T21:21:45.510550" elapsed="7.832675"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:21:44.694554" elapsed="8.648671"/>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:21:44.693514" elapsed="8.649711"/>
 </kw>
-<kw name="Close Browser" type="TEARDOWN">
-<msg time="2025-01-05T21:14:37.197485" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<kw name="Verify the Title of Magento E-Commerce HomePage" owner="HomePage_Keywords">
+<kw name="Verify Page Title" owner="BaseFile">
+<kw name="Get Title" owner="Browser">
+<msg time="2025-01-05T21:21:53.363436" level="INFO">Title: 'Home Page'</msg>
+<msg time="2025-01-05T21:21:53.363436" level="INFO">${actual_title} = Home Page</msg>
+<var>${actual_title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-05T21:21:53.345225" elapsed="0.018211"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>${expected_title}</arg>
+<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-05T21:21:53.364433" elapsed="0.000000"/>
+</kw>
+<arg>${Magento_E-commerce_PageTitle}</arg>
+<doc>Keyword to Verify the Page Title with the expected title</doc>
+<status status="PASS" start="2025-01-05T21:21:53.344225" elapsed="0.020208"/>
+</kw>
+<doc>Method to verify the title of Magento E-Commerce Home Page</doc>
+<status status="PASS" start="2025-01-05T21:21:53.344225" elapsed="0.020208"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-05T21:21:53.645425" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-05T21:21:53.365432" elapsed="0.280501"/>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-05T21:21:54.242746" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'Close Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-05T21:21:53.645933" elapsed="0.596813"/>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
 <tag>MEC-1</tag>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:21:44.683763" elapsed="9.559502"/>
 </test>
 <test id="s1-s1-t2" name="TC02 - Select Brand Logo Icon on Home Page" line="18">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="New Browser">
-<msg time="2025-01-05T21:14:37.197485" level="FAIL">No keyword with name 'New Browser' found.</msg>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-05T21:21:56.684382" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\8399a676-d712-4c48-a770-50373b30830e"}</msg>
+<msg time="2025-01-05T21:21:56.968295" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\8399a676-d712-4c48-a770-50373b30830e"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:21:56.684382" elapsed="0.283913"/>
 </kw>
-<kw name="New Context">
-<status status="NOT RUN" start="2025-01-05T21:14:37.197485" elapsed="0.000000"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-05T21:21:56.968295" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-05T21:21:57.046424" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-05T21:21:57.046424" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:21:56.968295" elapsed="0.078129"/>
 </kw>
-<kw name="New Page">
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-05T21:22:01.463269" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
-<status status="NOT RUN" start="2025-01-05T21:14:37.197485" elapsed="0.000000"/>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-05T21:21:57.046424" elapsed="4.416845"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:21:56.684382" elapsed="4.779890"/>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:21:56.684382" elapsed="4.779890"/>
 </kw>
-<kw name="Close Browser" type="TEARDOWN">
-<msg time="2025-01-05T21:14:37.197485" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<kw name="Select the Brand Logo Icon on HomePage" owner="HomePage_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-05T21:22:01.465271" level="INFO">Clicking on Brand logo icon on Homepage</msg>
+<arg>Clicking on Brand logo icon on Homepage</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-05T21:22:01.464272" elapsed="0.000999"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-05T21:22:01.465271" level="INFO">Clicks the element 'css=a.logo'.</msg>
+<msg time="2025-01-05T21:22:01.900968" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-05T21:22:01.900968" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-05T21:22:01.901966" level="FAIL">Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
+    1) &lt;a title="" class="logo" aria-label="store logo" hr…&gt;…&lt;/a&gt; aka getByLabel('store logo')
+    2) &lt;a class="logo" rel="noopener" target="_blank" href…&gt;…&lt;/a&gt; aka getByRole('link', { name: 'Ads by Netpub' })
+
+Call log:
+  [2m- waiting for locator('a.logo')[22m
+</msg>
+<arg>${brand_logo_locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="FAIL" start="2025-01-05T21:22:01.465271" elapsed="0.518255">Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
+    1) &lt;a title="" class="logo" aria-label="store logo" hr…&gt;…&lt;/a&gt; aka getByLabel('store logo')
+    2) &lt;a class="logo" rel="noopener" target="_blank" href…&gt;…&lt;/a&gt; aka getByRole('link', { name: 'Ads by Netpub' })
+
+Call log:
+  [2m- waiting for locator('a.logo')[22m
+</status>
+</kw>
+<doc>Click on the Brand Logo Icon on HomePage</doc>
+<status status="FAIL" start="2025-01-05T21:22:01.464272" elapsed="0.519254">Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
+    1) &lt;a title="" class="logo" aria-label="store logo" hr…&gt;…&lt;/a&gt; aka getByLabel('store logo')
+    2) &lt;a class="logo" rel="noopener" target="_blank" href…&gt;…&lt;/a&gt; aka getByRole('link', { name: 'Ads by Netpub' })
+
+Call log:
+  [2m- waiting for locator('a.logo')[22m
+</status>
+</kw>
+<kw name="Verify the Title of Magento E-Commerce HomePage" owner="HomePage_Keywords">
+<doc>Method to verify the title of Magento E-Commerce Home Page</doc>
+<status status="NOT RUN" start="2025-01-05T21:22:01.984046" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="NOT RUN" start="2025-01-05T21:22:01.984046" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-05T21:22:02.323102" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">No keyword with name 'Close Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-05T21:22:01.984563" elapsed="0.338539"/>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
 <tag>MEC-2</tag>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.000000">Setup failed:
-No keyword with name 'New Browser' found.
+<status status="FAIL" start="2025-01-05T21:21:56.684382" elapsed="5.638720">Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
+    1) &lt;a title="" class="logo" aria-label="store logo" hr…&gt;…&lt;/a&gt; aka getByLabel('store logo')
+    2) &lt;a class="logo" rel="noopener" target="_blank" href…&gt;…&lt;/a&gt; aka getByRole('link', { name: 'Ads by Netpub' })
 
-Also teardown failed:
-No keyword with name 'Close Browser' found.</status>
+Call log:
+  [2m- waiting for locator('a.logo')[22m
+</status>
 </test>
 <test id="s1-s1-t3" name="TC03 - Verify Navigation to Login Page" line="25">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="New Browser">
-<msg time="2025-01-05T21:14:37.212128" level="FAIL">No keyword with name 'New Browser' found.</msg>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-05T21:22:02.370299" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\e33afb3b-ec97-4ef6-85f7-69165f3e83c4"}</msg>
+<msg time="2025-01-05T21:22:02.746752" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\e33afb3b-ec97-4ef6-85f7-69165f3e83c4"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:22:02.370299" elapsed="0.376453"/>
 </kw>
-<kw name="New Context">
-<status status="NOT RUN" start="2025-01-05T21:14:37.212128" elapsed="0.000000"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-05T21:22:02.746752" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-05T21:22:02.778005" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-05T21:22:02.778005" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:22:02.746752" elapsed="0.031253"/>
 </kw>
-<kw name="New Page">
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-05T21:22:06.928184" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
-<status status="NOT RUN" start="2025-01-05T21:14:37.212128" elapsed="0.000000"/>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-05T21:22:02.778005" elapsed="4.150179"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:22:02.370299" elapsed="4.558886"/>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:22:02.370299" elapsed="4.558886"/>
 </kw>
-<kw name="Close Browser" type="TEARDOWN">
-<msg time="2025-01-05T21:14:37.212128" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<kw name="Select Sign In link on Home Page" owner="HomePage_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-05T21:22:06.930663" level="INFO">Clicking on Sign In link on Magento Home Page</msg>
+<arg>Clicking on Sign In link on Magento Home Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-05T21:22:06.930663" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-05T21:22:06.932843" level="INFO">Clicks the element 'xpath=(//li[@class='authorization-link']//a)[1]'.</msg>
+<arg>${sign_In_link_locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-05T21:22:06.930663" elapsed="0.663711"/>
+</kw>
+<doc>Click on Sign In link on Magento Home Page</doc>
+<status status="PASS" start="2025-01-05T21:22:06.929185" elapsed="0.665189"/>
+</kw>
+<kw name="Verify Page Title" owner="BaseFile">
+<kw name="Get Title" owner="Browser">
+<msg time="2025-01-05T21:22:07.638941" level="INFO">Title: 'Customer Login'</msg>
+<msg time="2025-01-05T21:22:07.638941" level="INFO">${actual_title} = Customer Login</msg>
+<var>${actual_title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-05T21:22:07.595372" elapsed="0.043569"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>${expected_title}</arg>
+<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-05T21:22:07.638941" elapsed="0.001000"/>
+</kw>
+<arg>${Login_Page_Title}</arg>
+<doc>Keyword to Verify the Page Title with the expected title</doc>
+<status status="PASS" start="2025-01-05T21:22:07.595372" elapsed="0.044569"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-05T21:22:07.840438" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-05T21:22:07.639941" elapsed="0.200497"/>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-05T21:22:08.312235" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'Close Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-05T21:22:07.841439" elapsed="0.471341"/>
 </kw>
 <doc>Select Sign In link on Home Page &amp; verify user navigation to Login page</doc>
 <tag>HomePage</tag>
 <tag>MEC-3</tag>
-<status status="FAIL" start="2025-01-05T21:14:37.197485" elapsed="0.014643">Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:22:02.370299" elapsed="5.942481"/>
 </test>
 <test id="s1-s1-t4" name="TC04 - Verify Navigation to 'Create an Account' Page" line="32">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="New Browser">
-<msg time="2025-01-05T21:14:37.212128" level="FAIL">No keyword with name 'New Browser' found.</msg>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-05T21:22:08.341288" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\2eb76af8-7d2e-48bd-8f41-d91a82fbaf92"}</msg>
+<msg time="2025-01-05T21:22:08.685342" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\2eb76af8-7d2e-48bd-8f41-d91a82fbaf92"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:22:08.341288" elapsed="0.344054"/>
 </kw>
-<kw name="New Context">
-<status status="NOT RUN" start="2025-01-05T21:14:37.212128" elapsed="0.000000"/>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-05T21:22:08.685342" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-05T21:22:08.700973" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-05T21:22:08.700973" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-05T21:22:08.685342" elapsed="0.015631"/>
 </kw>
-<kw name="New Page">
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-05T21:22:11.560981" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
-<status status="NOT RUN" start="2025-01-05T21:14:37.212128" elapsed="0.000000"/>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-05T21:22:08.700973" elapsed="2.861008"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:22:08.341288" elapsed="3.220693"/>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'New Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:22:08.341288" elapsed="3.220693"/>
 </kw>
-<kw name="Close Browser" type="TEARDOWN">
-<msg time="2025-01-05T21:14:37.212128" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<kw name="Select 'Create an Account' link on Home Page" owner="HomePage_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-05T21:22:11.563981" level="INFO">Clicking on 'Create an Account' link on Home Page</msg>
+<arg>Clicking on 'Create an Account' link on Home Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-05T21:22:11.563981" elapsed="0.000445"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-05T21:22:11.564426" level="INFO">Clicks the element 'xpath=(//li//a[text()='Create an Account'])[1]'.</msg>
+<arg>${create-an-account-link_locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-05T21:22:11.564426" elapsed="0.585847"/>
+</kw>
+<doc>Click on 'Create an Account' link on Home Page</doc>
+<status status="PASS" start="2025-01-05T21:22:11.562982" elapsed="0.587291"/>
+</kw>
+<kw name="Verify Page Title" owner="BaseFile">
+<kw name="Get Title" owner="Browser">
+<msg time="2025-01-05T21:22:12.185216" level="INFO">Title: 'Create New Customer Account'</msg>
+<msg time="2025-01-05T21:22:12.185216" level="INFO">${actual_title} = Create New Customer Account</msg>
+<var>${actual_title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-05T21:22:12.152271" elapsed="0.033945"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>${expected_title}</arg>
+<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-05T21:22:12.186216" elapsed="0.001003"/>
+</kw>
+<arg>${Create-an-Account_Page_Title}</arg>
+<doc>Keyword to Verify the Page Title with the expected title</doc>
+<status status="PASS" start="2025-01-05T21:22:12.151271" elapsed="0.035948"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-05T21:22:12.564114" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-05T21:22:12.187219" elapsed="0.376895"/>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-05T21:22:13.042607" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">No keyword with name 'Close Browser' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-05T21:22:12.565114" elapsed="0.477493"/>
 </kw>
 <doc>Select 'Create an Account' link on Home Page &amp; verify user navigation to 'Create an Account' page</doc>
 <tag>HomePage</tag>
 <tag>MEC-4</tag>
-<status status="FAIL" start="2025-01-05T21:14:37.212128" elapsed="0.000000">Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</status>
+<status status="PASS" start="2025-01-05T21:22:08.341288" elapsed="4.701319"/>
 </test>
-<status status="FAIL" start="2025-01-05T21:14:36.160352" elapsed="1.051776"/>
+<status status="FAIL" start="2025-01-05T21:21:42.960902" elapsed="30.122762"/>
 </suite>
-<status status="FAIL" start="2025-01-05T21:14:36.129103" elapsed="1.083025"/>
+<status status="FAIL" start="2025-01-05T21:21:42.928626" elapsed="30.183820"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="4" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="4" skip="0">HomePage</stat>
-<stat pass="0" fail="1" skip="0">MEC-1</stat>
+<stat pass="3" fail="1" skip="0">HomePage</stat>
+<stat pass="1" fail="0" skip="0">MEC-1</stat>
 <stat pass="0" fail="1" skip="0">MEC-2</stat>
-<stat pass="0" fail="1" skip="0">MEC-3</stat>
-<stat pass="0" fail="1" skip="0">MEC-4</stat>
+<stat pass="1" fail="0" skip="0">MEC-3</stat>
+<stat pass="1" fail="0" skip="0">MEC-4</stat>
 </tag>
 <suite>
-<stat pass="0" fail="4" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="0" fail="4" skip="0" id="s1-s1" name="HomePage">Tests.HomePage</stat>
+<stat pass="3" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="1" skip="0" id="s1-s1" name="HomePage">Tests.HomePage</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-01-05T21:14:37.118370" level="ERROR">Error in file 'D:\a\1\s\Tests\HomePage.robot' on line 2: Initializing library 'Browser' with no arguments failed: Could not find node dependencies in installation directory `C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.
-Traceback (most recent call last):
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\browser.py", line 873, in __init__
-    self.playwright = Playwright(
-                      ^^^^^^^^^^^
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\playwright.py", line 53, in __init__
-    self.ensure_node_dependencies()
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\playwright.py", line 85, in ensure_node_dependencies
-    raise RuntimeError(
-RuntimeError: Could not find node dependencies in installation directory `C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.</msg>
-<msg time="2025-01-05T21:14:37.149621" level="ERROR">Error in file 'D:\a\1\s\Keywords\HomePage_Keywords.robot' on line 2: Initializing library 'Browser' with no arguments failed: Could not find node dependencies in installation directory `C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.
-Traceback (most recent call last):
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\browser.py", line 873, in __init__
-    self.playwright = Playwright(
-                      ^^^^^^^^^^^
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\playwright.py", line 53, in __init__
-    self.ensure_node_dependencies()
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\playwright.py", line 85, in ensure_node_dependencies
-    raise RuntimeError(
-RuntimeError: Could not find node dependencies in installation directory `C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.</msg>
-<msg time="2025-01-05T21:14:37.197485" level="ERROR">Error in file 'D:\a\1\s\Keywords\BaseFile.robot' on line 2: Initializing library 'Browser' with no arguments failed: Could not find node dependencies in installation directory `C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.
-Traceback (most recent call last):
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\browser.py", line 873, in __init__
-    self.playwright = Playwright(
-                      ^^^^^^^^^^^
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\playwright.py", line 53, in __init__
-    self.ensure_node_dependencies()
-  File "C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\playwright.py", line 85, in ensure_node_dependencies
-    raise RuntimeError(
-RuntimeError: Could not find node dependencies in installation directory `C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.</msg>
 </errors>
 </robot>

@@ -406,7 +406,7 @@
               <table class="card-table">
                 <tr>
                   <td class="total">4</td>
-                  <td class="pass">0</td>
+                  <td class="pass">3</td>
                 </tr>
                 <tr>
                   <td>Total</td>
@@ -415,7 +415,7 @@
               </table>
               <table class="card-table">
                 <tr>
-                  <td class="fail">4</td>
+                  <td class="fail">1</td>
                   <td class="skip">0</td>
                 </tr>
                 <tr>
@@ -460,15 +460,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Suite</td>
-                <td class="suite-list">0.02</td>
-                <td class="suite-list">0.02</td>
-                <td class="suite-list">0.02</td>
+                <td class="suite-list">0.5</td>
+                <td class="suite-list">0.5</td>
+                <td class="suite-list">0.5</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Test</td>
-                <td class="suite-list">0.0</td>
-                <td class="suite-list">0.0</td>
-                <td class="suite-list">0.0</td>
+                <td class="suite-list">0.08</td>
+                <td class="suite-list">0.16</td>
+                <td class="suite-list">0.11</td>
               </tr>
             </table>
           </div>
@@ -482,15 +482,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Start Time</td>
-                <td>2025-01-05 21:14:37.197000</td>
+                <td>2025-01-05 21:21:44.683000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">End Time</td>
-                <td>2025-01-05 21:14:37.212000</td>
+                <td>2025-01-05 21:22:13.042000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Duration</td>
-                <td>0 days 00:00:00.015000</td>
+                <td>0 days 00:00:28.359000</td>
               </tr>
             </table>
           </div>
@@ -560,10 +560,10 @@
             <td style="color: red">FAIL</td>
             
             <td>4</td>
-            <td style="color: green">0</td>
-            <td style="color: red">4</td>
+            <td style="color: green">3</td>
+            <td style="color: red">1</td>
             <td style="color: orange">0</td>
-            <td>1.05</td>
+            <td>30.12</td>
           </tr>
           
         </tbody>
@@ -604,14 +604,10 @@
               style="cursor: pointer; color:blue;width: 200px;">
               TC01 - Verify Page Title of Home Page</td>
             
-            <td style="color:red">FAIL</td>
+            <td style="color:green">PASS</td>
             
-            <td>0.0</td>
-            <td class="td_left" style="font-size: 12px">Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</td>
+            <td>9.56</td>
+            <td class="td_left" style="font-size: 12px"></td>
             <td class="hide td_left">[HomePage, MEC-1]
             </td>
           </tr>
@@ -625,12 +621,14 @@ No keyword with name 'Close Browser' found.</td>
             
             <td style="color:red">FAIL</td>
             
-            <td>0.0</td>
-            <td class="td_left" style="font-size: 12px">Setup failed:
-No keyword with name 'New Browser' found.
+            <td>5.64</td>
+            <td class="td_left" style="font-size: 12px">Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
+    1) <a title="" class="logo" aria-label="store logo" hr…>…</a> aka getByLabel('store logo')
+    2) <a class="logo" rel="noopener" target="_blank" href…>…</a> aka getByRole('link', { name: 'Ads by Netpub' })
 
-Also teardown failed:
-No keyword with name 'Close Browser' found.</td>
+Call log:
+  [2m- waiting for locator('a.logo')[22m
+</td>
             <td class="hide td_left">[HomePage, MEC-2]
             </td>
           </tr>
@@ -642,14 +640,10 @@ No keyword with name 'Close Browser' found.</td>
               style="cursor: pointer; color:blue;width: 200px;">
               TC03 - Verify Navigation to Login Page</td>
             
-            <td style="color:red">FAIL</td>
+            <td style="color:green">PASS</td>
             
-            <td>0.01</td>
-            <td class="td_left" style="font-size: 12px">Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</td>
+            <td>5.94</td>
+            <td class="td_left" style="font-size: 12px"></td>
             <td class="hide td_left">[HomePage, MEC-3]
             </td>
           </tr>
@@ -661,14 +655,10 @@ No keyword with name 'Close Browser' found.</td>
               style="cursor: pointer; color:blue;width: 200px;">
               TC04 - Verify Navigation to 'Create an Account' Page</td>
             
-            <td style="color:red">FAIL</td>
+            <td style="color:green">PASS</td>
             
-            <td>0.0</td>
-            <td class="td_left" style="font-size: 12px">Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</td>
+            <td>4.7</td>
+            <td class="td_left" style="font-size: 12px"></td>
             <td class="hide td_left">[HomePage, MEC-4]
             </td>
           </tr>
@@ -696,57 +686,129 @@ No keyword with name 'Close Browser' found.</td>
           
           
           <tr>
+            <td class="td_left">Click</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0.52</td>
+            <td>0.66</td>
+            <td>0.59</td>
+          </tr>
+          
+          <tr>
             <td class="td_left">Close Browser</td>
             <td>4</td>
-            <td>4</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
+            <td>0</td>
+            <td>0.34</td>
+            <td>0.6</td>
+            <td>0.47</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Get Title</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0.02</td>
+            <td>0.04</td>
+            <td>0.03</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch Magento Application</td>
             <td>4</td>
-            <td>4</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
+            <td>0</td>
+            <td>3.22</td>
+            <td>8.65</td>
+            <td>5.3</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch the Magento E-Commerce HomePage</td>
             <td>4</td>
-            <td>4</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
+            <td>0</td>
+            <td>3.22</td>
+            <td>8.65</td>
+            <td>5.3</td>
           </tr>
           
           <tr>
             <td class="td_left">New Browser</td>
             <td>4</td>
-            <td>4</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
+            <td>0</td>
+            <td>0.28</td>
+            <td>0.78</td>
+            <td>0.45</td>
           </tr>
           
           <tr>
             <td class="td_left">New Context</td>
             <td>4</td>
             <td>0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
+            <td>0.02</td>
+            <td>0.08</td>
+            <td>0.04</td>
           </tr>
           
           <tr>
             <td class="td_left">New Page</td>
             <td>4</td>
             <td>0</td>
+            <td>2.86</td>
+            <td>7.83</td>
+            <td>4.82</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Select 'Create an Account' link on Home Page</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0.59</td>
+            <td>0.59</td>
+            <td>0.59</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Select Sign In link on Home Page</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0.67</td>
+            <td>0.67</td>
+            <td>0.67</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Select the Brand Logo Icon on HomePage</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.52</td>
+            <td>0.52</td>
+            <td>0.52</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Take Screenshot</td>
+            <td>4</td>
+            <td>0</td>
             <td>0.0</td>
+            <td>0.38</td>
+            <td>0.21</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Verify Page Title</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0.02</td>
+            <td>0.04</td>
+            <td>0.03</td>
+          </tr>
+          
+          <tr>
+            <td class="td_left">Verify the Title of Magento E-Commerce HomePage</td>
+            <td>2</td>
+            <td>0</td>
             <td>0.0</td>
-            <td>0.0</td>
+            <td>0.02</td>
+            <td>0.01</td>
           </tr>
           
           
@@ -806,10 +868,10 @@ No keyword with name 'Close Browser' found.</td>
                   <tbody>
                     <tr>
                       <td><b>4</b></td>
-                      <td class="text-success"><b>0</b></td>
-                      <td class="text-danger"><b>4</b></td>
+                      <td class="text-success"><b>3</b></td>
+                      <td class="text-danger"><b>1</b></td>
                       <td class="text-warning"><b>0</b></td>
-                      <td>0:00:01.052000</td>
+                      <td>0:00:30.123000</td>
                     </tr>
                   </tbody>
                 </table>
@@ -817,25 +879,10 @@ No keyword with name 'Close Browser' found.</td>
                 
                 <div class="card test-item">
                   <div class="card-body">
-                    <h5 class="test-name fail title">TC01 - Verify Page Title of Home Page</h5>
+                    <h5 class="test-name pass title">TC01 - Verify Page Title of Home Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:00</p>
+                      <p><b>Duration:</b> 0:00:09.560000</p>
                       <p><b>Tags:</b> HomePage, MEC-1</p>
-                      
-                      <p><b>Message:</b></p>
-                      <div class="error-message-box">
-                        <p> Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</p>
-                      </div>
-                      <div>
-                        <p><b>Failed Keywords:</b></p>
-                        <div class="card-body">
-                          
-                        </div>
-                      </div>
                       
                     </div>
                   </div>
@@ -845,20 +892,46 @@ No keyword with name 'Close Browser' found.</p>
                   <div class="card-body">
                     <h5 class="test-name fail title">TC02 - Select Brand Logo Icon on Home Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:00</p>
+                      <p><b>Duration:</b> 0:00:05.639000</p>
                       <p><b>Tags:</b> HomePage, MEC-2</p>
                       
                       <p><b>Message:</b></p>
                       <div class="error-message-box">
-                        <p> Setup failed:
-No keyword with name 'New Browser' found.
+                        <p> Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
+    1) <a title="" class="logo" aria-label="store logo" hr…>…</a> aka getByLabel('store logo')
+    2) <a class="logo" rel="noopener" target="_blank" href…>…</a> aka getByRole('link', { name: 'Ads by Netpub' })
 
-Also teardown failed:
-No keyword with name 'Close Browser' found.</p>
+Call log:
+  [2m- waiting for locator('a.logo')[22m
+</p>
                       </div>
                       <div>
                         <p><b>Failed Keywords:</b></p>
                         <div class="card-body">
+                          
+                          
+                          
+                          
+                          
+                          
+                          <p class="text-danger title">Select the Brand Logo Icon on HomePage</p>
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
                           
                         </div>
                       </div>
@@ -869,51 +942,21 @@ No keyword with name 'Close Browser' found.</p>
                 
                 <div class="card test-item">
                   <div class="card-body">
-                    <h5 class="test-name fail title">TC03 - Verify Navigation to Login Page</h5>
+                    <h5 class="test-name pass title">TC03 - Verify Navigation to Login Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:00.015000</p>
+                      <p><b>Duration:</b> 0:00:05.942000</p>
                       <p><b>Tags:</b> HomePage, MEC-3</p>
                       
-                      <p><b>Message:</b></p>
-                      <div class="error-message-box">
-                        <p> Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</p>
-                      </div>
-                      <div>
-                        <p><b>Failed Keywords:</b></p>
-                        <div class="card-body">
-                          
-                        </div>
-                      </div>
-                      
                     </div>
                   </div>
                 </div>
                 
                 <div class="card test-item">
                   <div class="card-body">
-                    <h5 class="test-name fail title">TC04 - Verify Navigation to 'Create an Account' Page</h5>
+                    <h5 class="test-name pass title">TC04 - Verify Navigation to 'Create an Account' Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:00</p>
+                      <p><b>Duration:</b> 0:00:04.701000</p>
                       <p><b>Tags:</b> HomePage, MEC-4</p>
-                      
-                      <p><b>Message:</b></p>
-                      <div class="error-message-box">
-                        <p> Setup failed:
-No keyword with name 'New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Close Browser' found.</p>
-                      </div>
-                      <div>
-                        <p><b>Failed Keywords:</b></p>
-                        <div class="card-body">
-                          
-                        </div>
-                      </div>
                       
                     </div>
                   </div>
@@ -1047,8 +1090,8 @@ No keyword with name 'Close Browser' found.</p>
     <script>
       window.onload = function () {
         barChart('#suitePie', "0", "1", "0");
-        pieChart('#testPie', "0", "4", "0");
-        barChart('#keywordPie', "0", "16", "0");
+        pieChart('#testPie', "3", "1", "0");
+        barChart('#keywordPie', "38", "2", "0");
       };
     </script>
     <script>
@@ -1131,8 +1174,8 @@ No keyword with name 'Close Browser' found.</p>
       
       
       catgArray.push("Tests.HomePage");
-      passArray.push(100.0);
-      failArray.push(4);
+      passArray.push(25.0);
+      failArray.push(1);
       
       
 
