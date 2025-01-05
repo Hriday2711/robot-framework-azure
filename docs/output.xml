@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.8 on win32)" generated="2025-01-05T00:17:34.150981" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\a\1\s\Tests">
+<suite id="s1-s1" name="HomePage" source="D:\a\1\s\Tests\HomePage.robot">
+<test id="s1-s1-t1" name="TC1 - Verify Page Title of Magento E-commerce Home Page" line="8">
+<kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
+<kw name="Launch Magento Application" owner="BaseFile">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-05T00:17:35.674288" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\b5d322d5-1309-4935-8b90-d1d1b610da10"}</msg>
+<msg time="2025-01-05T00:17:36.375987" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\b5d322d5-1309-4935-8b90-d1d1b610da10"}</msg>
+<arg>${browser}</arg>
+<arg>false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-05T00:17:35.673722" elapsed="0.702265"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-05T00:17:36.375987" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-01-05T00:17:36.407413" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-05T00:17:36.407413" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-05T00:17:36.375987" elapsed="0.031426"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-01-05T00:17:40.597581" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-01-05T00:17:36.407413" elapsed="4.190168"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${APP_URL}</arg>
+<doc>Launches the Magento Application into the desired browser for test execution</doc>
+<status status="PASS" start="2025-01-05T00:17:35.672530" elapsed="4.925051"/>
+</kw>
+<status status="PASS" start="2025-01-05T00:17:35.671922" elapsed="4.926659"/>
+</kw>
+<kw name="Verify the Title of Magento E-Commerce HomePage" owner="HomePage_Keywords">
+<kw name="Verify Page Title" owner="BaseFile">
+<kw name="Get Title" owner="Browser">
+<msg time="2025-01-05T00:17:40.665479" level="INFO">Title: 'Home Page'</msg>
+<msg time="2025-01-05T00:17:40.665479" level="INFO">${actual_title} = Home Page</msg>
+<var>${actual_title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-05T00:17:40.599583" elapsed="0.065896"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>${expected_title}</arg>
+<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-05T00:17:40.666467" elapsed="0.000275"/>
+</kw>
+<arg>${Magento_E-commerce_PageTitle}</arg>
+<doc>Keyword to Verify the Page Title with the expected title</doc>
+<status status="PASS" start="2025-01-05T00:17:40.598581" elapsed="0.068161"/>
+</kw>
+<status status="PASS" start="2025-01-05T00:17:40.598581" elapsed="0.068161"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-05T00:17:41.031513" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-05T00:17:40.667745" elapsed="0.363768"/>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-05T00:17:41.666893" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-05T00:17:41.032513" elapsed="0.634380"/>
+</kw>
+<doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
+<tag>HomePage</tag>
+<tag>MEC-1</tag>
+<tag>Regression</tag>
+<status status="PASS" start="2025-01-05T00:17:35.666988" elapsed="5.999905"/>
+</test>
+<status status="PASS" start="2025-01-05T00:17:34.193791" elapsed="7.673578"/>
+</suite>
+<status status="PASS" start="2025-01-05T00:17:34.152821" elapsed="7.740573"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">HomePage</stat>
+<stat pass="1" fail="0" skip="0">MEC-1</stat>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="HomePage">Tests.HomePage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
