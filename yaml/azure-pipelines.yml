@@ -63,7 +63,7 @@ steps:
   # Task to Run the Automation tests located in the Robot Framework
   - powershell: |
       # Run the initial Robot Framework tests
-      robot --name $(CI_TEST_EXECUTION_NAME) --reporttitle $(CI_REPORT_TITLE) --logtitle $(CI_LOGFILE_TITLE) --variable BROWSER:$(BROWSER) --include $(TEST_TAGS) --outputdir docs Tests/
+      robot --name "$(CI_TEST_EXECUTION_NAME)" --reporttitle "$(CI_REPORT_TITLE)" --logtitle "$(CI_LOGFILE_TITLE)" --variable BROWSER:"$(BROWSER)" --include "$(TEST_TAGS)" --outputdir docs Tests/
       exit 0
     displayName: "Run Robot Framework Tests"
     continueOnError: true
