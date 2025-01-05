@@ -1,82 +1,51 @@
-{"level":30,"time":"2025-01-05T21:21:44.144Z","pid":716,"hostname":"fv-az354-695","msg":"Listening on 56370"}
-(node:716) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-01-05T22:08:43.571Z","pid":4820,"hostname":"fv-az670-733","msg":"Listening on 50291"}
+(node:4820) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-{"level":30,"time":"2025-01-05T21:21:44.682Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:44.682Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:44.687Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:44.687Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:44.695Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:21:45.486Z","pid":716,"hostname":"fv-az354-695","msg":"Adding browser to stack: chromium, version: 125.0.6422.26"}
-{"level":30,"time":"2025-01-05T21:21:45.487Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:21:45.487Z","pid":716,"hostname":"fv-az354-695","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-01-05T21:21:45.493Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newContext"}
-{"level":30,"time":"2025-01-05T21:21:45.493Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:21:45.493Z","pid":716,"hostname":"fv-az354-695","msg":"Trace file: "}
-{"level":30,"time":"2025-01-05T21:21:45.514Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active context"}
-{"level":30,"time":"2025-01-05T21:21:45.514Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newContext"}
-{"level":30,"time":"2025-01-05T21:21:45.521Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-01-05T21:21:45.522Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:21:47.587Z","pid":716,"hostname":"fv-az354-695","msg":"Video path: undefined"}
-{"level":30,"time":"2025-01-05T21:21:47.588Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active page"}
-{"level":30,"time":"2025-01-05T21:21:53.234Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newPage"}
-{"level":30,"time":"2025-01-05T21:21:53.364Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:21:53.364Z","pid":716,"hostname":"fv-az354-695","Take screenshot with options: ":{"path":"D:\\a\\1\\s\\docs\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-01-05T21:21:53.638Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:21:53.647Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-01-05T21:21:53.704Z","pid":716,"hostname":"fv-az354-695","msg":"Removed page=442a8d00-06bb-4682-b505-4b8ff3f2e31e from context=b9edf2a8-10ef-4799-aafd-837430f99ca9 page stack"}
-{"level":30,"time":"2025-01-05T21:21:54.235Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:08:43.944Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:43.945Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:43.950Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:43.950Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:43.957Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:08:45.047Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-05T22:08:45.048Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:08:45.048Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-05T22:08:45.054Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:08:45.054Z","pid":4820,"hostname":"fv-az670-733","msg":"Trace file: "}
+{"level":30,"time":"2025-01-05T22:08:45.054Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-01-05T22:08:45.266Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active context"}
+{"level":30,"time":"2025-01-05T22:08:45.267Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-05T22:08:45.274Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:08:45.274Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-01-05T22:08:47.393Z","pid":4820,"hostname":"fv-az670-733","msg":"Video path: undefined"}
+{"level":30,"time":"2025-01-05T22:08:47.393Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active page"}
+{"level":30,"time":"2025-01-05T22:08:57.402Z","pid":4820,"hostname":"fv-az670-733","msg":"Error of node method  newPage"}
 ================= Original suppressed error =================
-Error: Browser has been closed.
-    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
-    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
-    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
-    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
-    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
-    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
-    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
-    at ServerHttp2Stream.emit (node:events:529:35)
-    at endReadableNT (node:internal/streams/readable:1400:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
-=============================================================
-{"level":30,"time":"2025-01-05T21:21:56.679Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:56.679Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:56.683Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:56.684Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:21:56.688Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:21:56.972Z","pid":716,"hostname":"fv-az354-695","msg":"Adding browser to stack: chromium, version: 125.0.6422.26"}
-{"level":30,"time":"2025-01-05T21:21:56.972Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:21:56.972Z","pid":716,"hostname":"fv-az354-695","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-01-05T21:21:56.977Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:21:56.977Z","pid":716,"hostname":"fv-az354-695","msg":"Trace file: "}
-{"level":30,"time":"2025-01-05T21:21:56.977Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newContext"}
-{"level":30,"time":"2025-01-05T21:21:57.049Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active context"}
-{"level":30,"time":"2025-01-05T21:21:57.049Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newContext"}
-{"level":30,"time":"2025-01-05T21:21:57.054Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:21:57.054Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-01-05T21:21:57.576Z","pid":716,"hostname":"fv-az354-695","msg":"Video path: undefined"}
-{"level":30,"time":"2025-01-05T21:21:57.576Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active page"}
-{"level":30,"time":"2025-01-05T21:22:01.456Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newPage"}
-{"level":30,"time":"2025-01-05T21:22:01.463Z","pid":716,"hostname":"fv-az354-695","msg":"Strict mode is enabled, find Locator with css=a.logo in page."}
-{"level":30,"time":"2025-01-05T21:22:01.463Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method click"}
-================= Original suppressed error =================
-locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
-    1) <a title="" class="logo" aria-label="store logo" hr…>…</a> aka getByLabel('store logo')
-    2) <a class="logo" rel="noopener" target="_blank" href…>…</a> aka getByRole('link', { name: 'Ads by Netpub' })
-
+page.goto: Timeout 10000ms exceeded.
 Call log:
-  [2m- waiting for locator('a.logo')[22m
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
 
-    at internalClick (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:9755:19)
-    at async click (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:9736:18)
-    at async PlaywrightServer.click (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:28)
+    at newPage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10361:18)
+    at async PlaywrightServer.newPage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:28) {
+  name: 'TimeoutError'
+}
 =============================================================
-{"level":30,"time":"2025-01-05T21:22:01.556Z","pid":716,"hostname":"fv-az354-695","msg":"Error of node method  click"}
-{"level":30,"time":"2025-01-05T21:22:01.652Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:22:01.652Z","pid":716,"hostname":"fv-az354-695","Take screenshot with options: ":{"path":"D:\\a\\1\\s\\docs\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-01-05T21:22:01.875Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:22:01.981Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-01-05T21:22:02.036Z","pid":716,"hostname":"fv-az354-695","msg":"Removed page=d3daa571-4410-4aec-8696-ba1aaa33ba7e from context=f4ed92f1-be52-415e-b9ad-90b26b66022c page stack"}
-{"level":30,"time":"2025-01-05T21:22:02.331Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:08:57.580Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8712:11)
+    at takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8756:3)
+    at PlaywrightServer.takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:34)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-05T22:08:57.580Z","pid":4820,"hostname":"fv-az670-733","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-01-05T22:08:57.641Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:08:59.346Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method closeAllBrowsers"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
@@ -90,33 +59,33 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2025-01-05T21:22:02.363Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:02.364Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:02.367Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:02.367Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:02.372Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:22:02.752Z","pid":716,"hostname":"fv-az354-695","msg":"Adding browser to stack: chromium, version: 125.0.6422.26"}
-{"level":30,"time":"2025-01-05T21:22:02.752Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:22:02.752Z","pid":716,"hostname":"fv-az354-695","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-01-05T21:22:02.757Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:22:02.757Z","pid":716,"hostname":"fv-az354-695","msg":"Trace file: "}
-{"level":30,"time":"2025-01-05T21:22:02.757Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newContext"}
-{"level":30,"time":"2025-01-05T21:22:02.785Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active context"}
-{"level":30,"time":"2025-01-05T21:22:02.785Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newContext"}
-{"level":30,"time":"2025-01-05T21:22:02.789Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-01-05T21:22:02.789Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:22:03.122Z","pid":716,"hostname":"fv-az354-695","msg":"Video path: undefined"}
-{"level":30,"time":"2025-01-05T21:22:03.122Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active page"}
-{"level":30,"time":"2025-01-05T21:22:06.918Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newPage"}
-{"level":30,"time":"2025-01-05T21:22:06.928Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method click"}
-{"level":30,"time":"2025-01-05T21:22:06.928Z","pid":716,"hostname":"fv-az354-695","msg":"Strict mode is enabled, find Locator with xpath=(//li[@class='authorization-link']//a)[1] in page."}
-{"level":30,"time":"2025-01-05T21:22:07.587Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method click"}
-{"level":30,"time":"2025-01-05T21:22:07.639Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:22:07.639Z","pid":716,"hostname":"fv-az354-695","Take screenshot with options: ":{"path":"D:\\a\\1\\s\\docs\\browser\\screenshot\\robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-01-05T21:22:07.833Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:22:07.837Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-01-05T21:22:07.871Z","pid":716,"hostname":"fv-az354-695","msg":"Removed page=59d37cb1-a565-4ba9-bbbf-942fd6388c80 from context=21e0e97d-b97d-464a-b9e7-1c3a8c0c0e6e page stack"}
-{"level":30,"time":"2025-01-05T21:22:08.305Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:08:59.384Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:59.384Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:59.388Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:59.389Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:08:59.394Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:09:00.365Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-05T22:09:00.366Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:09:00.366Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-05T22:09:00.371Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:09:00.371Z","pid":4820,"hostname":"fv-az670-733","msg":"Trace file: "}
+{"level":30,"time":"2025-01-05T22:09:00.371Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-01-05T22:09:00.530Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active context"}
+{"level":30,"time":"2025-01-05T22:09:00.530Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-05T22:09:00.538Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:09:00.538Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-01-05T22:09:02.035Z","pid":4820,"hostname":"fv-az670-733","msg":"Video path: undefined"}
+{"level":30,"time":"2025-01-05T22:09:02.035Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active page"}
+{"level":30,"time":"2025-01-05T22:09:05.083Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newPage"}
+{"level":30,"time":"2025-01-05T22:09:05.098Z","pid":4820,"hostname":"fv-az670-733","msg":"Strict mode is enabled, find Locator with css=a.logo in page."}
+{"level":30,"time":"2025-01-05T22:09:05.098Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method click"}
+{"level":30,"time":"2025-01-05T22:09:06.268Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method click"}
+{"level":30,"time":"2025-01-05T22:09:06.322Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-05T22:09:06.322Z","pid":4820,"hostname":"fv-az670-733","Take screenshot with options: ":{"path":"D:\\a\\1\\s\\docs\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-01-05T22:09:06.772Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-05T22:09:06.780Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:09:06.791Z","pid":4820,"hostname":"fv-az670-733","msg":"Removed page=95427e64-ce08-430c-b9e8-a66b85721378 from context=f04b3f1b-c248-4578-9852-ea84788bb07e page stack"}
+{"level":30,"time":"2025-01-05T22:09:08.146Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method closeAllBrowsers"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
@@ -130,33 +99,33 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2025-01-05T21:22:08.339Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:08.339Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:08.342Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:08.342Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:08.346Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:22:08.684Z","pid":716,"hostname":"fv-az354-695","msg":"Adding browser to stack: chromium, version: 125.0.6422.26"}
-{"level":30,"time":"2025-01-05T21:22:08.684Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-01-05T21:22:08.684Z","pid":716,"hostname":"fv-az354-695","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-01-05T21:22:08.690Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:22:08.690Z","pid":716,"hostname":"fv-az354-695","msg":"Trace file: "}
-{"level":30,"time":"2025-01-05T21:22:08.689Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newContext"}
-{"level":30,"time":"2025-01-05T21:22:08.704Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active context"}
-{"level":30,"time":"2025-01-05T21:22:08.704Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newContext"}
-{"level":30,"time":"2025-01-05T21:22:08.708Z","pid":716,"hostname":"fv-az354-695","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-01-05T21:22:08.708Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-01-05T21:22:09.089Z","pid":716,"hostname":"fv-az354-695","msg":"Video path: undefined"}
-{"level":30,"time":"2025-01-05T21:22:09.090Z","pid":716,"hostname":"fv-az354-695","msg":"Changed active page"}
-{"level":30,"time":"2025-01-05T21:22:11.552Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method newPage"}
-{"level":30,"time":"2025-01-05T21:22:11.561Z","pid":716,"hostname":"fv-az354-695","msg":"Strict mode is enabled, find Locator with xpath=(//li//a[text()='Create an Account'])[1] in page."}
-{"level":30,"time":"2025-01-05T21:22:11.561Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method click"}
-{"level":30,"time":"2025-01-05T21:22:12.143Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method click"}
-{"level":30,"time":"2025-01-05T21:22:12.194Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:22:12.194Z","pid":716,"hostname":"fv-az354-695","Take screenshot with options: ":{"path":"D:\\a\\1\\s\\docs\\browser\\screenshot\\robotframework-browser-screenshot-3.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-01-05T21:22:12.556Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-01-05T21:22:12.572Z","pid":716,"hostname":"fv-az354-695","msg":"Removed page=78486587-08ff-46bb-954f-ad3067971435 from context=88181b56-21a8-46c3-a182-3ccc8f74a688 page stack"}
-{"level":30,"time":"2025-01-05T21:22:12.562Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-01-05T21:22:13.042Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:09:08.185Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:08.185Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:08.189Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:08.189Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:08.194Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:09:08.975Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-05T22:09:08.976Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:09:08.976Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-05T22:09:08.982Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:09:08.982Z","pid":4820,"hostname":"fv-az670-733","msg":"Trace file: "}
+{"level":30,"time":"2025-01-05T22:09:08.982Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-01-05T22:09:09.076Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active context"}
+{"level":30,"time":"2025-01-05T22:09:09.076Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-05T22:09:09.081Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:09:09.081Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-01-05T22:09:10.156Z","pid":4820,"hostname":"fv-az670-733","msg":"Video path: undefined"}
+{"level":30,"time":"2025-01-05T22:09:10.156Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active page"}
+{"level":30,"time":"2025-01-05T22:09:13.589Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newPage"}
+{"level":30,"time":"2025-01-05T22:09:13.597Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method click"}
+{"level":30,"time":"2025-01-05T22:09:13.597Z","pid":4820,"hostname":"fv-az670-733","msg":"Strict mode is enabled, find Locator with xpath=(//li[@class='authorization-link']//a)[1] in page."}
+{"level":30,"time":"2025-01-05T22:09:15.333Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method click"}
+{"level":30,"time":"2025-01-05T22:09:15.393Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-05T22:09:15.393Z","pid":4820,"hostname":"fv-az670-733","Take screenshot with options: ":{"path":"D:\\a\\1\\s\\docs\\browser\\screenshot\\robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-01-05T22:09:15.636Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-05T22:09:15.643Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:09:15.658Z","pid":4820,"hostname":"fv-az670-733","msg":"Removed page=bc9f9b77-52d1-4418-b34a-a6ba4ebaf4dd from context=e5095d75-5384-4336-8857-ac3faa901dfc page stack"}
+{"level":30,"time":"2025-01-05T22:09:17.323Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method closeAllBrowsers"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
@@ -170,8 +139,33 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2025-01-05T21:22:13.075Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:13.075Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:17.361Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:17.362Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:17.365Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:17.365Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:17.371Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:09:18.165Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-05T22:09:18.165Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-05T22:09:18.165Z","pid":4820,"hostname":"fv-az670-733","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-05T22:09:18.170Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:09:18.170Z","pid":4820,"hostname":"fv-az670-733","msg":"Trace file: "}
+{"level":30,"time":"2025-01-05T22:09:18.170Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-01-05T22:09:18.244Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active context"}
+{"level":30,"time":"2025-01-05T22:09:18.245Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-05T22:09:18.249Z","pid":4820,"hostname":"fv-az670-733","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-05T22:09:18.249Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-01-05T22:09:19.359Z","pid":4820,"hostname":"fv-az670-733","msg":"Video path: undefined"}
+{"level":30,"time":"2025-01-05T22:09:19.360Z","pid":4820,"hostname":"fv-az670-733","msg":"Changed active page"}
+{"level":30,"time":"2025-01-05T22:09:23.056Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method newPage"}
+{"level":30,"time":"2025-01-05T22:09:23.062Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method click"}
+{"level":30,"time":"2025-01-05T22:09:23.062Z","pid":4820,"hostname":"fv-az670-733","msg":"Strict mode is enabled, find Locator with xpath=(//li//a[text()='Create an Account'])[1] in page."}
+{"level":30,"time":"2025-01-05T22:09:24.358Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method click"}
+{"level":30,"time":"2025-01-05T22:09:24.403Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-05T22:09:24.403Z","pid":4820,"hostname":"fv-az670-733","Take screenshot with options: ":{"path":"D:\\a\\1\\s\\docs\\browser\\screenshot\\robotframework-browser-screenshot-3.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-01-05T22:09:24.632Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-01-05T22:09:24.644Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:09:24.658Z","pid":4820,"hostname":"fv-az670-733","msg":"Removed page=5df4e347-e44f-4b13-9598-aa1c5db907e8 from context=ad5d4448-0196-46d1-826c-04806ba37d87 page stack"}
+{"level":30,"time":"2025-01-05T22:09:25.887Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method closeAllBrowsers"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
@@ -185,7 +179,22 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2025-01-05T21:22:13.107Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:13.107Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-01-05T21:22:13.149Z","pid":716,"hostname":"fv-az354-695","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-01-05T21:22:13.150Z","pid":716,"hostname":"fv-az354-695","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:09:25.924Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:25.924Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-05T22:09:25.960Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:25.960Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-05T22:09:26.007Z","pid":4820,"hostname":"fv-az670-733","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-05T22:09:26.007Z","pid":4820,"hostname":"fv-az670-733","msg":"End of node method closeAllBrowsers"}

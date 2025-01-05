@@ -460,15 +460,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Suite</td>
-                <td class="suite-list">0.5</td>
-                <td class="suite-list">0.5</td>
-                <td class="suite-list">0.5</td>
+                <td class="suite-list">0.72</td>
+                <td class="suite-list">0.72</td>
+                <td class="suite-list">0.72</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Test</td>
-                <td class="suite-list">0.08</td>
-                <td class="suite-list">0.16</td>
-                <td class="suite-list">0.11</td>
+                <td class="suite-list">0.14</td>
+                <td class="suite-list">0.26</td>
+                <td class="suite-list">0.17</td>
               </tr>
             </table>
           </div>
@@ -482,15 +482,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Start Time</td>
-                <td>2025-01-05 21:21:44.683000</td>
+                <td>2025-01-05 22:08:43.941000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">End Time</td>
-                <td>2025-01-05 21:22:13.042000</td>
+                <td>2025-01-05 22:09:25.889000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Duration</td>
-                <td>0 days 00:00:28.359000</td>
+                <td>0 days 00:00:41.948000</td>
               </tr>
             </table>
           </div>
@@ -552,10 +552,10 @@
         <tbody>
           
           <tr>
-            <td class="td_left" data-toggle="tooltip" title="Tests.HomePage"
+            <td class="td_left" data-toggle="tooltip" title="Magento Home Page CI Test execution.HomePage"
               onclick="openInNewTab('log.html#s1-s1','#s1-s1')"
               style="cursor: pointer; color:blue;">
-              Tests.HomePage</td>
+              Magento Home Page CI Test execution.HomePage</td>
             
             <td style="color: red">FAIL</td>
             
@@ -563,7 +563,7 @@
             <td style="color: green">3</td>
             <td style="color: red">1</td>
             <td style="color: orange">0</td>
-            <td>30.12</td>
+            <td>43.49</td>
           </tr>
           
         </tbody>
@@ -604,10 +604,15 @@
               style="cursor: pointer; color:blue;width: 200px;">
               TC01 - Verify Page Title of Home Page</td>
             
-            <td style="color:green">PASS</td>
+            <td style="color:red">FAIL</td>
             
-            <td>9.56</td>
-            <td class="td_left" style="font-size: 12px"></td>
+            <td>15.41</td>
+            <td class="td_left" style="font-size: 12px">Setup failed:
+TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</td>
             <td class="hide td_left">[HomePage, MEC-1]
             </td>
           </tr>
@@ -619,16 +624,10 @@
               style="cursor: pointer; color:blue;width: 200px;">
               TC02 - Select Brand Logo Icon on Home Page</td>
             
-            <td style="color:red">FAIL</td>
+            <td style="color:green">PASS</td>
             
-            <td>5.64</td>
-            <td class="td_left" style="font-size: 12px">Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
-    1) <a title="" class="logo" aria-label="store logo" hr…>…</a> aka getByLabel('store logo')
-    2) <a class="logo" rel="noopener" target="_blank" href…>…</a> aka getByRole('link', { name: 'Ads by Netpub' })
-
-Call log:
-  [2m- waiting for locator('a.logo')[22m
-</td>
+            <td>8.77</td>
+            <td class="td_left" style="font-size: 12px"></td>
             <td class="hide td_left">[HomePage, MEC-2]
             </td>
           </tr>
@@ -642,7 +641,7 @@ Call log:
             
             <td style="color:green">PASS</td>
             
-            <td>5.94</td>
+            <td>9.15</td>
             <td class="td_left" style="font-size: 12px"></td>
             <td class="hide td_left">[HomePage, MEC-3]
             </td>
@@ -657,7 +656,7 @@ Call log:
             
             <td style="color:green">PASS</td>
             
-            <td>4.7</td>
+            <td>8.53</td>
             <td class="td_left" style="font-size: 12px"></td>
             <td class="hide td_left">[HomePage, MEC-4]
             </td>
@@ -688,19 +687,19 @@ Call log:
           <tr>
             <td class="td_left">Click</td>
             <td>3</td>
-            <td>1</td>
-            <td>0.52</td>
-            <td>0.66</td>
-            <td>0.59</td>
+            <td>0</td>
+            <td>1.18</td>
+            <td>1.74</td>
+            <td>1.41</td>
           </tr>
           
           <tr>
             <td class="td_left">Close Browser</td>
             <td>4</td>
             <td>0</td>
-            <td>0.34</td>
-            <td>0.6</td>
-            <td>0.47</td>
+            <td>1.25</td>
+            <td>1.71</td>
+            <td>1.5</td>
           </tr>
           
           <tr>
@@ -708,89 +707,89 @@ Call log:
             <td>3</td>
             <td>0</td>
             <td>0.02</td>
+            <td>0.05</td>
             <td>0.04</td>
-            <td>0.03</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch Magento Application</td>
             <td>4</td>
-            <td>0</td>
-            <td>3.22</td>
-            <td>8.65</td>
-            <td>5.3</td>
+            <td>1</td>
+            <td>5.41</td>
+            <td>13.69</td>
+            <td>7.62</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch the Magento E-Commerce HomePage</td>
             <td>4</td>
-            <td>0</td>
-            <td>3.22</td>
-            <td>8.65</td>
-            <td>5.3</td>
+            <td>1</td>
+            <td>5.41</td>
+            <td>13.69</td>
+            <td>7.62</td>
           </tr>
           
           <tr>
             <td class="td_left">New Browser</td>
             <td>4</td>
             <td>0</td>
-            <td>0.28</td>
-            <td>0.78</td>
-            <td>0.45</td>
+            <td>0.79</td>
+            <td>1.1</td>
+            <td>0.91</td>
           </tr>
           
           <tr>
             <td class="td_left">New Context</td>
             <td>4</td>
             <td>0</td>
-            <td>0.02</td>
             <td>0.08</td>
-            <td>0.04</td>
+            <td>0.22</td>
+            <td>0.14</td>
           </tr>
           
           <tr>
             <td class="td_left">New Page</td>
             <td>4</td>
-            <td>0</td>
-            <td>2.86</td>
-            <td>7.83</td>
-            <td>4.82</td>
+            <td>1</td>
+            <td>4.52</td>
+            <td>12.37</td>
+            <td>6.57</td>
           </tr>
           
           <tr>
             <td class="td_left">Select 'Create an Account' link on Home Page</td>
             <td>1</td>
             <td>0</td>
-            <td>0.59</td>
-            <td>0.59</td>
-            <td>0.59</td>
+            <td>1.32</td>
+            <td>1.32</td>
+            <td>1.32</td>
           </tr>
           
           <tr>
             <td class="td_left">Select Sign In link on Home Page</td>
             <td>1</td>
             <td>0</td>
-            <td>0.67</td>
-            <td>0.67</td>
-            <td>0.67</td>
+            <td>1.75</td>
+            <td>1.75</td>
+            <td>1.75</td>
           </tr>
           
           <tr>
             <td class="td_left">Select the Brand Logo Icon on HomePage</td>
             <td>1</td>
-            <td>1</td>
-            <td>0.52</td>
-            <td>0.52</td>
-            <td>0.52</td>
+            <td>0</td>
+            <td>1.18</td>
+            <td>1.18</td>
+            <td>1.18</td>
           </tr>
           
           <tr>
             <td class="td_left">Take Screenshot</td>
-            <td>4</td>
+            <td>3</td>
             <td>0</td>
-            <td>0.0</td>
-            <td>0.38</td>
-            <td>0.21</td>
+            <td>0.24</td>
+            <td>0.46</td>
+            <td>0.32</td>
           </tr>
           
           <tr>
@@ -798,17 +797,17 @@ Call log:
             <td>3</td>
             <td>0</td>
             <td>0.02</td>
+            <td>0.05</td>
             <td>0.04</td>
-            <td>0.03</td>
           </tr>
           
           <tr>
             <td class="td_left">Verify the Title of Magento E-Commerce HomePage</td>
-            <td>2</td>
+            <td>1</td>
             <td>0</td>
-            <td>0.0</td>
-            <td>0.02</td>
-            <td>0.01</td>
+            <td>0.05</td>
+            <td>0.05</td>
+            <td>0.05</td>
           </tr>
           
           
@@ -839,7 +838,7 @@ Call log:
             
             <div class="card suite-card fail" id="s1-s1"
               data-status="fail" onclick="updateDetails('s1-s1')">
-              <div class="title">Tests.HomePage</div>
+              <div class="title">Magento Home Page CI Test execution.HomePage</div>
             </div>
             
             
@@ -854,7 +853,7 @@ Call log:
               
               
               <div class="suite-content" id="s1-s1_details" style="display: none;">
-                <h4 class="title" style="color:gray">Tests.HomePage</h4>
+                <h4 class="title" style="color:gray">Magento Home Page CI Test execution.HomePage</h4>
                 <table class="suite-table">
                   <thead>
                     <tr>
@@ -871,7 +870,7 @@ Call log:
                       <td class="text-success"><b>3</b></td>
                       <td class="text-danger"><b>1</b></td>
                       <td class="text-warning"><b>0</b></td>
-                      <td>0:00:30.123000</td>
+                      <td>0:00:43.494000</td>
                     </tr>
                   </tbody>
                 </table>
@@ -879,42 +878,24 @@ Call log:
                 
                 <div class="card test-item">
                   <div class="card-body">
-                    <h5 class="test-name pass title">TC01 - Verify Page Title of Home Page</h5>
+                    <h5 class="test-name fail title">TC01 - Verify Page Title of Home Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:09.560000</p>
+                      <p><b>Duration:</b> 0:00:15.407000</p>
                       <p><b>Tags:</b> HomePage, MEC-1</p>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="card test-item">
-                  <div class="card-body">
-                    <h5 class="test-name fail title">TC02 - Select Brand Logo Icon on Home Page</h5>
-                    <div class="test-details">
-                      <p><b>Duration:</b> 0:00:05.639000</p>
-                      <p><b>Tags:</b> HomePage, MEC-2</p>
                       
                       <p><b>Message:</b></p>
                       <div class="error-message-box">
-                        <p> Error: locator.click: Error: strict mode violation: locator('a.logo') resolved to 2 elements:
-    1) <a title="" class="logo" aria-label="store logo" hr…>…</a> aka getByLabel('store logo')
-    2) <a class="logo" rel="noopener" target="_blank" href…>…</a> aka getByRole('link', { name: 'Ads by Netpub' })
-
+                        <p> Setup failed:
+TimeoutError: page.goto: Timeout 10000ms exceeded.
 Call log:
-  [2m- waiting for locator('a.logo')[22m
-</p>
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</p>
                       </div>
                       <div>
                         <p><b>Failed Keywords:</b></p>
                         <div class="card-body">
                           
-                          
-                          
-                          
-                          
-                          
-                          <p class="text-danger title">Select the Brand Logo Icon on HomePage</p>
                           
                           
                           
@@ -942,9 +923,20 @@ Call log:
                 
                 <div class="card test-item">
                   <div class="card-body">
+                    <h5 class="test-name pass title">TC02 - Select Brand Logo Icon on Home Page</h5>
+                    <div class="test-details">
+                      <p><b>Duration:</b> 0:00:08.769000</p>
+                      <p><b>Tags:</b> HomePage, MEC-2</p>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card test-item">
+                  <div class="card-body">
                     <h5 class="test-name pass title">TC03 - Verify Navigation to Login Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:05.942000</p>
+                      <p><b>Duration:</b> 0:00:09.146000</p>
                       <p><b>Tags:</b> HomePage, MEC-3</p>
                       
                     </div>
@@ -955,7 +947,7 @@ Call log:
                   <div class="card-body">
                     <h5 class="test-name pass title">TC04 - Verify Navigation to 'Create an Account' Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:04.701000</p>
+                      <p><b>Duration:</b> 0:00:08.528000</p>
                       <p><b>Tags:</b> HomePage, MEC-4</p>
                       
                     </div>
@@ -1091,7 +1083,7 @@ Call log:
       window.onload = function () {
         barChart('#suitePie', "0", "1", "0");
         pieChart('#testPie', "3", "1", "0");
-        barChart('#keywordPie', "38", "2", "0");
+        barChart('#keywordPie', "37", "3", "0");
       };
     </script>
     <script>
@@ -1173,7 +1165,7 @@ Call log:
 
       
       
-      catgArray.push("Tests.HomePage");
+      catgArray.push("Magento Home Page CI Test execution.HomePage");
       passArray.push(25.0);
       failArray.push(1);
       
