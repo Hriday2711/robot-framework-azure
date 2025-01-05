@@ -107,7 +107,7 @@ steps:
       # }
 
       git status
-      git add ./docs/**.html -f
+      git add ./docs/* -f
       git commit -m "Azure CI Test Results $(Build.BuildID) [skip ci]"
 
       # Pushing the update to GitHub Repository
