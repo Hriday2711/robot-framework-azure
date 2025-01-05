@@ -41,7 +41,6 @@ steps:
   # Task to Install the Robot framework libraries and dependencies on the Agent machine
   - script: |
       pip install -r Requirements.txt
-      rfbrowser init
     displayName: "Install Robot Dependencies and Browser Library"
     continueOnError: true
     condition: always()

@@ -5,8 +5,8 @@ Resource    BaseFile.robot
 *** Variables ***
 ${Magento_E-commerce_PageTitle}        Home Page
 ${brand_logo_locator}                  css=a.logo
-${sign_In_link_locator}                xpath=//li[@class='authorization-link']//a
-${create-an-account-link_locator}      text=Create an Account
+${sign_In_link_locator}                xpath=(//li[@class='authorization-link']//a)[1]
+${create-an-account-link_locator}      xpath=(//li//a[text()='Create an Account'])[1]
 
 
 *** Keywords ***
