@@ -406,7 +406,7 @@
               <table class="card-table">
                 <tr>
                   <td class="total">4</td>
-                  <td class="pass">2</td>
+                  <td class="pass">0</td>
                 </tr>
                 <tr>
                   <td>Total</td>
@@ -415,7 +415,7 @@
               </table>
               <table class="card-table">
                 <tr>
-                  <td class="fail">2</td>
+                  <td class="fail">4</td>
                   <td class="skip">0</td>
                 </tr>
                 <tr>
@@ -460,15 +460,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Suite</td>
-                <td class="suite-list">0.47</td>
-                <td class="suite-list">0.47</td>
-                <td class="suite-list">0.47</td>
+                <td class="suite-list">0.02</td>
+                <td class="suite-list">0.02</td>
+                <td class="suite-list">0.02</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Test</td>
-                <td class="suite-list">0.09</td>
-                <td class="suite-list">0.15</td>
-                <td class="suite-list">0.11</td>
+                <td class="suite-list">0.0</td>
+                <td class="suite-list">0.0</td>
+                <td class="suite-list">0.0</td>
               </tr>
             </table>
           </div>
@@ -482,15 +482,15 @@
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Start Time</td>
-                <td>2025-01-05 21:05:21.534000</td>
+                <td>2025-01-05 21:14:37.197000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">End Time</td>
-                <td>2025-01-05 21:05:48.158000</td>
+                <td>2025-01-05 21:14:37.212000</td>
               </tr>
               <tr>
                 <td class="suite-list" style="text-align: left;">Duration</td>
-                <td>0 days 00:00:26.624000</td>
+                <td>0 days 00:00:00.015000</td>
               </tr>
             </table>
           </div>
@@ -560,10 +560,10 @@
             <td style="color: red">FAIL</td>
             
             <td>4</td>
-            <td style="color: green">2</td>
-            <td style="color: red">2</td>
+            <td style="color: green">0</td>
+            <td style="color: red">4</td>
             <td style="color: orange">0</td>
-            <td>28.29</td>
+            <td>1.05</td>
           </tr>
           
         </tbody>
@@ -604,10 +604,14 @@
               style="cursor: pointer; color:blue;width: 200px;">
               TC01 - Verify Page Title of Home Page</td>
             
-            <td style="color:green">PASS</td>
+            <td style="color:red">FAIL</td>
             
-            <td>8.87</td>
-            <td class="td_left" style="font-size: 12px"></td>
+            <td>0.0</td>
+            <td class="td_left" style="font-size: 12px">Setup failed:
+No keyword with name 'New Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</td>
             <td class="hide td_left">[HomePage, MEC-1]
             </td>
           </tr>
@@ -619,10 +623,14 @@
               style="cursor: pointer; color:blue;width: 200px;">
               TC02 - Select Brand Logo Icon on Home Page</td>
             
-            <td style="color:green">PASS</td>
+            <td style="color:red">FAIL</td>
             
-            <td>6.01</td>
-            <td class="td_left" style="font-size: 12px"></td>
+            <td>0.0</td>
+            <td class="td_left" style="font-size: 12px">Setup failed:
+No keyword with name 'New Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</td>
             <td class="hide td_left">[HomePage, MEC-2]
             </td>
           </tr>
@@ -636,14 +644,12 @@
             
             <td style="color:red">FAIL</td>
             
-            <td>5.41</td>
-            <td class="td_left" style="font-size: 12px">Error: locator.click: Error: strict mode violation: locator('//li[@class=\'authorization-link\']//a') resolved to 2 elements:
-    1) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka getByRole('link', { name: 'Sign In' })
-    2) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka locator('[id="store\\.links"]').getByText('Sign In')
+            <td>0.01</td>
+            <td class="td_left" style="font-size: 12px">Setup failed:
+No keyword with name 'New Browser' found.
 
-Call log:
-  [2m- waiting for locator('//li[@class=\'authorization-link\']//a')[22m
-</td>
+Also teardown failed:
+No keyword with name 'Close Browser' found.</td>
             <td class="hide td_left">[HomePage, MEC-3]
             </td>
           </tr>
@@ -657,15 +663,12 @@ Call log:
             
             <td style="color:red">FAIL</td>
             
-            <td>5.83</td>
-            <td class="td_left" style="font-size: 12px">Error: locator.click: Error: strict mode violation: locator('text=Create an Account') resolved to 3 elements:
-    1) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka getByRole('link', { name: 'Create an Account' })
-    2) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka locator('[id="store\\.links"]').getByText('Create an Account')
-    3) <span data-bind="i18n: 'Create an Account'">Create an Account</span> aka getByLabel('Checkout as a new customer').locator('a')
+            <td>0.0</td>
+            <td class="td_left" style="font-size: 12px">Setup failed:
+No keyword with name 'New Browser' found.
 
-Call log:
-  [2m- waiting for locator('text=Create an Account')[22m
-</td>
+Also teardown failed:
+No keyword with name 'Close Browser' found.</td>
             <td class="hide td_left">[HomePage, MEC-4]
             </td>
           </tr>
@@ -693,129 +696,57 @@ Call log:
           
           
           <tr>
-            <td class="td_left">Click</td>
-            <td>3</td>
-            <td>2</td>
-            <td>0.6</td>
-            <td>1.02</td>
-            <td>0.76</td>
-          </tr>
-          
-          <tr>
             <td class="td_left">Close Browser</td>
             <td>4</td>
-            <td>0</td>
-            <td>0.44</td>
-            <td>0.74</td>
-            <td>0.56</td>
-          </tr>
-          
-          <tr>
-            <td class="td_left">Get Title</td>
-            <td>2</td>
-            <td>0</td>
-            <td>0.01</td>
-            <td>0.01</td>
-            <td>0.01</td>
+            <td>4</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch Magento Application</td>
             <td>4</td>
-            <td>0</td>
-            <td>3.94</td>
-            <td>7.83</td>
-            <td>5.16</td>
+            <td>4</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
           </tr>
           
           <tr>
             <td class="td_left">Launch the Magento E-Commerce HomePage</td>
             <td>4</td>
-            <td>0</td>
-            <td>3.94</td>
-            <td>7.83</td>
-            <td>5.16</td>
+            <td>4</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
           </tr>
           
           <tr>
             <td class="td_left">New Browser</td>
             <td>4</td>
-            <td>0</td>
-            <td>0.29</td>
-            <td>0.83</td>
-            <td>0.46</td>
+            <td>4</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
           </tr>
           
           <tr>
             <td class="td_left">New Context</td>
             <td>4</td>
             <td>0</td>
-            <td>0.02</td>
-            <td>0.06</td>
-            <td>0.04</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
           </tr>
           
           <tr>
             <td class="td_left">New Page</td>
             <td>4</td>
             <td>0</td>
-            <td>3.49</td>
-            <td>6.96</td>
-            <td>4.65</td>
-          </tr>
-          
-          <tr>
-            <td class="td_left">Select 'Create an Account' link on Home Page</td>
-            <td>1</td>
-            <td>1</td>
-            <td>0.6</td>
-            <td>0.6</td>
-            <td>0.6</td>
-          </tr>
-          
-          <tr>
-            <td class="td_left">Select Sign In link on Home Page</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1.02</td>
-            <td>1.02</td>
-            <td>1.02</td>
-          </tr>
-          
-          <tr>
-            <td class="td_left">Select the Brand Logo Icon on HomePage</td>
-            <td>1</td>
-            <td>0</td>
-            <td>0.65</td>
-            <td>0.65</td>
-            <td>0.65</td>
-          </tr>
-          
-          <tr>
-            <td class="td_left">Take Screenshot</td>
-            <td>4</td>
-            <td>0</td>
             <td>0.0</td>
-            <td>0.65</td>
-            <td>0.23</td>
-          </tr>
-          
-          <tr>
-            <td class="td_left">Verify Page Title</td>
-            <td>4</td>
-            <td>0</td>
             <td>0.0</td>
-            <td>0.01</td>
-            <td>0.01</td>
-          </tr>
-          
-          <tr>
-            <td class="td_left">Verify the Title of Magento E-Commerce HomePage</td>
-            <td>2</td>
-            <td>0</td>
-            <td>0.01</td>
-            <td>0.01</td>
-            <td>0.01</td>
+            <td>0.0</td>
           </tr>
           
           
@@ -875,10 +806,10 @@ Call log:
                   <tbody>
                     <tr>
                       <td><b>4</b></td>
-                      <td class="text-success"><b>2</b></td>
-                      <td class="text-danger"><b>2</b></td>
+                      <td class="text-success"><b>0</b></td>
+                      <td class="text-danger"><b>4</b></td>
                       <td class="text-warning"><b>0</b></td>
-                      <td>0:00:28.292000</td>
+                      <td>0:00:01.052000</td>
                     </tr>
                   </tbody>
                 </table>
@@ -886,10 +817,25 @@ Call log:
                 
                 <div class="card test-item">
                   <div class="card-body">
-                    <h5 class="test-name pass title">TC01 - Verify Page Title of Home Page</h5>
+                    <h5 class="test-name fail title">TC01 - Verify Page Title of Home Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:08.865000</p>
+                      <p><b>Duration:</b> 0:00:00</p>
                       <p><b>Tags:</b> HomePage, MEC-1</p>
+                      
+                      <p><b>Message:</b></p>
+                      <div class="error-message-box">
+                        <p> Setup failed:
+No keyword with name 'New Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</p>
+                      </div>
+                      <div>
+                        <p><b>Failed Keywords:</b></p>
+                        <div class="card-body">
+                          
+                        </div>
+                      </div>
                       
                     </div>
                   </div>
@@ -897,10 +843,25 @@ Call log:
                 
                 <div class="card test-item">
                   <div class="card-body">
-                    <h5 class="test-name pass title">TC02 - Select Brand Logo Icon on Home Page</h5>
+                    <h5 class="test-name fail title">TC02 - Select Brand Logo Icon on Home Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:06.015000</p>
+                      <p><b>Duration:</b> 0:00:00</p>
                       <p><b>Tags:</b> HomePage, MEC-2</p>
+                      
+                      <p><b>Message:</b></p>
+                      <div class="error-message-box">
+                        <p> Setup failed:
+No keyword with name 'New Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</p>
+                      </div>
+                      <div>
+                        <p><b>Failed Keywords:</b></p>
+                        <div class="card-body">
+                          
+                        </div>
+                      </div>
                       
                     </div>
                   </div>
@@ -910,48 +871,20 @@ Call log:
                   <div class="card-body">
                     <h5 class="test-name fail title">TC03 - Verify Navigation to Login Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:05.406000</p>
+                      <p><b>Duration:</b> 0:00:00.015000</p>
                       <p><b>Tags:</b> HomePage, MEC-3</p>
                       
                       <p><b>Message:</b></p>
                       <div class="error-message-box">
-                        <p> Error: locator.click: Error: strict mode violation: locator('//li[@class=\'authorization-link\']//a') resolved to 2 elements:
-    1) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka getByRole('link', { name: 'Sign In' })
-    2) <a href="https://magento.softwaretestingboard.com/c…>↵        Sign In    </a> aka locator('[id="store\\.links"]').getByText('Sign In')
+                        <p> Setup failed:
+No keyword with name 'New Browser' found.
 
-Call log:
-  [2m- waiting for locator('//li[@class=\'authorization-link\']//a')[22m
-</p>
+Also teardown failed:
+No keyword with name 'Close Browser' found.</p>
                       </div>
                       <div>
                         <p><b>Failed Keywords:</b></p>
                         <div class="card-body">
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          <p class="text-danger title">Select Sign In link on Home Page</p>
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          <p class="text-danger title">Select 'Create an Account' link on Home Page</p>
-                          
-                          
-                          
-                          
-                          
                           
                         </div>
                       </div>
@@ -964,49 +897,20 @@ Call log:
                   <div class="card-body">
                     <h5 class="test-name fail title">TC04 - Verify Navigation to 'Create an Account' Page</h5>
                     <div class="test-details">
-                      <p><b>Duration:</b> 0:00:05.832000</p>
+                      <p><b>Duration:</b> 0:00:00</p>
                       <p><b>Tags:</b> HomePage, MEC-4</p>
                       
                       <p><b>Message:</b></p>
                       <div class="error-message-box">
-                        <p> Error: locator.click: Error: strict mode violation: locator('text=Create an Account') resolved to 3 elements:
-    1) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka getByRole('link', { name: 'Create an Account' })
-    2) <a href="https://magento.softwaretestingboard.com/c…>Create an Account</a> aka locator('[id="store\\.links"]').getByText('Create an Account')
-    3) <span data-bind="i18n: 'Create an Account'">Create an Account</span> aka getByLabel('Checkout as a new customer').locator('a')
+                        <p> Setup failed:
+No keyword with name 'New Browser' found.
 
-Call log:
-  [2m- waiting for locator('text=Create an Account')[22m
-</p>
+Also teardown failed:
+No keyword with name 'Close Browser' found.</p>
                       </div>
                       <div>
                         <p><b>Failed Keywords:</b></p>
                         <div class="card-body">
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          <p class="text-danger title">Select Sign In link on Home Page</p>
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          <p class="text-danger title">Select 'Create an Account' link on Home Page</p>
-                          
-                          
-                          
-                          
-                          
                           
                         </div>
                       </div>
@@ -1143,8 +1047,8 @@ Call log:
     <script>
       window.onload = function () {
         barChart('#suitePie', "0", "1", "0");
-        pieChart('#testPie', "2", "2", "0");
-        barChart('#keywordPie', "34", "4", "0");
+        pieChart('#testPie', "0", "4", "0");
+        barChart('#keywordPie', "0", "16", "0");
       };
     </script>
     <script>
@@ -1227,8 +1131,8 @@ Call log:
       
       
       catgArray.push("Tests.HomePage");
-      passArray.push(50.0);
-      failArray.push(2);
+      passArray.push(100.0);
+      failArray.push(4);
       
       
 
