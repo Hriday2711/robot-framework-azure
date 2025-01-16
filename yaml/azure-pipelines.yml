@@ -12,26 +12,26 @@ pool:
   vmImage: windows-latest
 
 steps:
-  # Task to Remove the Old CI Test Execution results from the Results folder in the GitHub Repository
-  - powershell: |
-      cd .
-      git config --global user.email "hridaybhogayata4@gmail.com"
-      git config --global user.name "Hriday2711"
+#   # Task to Remove the Old CI Test Execution results from the Results folder in the GitHub Repository
+#   - powershell: |
+#       cd .
+#       git config --global user.email "hridaybhogayata4@gmail.com"
+#       git config --global user.name "Hriday2711"
 
-      # Set or update the remote URL
-      if (git remote | findstr origin) {
-        git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      } else {
-        git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      }
-      # Check out or create the 'main' branch
-       if (!(git branch --list main)) {
-       git checkout -b main
-       }
-       git status
-       git rm -r ./docs/**.html
+#       # Set or update the remote URL
+#       if (git remote | findstr origin) {
+#         git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+#       } else {
+#         git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+#       }
+#       # Check out or create the 'main' branch
+#        if (!(git branch --list main)) {
+#        git checkout -b main
+#        }
+#        git status
+#        git rm -r ./docs/**.html
 
-    displayName: "Removing old Test Results from the GitHub Repository"
+#     displayName: "Removing old Test Results from the GitHub Repository"
 
   # Task to Install and Use the Latest Python version on the Agent Machine
   - task: UsePythonVersion@0
