@@ -17,4 +17,5 @@ Verify Page Title
     [Documentation]    Keyword to Verify the Page Title with the expected title
     [Arguments]    ${expected_title}
     ${actual_title}=    Get Title
+    Log    Current page title is: ${actual_title}
     Should Be Equal    ${actual_title}    ${expected_title}    Actual Page title is: ${actual_title} and expected page title is: ${expected_title}
