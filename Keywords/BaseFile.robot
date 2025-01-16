@@ -12,6 +12,7 @@ Launch Magento Application
     New Browser    ${browser}    false
     New Context
     New Page    ${url}
+    Set Browser Timeout    scope=Global    timeout=30secs
 
 Verify Page Title
     [Documentation]    Keyword to Verify the Page Title with the expected title
