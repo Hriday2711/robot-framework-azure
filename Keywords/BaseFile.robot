@@ -9,10 +9,8 @@ ${BROWSER}    chromium
 Launch Magento Application
     [Documentation]    Launches the Magento Application into the desired browser for test execution
     [Arguments]    ${browser}    ${url}
-    Set Browser Timeout    scope=Global    timeout=30secs
     New Browser    ${browser}    false
     New Context
-    Wait For Load State    state=domcontentloaded    timeout=30secs
     New Page    ${url}
 
 Verify Page Title
