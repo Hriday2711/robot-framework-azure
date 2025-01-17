@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.8 on win32)" generated="2025-01-17T20:21:35.165222" rpa="false" schemaversion="5">
+<suite id="s1" name="Magento Home Page CI Test execution" source="D:\a\1\s\Tests">
+<suite id="s1-s1" name="HomePage" source="D:\a\1\s\Tests\HomePage.robot">
+<test id="s1-s1-t1" name="TC01 - Verify Page Title of Home Page" line="13">
+<kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
+<kw name="Launch Magento Application" owner="BaseFile">
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>scope=Global</arg>
+<arg>timeout=30secs</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-01-17T20:21:36.607963" elapsed="0.235883"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-17T20:21:36.843846" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\70d08920-fa26-43d0-9b0f-3d56c2ffd928"}</msg>
+<msg time="2025-01-17T20:21:37.861005" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\70d08920-fa26-43d0-9b0f-3d56c2ffd928"}</msg>
+<arg>${browser}</arg>
+<arg>false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:36.843846" elapsed="1.017159"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-17T20:21:37.861005" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-17T20:21:37.892465" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:21:37.892465" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:37.861005" elapsed="0.031460"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-01-17T20:21:37.892465" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
+<msg time="2025-01-17T20:21:37.939357" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:21:37.939357" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:21:37.939357" level="FAIL">Error: No page open.</msg>
+<arg>state=domcontentloaded</arg>
+<arg>timeout=30secs</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="FAIL" start="2025-01-17T20:21:37.892465" elapsed="0.298333">Error: No page open.</status>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-01-17T20:21:38.190798" elapsed="0.000000"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${APP_URL}</arg>
+<doc>Launches the Magento Application into the desired browser for test execution</doc>
+<status status="FAIL" start="2025-01-17T20:21:36.606919" elapsed="1.583879">Error: No page open.</status>
+</kw>
+<doc>Method to Launch the Magento E-Commerce Home Page</doc>
+<status status="FAIL" start="2025-01-17T20:21:36.606396" elapsed="1.584402">Error: No page open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-17T20:21:41.174133" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-17T20:21:38.190798" elapsed="2.983335"/>
+</kw>
+<doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
+<tag>HomePage</tag>
+<tag>MEC-1</tag>
+<status status="FAIL" start="2025-01-17T20:21:36.602162" elapsed="4.571971">Setup failed:
+Error: No page open.</status>
+</test>
+<test id="s1-s1-t2" name="TC02 - Select Brand Logo Icon on Home Page" line="19">
+<kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
+<kw name="Launch Magento Application" owner="BaseFile">
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>scope=Global</arg>
+<arg>timeout=30secs</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-01-17T20:21:41.222483" elapsed="0.000550"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-17T20:21:41.223541" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\c939a1a2-1cc9-468a-9cfb-ec81ace2260c"}</msg>
+<msg time="2025-01-17T20:21:41.755918" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\c939a1a2-1cc9-468a-9cfb-ec81ace2260c"}</msg>
+<arg>${browser}</arg>
+<arg>false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:41.223541" elapsed="0.532377"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-17T20:21:41.755918" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-17T20:21:41.787551" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:21:41.787551" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:41.755918" elapsed="0.031633"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-01-17T20:21:41.787551" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
+<msg time="2025-01-17T20:21:41.850070" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:21:41.850070" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:21:41.850070" level="FAIL">Error: No page open.</msg>
+<arg>state=domcontentloaded</arg>
+<arg>timeout=30secs</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="FAIL" start="2025-01-17T20:21:41.787551" elapsed="0.062519">Error: No page open.</status>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-01-17T20:21:41.850070" elapsed="0.000000"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${APP_URL}</arg>
+<doc>Launches the Magento Application into the desired browser for test execution</doc>
+<status status="FAIL" start="2025-01-17T20:21:41.221862" elapsed="0.628208">Error: No page open.</status>
+</kw>
+<doc>Method to Launch the Magento E-Commerce Home Page</doc>
+<status status="FAIL" start="2025-01-17T20:21:41.221862" elapsed="0.628208">Error: No page open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-17T20:21:44.704394" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-17T20:21:41.850070" elapsed="2.866821"/>
+</kw>
+<doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
+<tag>HomePage</tag>
+<tag>MEC-2</tag>
+<status status="FAIL" start="2025-01-17T20:21:41.205480" elapsed="3.511411">Setup failed:
+Error: No page open.</status>
+</test>
+<test id="s1-s1-t3" name="TC03 - Verify Navigation to Login Page" line="27">
+<kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
+<kw name="Launch Magento Application" owner="BaseFile">
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>scope=Global</arg>
+<arg>timeout=30secs</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-01-17T20:21:44.746497" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-17T20:21:44.746497" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\0cb931d1-52ae-430f-ac80-6027cdffab51"}</msg>
+<msg time="2025-01-17T20:21:45.304049" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\0cb931d1-52ae-430f-ac80-6027cdffab51"}</msg>
+<arg>${browser}</arg>
+<arg>false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:44.746497" elapsed="0.557552"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-17T20:21:45.304049" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-17T20:21:45.367132" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:21:45.367132" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:45.304049" elapsed="0.063083"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-01-17T20:21:45.367132" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
+<msg time="2025-01-17T20:21:45.476528" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:21:45.476528" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:21:45.476528" level="FAIL">Error: No page open.</msg>
+<arg>state=domcontentloaded</arg>
+<arg>timeout=30secs</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="FAIL" start="2025-01-17T20:21:45.367132" elapsed="0.109396">Error: No page open.</status>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-01-17T20:21:45.476528" elapsed="0.000000"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${APP_URL}</arg>
+<doc>Launches the Magento Application into the desired browser for test execution</doc>
+<status status="FAIL" start="2025-01-17T20:21:44.746497" elapsed="0.730031">Error: No page open.</status>
+</kw>
+<doc>Method to Launch the Magento E-Commerce Home Page</doc>
+<status status="FAIL" start="2025-01-17T20:21:44.746497" elapsed="0.730031">Error: No page open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-17T20:21:48.255384" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-17T20:21:45.476528" elapsed="2.778856"/>
+</kw>
+<doc>Select Sign In link on Home Page &amp; verify user navigation to Login page</doc>
+<tag>HomePage</tag>
+<tag>MEC-3</tag>
+<status status="FAIL" start="2025-01-17T20:21:44.735977" elapsed="3.519407">Setup failed:
+Error: No page open.</status>
+</test>
+<test id="s1-s1-t4" name="TC04 - Verify Navigation to 'Create an Account' Page" line="35">
+<kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
+<kw name="Launch Magento Application" owner="BaseFile">
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>scope=Global</arg>
+<arg>timeout=30secs</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-01-17T20:21:48.285040" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-17T20:21:48.285040" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\c9cb8e7b-5dcb-423e-a6bb-99958c87b94c"}</msg>
+<msg time="2025-01-17T20:21:48.834501" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\c9cb8e7b-5dcb-423e-a6bb-99958c87b94c"}</msg>
+<arg>${browser}</arg>
+<arg>false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:48.285040" elapsed="0.549461"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-17T20:21:48.834501" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-17T20:21:48.868040" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:21:48.868040" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:48.834501" elapsed="0.033539"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-01-17T20:21:48.868040" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
+<msg time="2025-01-17T20:21:48.944570" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:21:48.944570" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:21:48.944570" level="FAIL">Error: No page open.</msg>
+<arg>state=domcontentloaded</arg>
+<arg>timeout=30secs</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="FAIL" start="2025-01-17T20:21:48.868040" elapsed="0.076530">Error: No page open.</status>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-01-17T20:21:48.944570" elapsed="0.000000"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${APP_URL}</arg>
+<doc>Launches the Magento Application into the desired browser for test execution</doc>
+<status status="FAIL" start="2025-01-17T20:21:48.285040" elapsed="0.659530">Error: No page open.</status>
+</kw>
+<doc>Method to Launch the Magento E-Commerce Home Page</doc>
+<status status="FAIL" start="2025-01-17T20:21:48.285040" elapsed="0.659530">Error: No page open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-17T20:21:51.793179" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-17T20:21:48.944570" elapsed="2.848609"/>
+</kw>
+<doc>Select 'Create an Account' link on Home Page &amp; verify user navigation to 'Create an Account' page</doc>
+<tag>HomePage</tag>
+<tag>MEC-4</tag>
+<status status="FAIL" start="2025-01-17T20:21:48.285040" elapsed="3.508139">Setup failed:
+Error: No page open.</status>
+</test>
+<test id="s1-s1-t5" name="TC05 - Verify Navigation to 'What's New' Page" line="43">
+<kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
+<kw name="Launch Magento Application" owner="BaseFile">
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>scope=Global</arg>
+<arg>timeout=30secs</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-01-17T20:21:51.823231" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-01-17T20:21:51.823231" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\2bc145ff-e1e4-414d-bc10-a0fb76c4e79b"}</msg>
+<msg time="2025-01-17T20:21:52.377444" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\2bc145ff-e1e4-414d-bc10-a0fb76c4e79b"}</msg>
+<arg>${browser}</arg>
+<arg>false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:51.823231" elapsed="0.554213"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-01-17T20:21:52.377444" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-01-17T20:21:52.409298" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:21:52.409298" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-01-17T20:21:52.377444" elapsed="0.031854"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-01-17T20:21:52.409298" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
+<msg time="2025-01-17T20:21:52.471772" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:21:52.471772" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:21:52.471772" level="FAIL">Error: No page open.</msg>
+<arg>state=domcontentloaded</arg>
+<arg>timeout=30secs</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="FAIL" start="2025-01-17T20:21:52.409298" elapsed="0.062474">Error: No page open.</status>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-01-17T20:21:52.471772" elapsed="0.000000"/>
+</kw>
+<arg>${BROWSER}</arg>
+<arg>${APP_URL}</arg>
+<doc>Launches the Magento Application into the desired browser for test execution</doc>
+<status status="FAIL" start="2025-01-17T20:21:51.823231" elapsed="0.648541">Error: No page open.</status>
+</kw>
+<doc>Method to Launch the Magento E-Commerce Home Page</doc>
+<status status="FAIL" start="2025-01-17T20:21:51.823231" elapsed="0.648541">Error: No page open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-01-17T20:21:55.342929" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-17T20:21:52.471772" elapsed="2.871663"/>
+</kw>
+<doc>Select 'Whats New' link on Home Page &amp; Verify user navigation for 'Whats New' page</doc>
+<tag>HomePage</tag>
+<tag>MEC-5</tag>
+<status status="FAIL" start="2025-01-17T20:21:51.823231" elapsed="3.520347">Setup failed:
+Error: No page open.</status>
+</test>
+<status status="FAIL" start="2025-01-17T20:21:35.197945" elapsed="20.167894"/>
+</suite>
+<status status="FAIL" start="2025-01-17T20:21:35.167281" elapsed="20.228066"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="5" skip="0">HomePage</stat>
+<stat pass="0" fail="1" skip="0">MEC-1</stat>
+<stat pass="0" fail="1" skip="0">MEC-2</stat>
+<stat pass="0" fail="1" skip="0">MEC-3</stat>
+<stat pass="0" fail="1" skip="0">MEC-4</stat>
+<stat pass="0" fail="1" skip="0">MEC-5</stat>
+</tag>
+<suite>
+<stat pass="0" fail="5" skip="0" id="s1" name="Magento Home Page CI Test execution">Magento Home Page CI Test execution</stat>
+<stat pass="0" fail="5" skip="0" id="s1-s1" name="HomePage">Magento Home Page CI Test execution.HomePage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

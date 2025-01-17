@@ -1,0 +1,320 @@
+{"level":30,"time":"2025-01-17T20:21:36.107Z","pid":6588,"hostname":"fv-az675-797","msg":"Listening on 57944"}
+(node:6588) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-01-17T20:21:36.594Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:36.595Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:36.599Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:36.599Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:36.844Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:37.864Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-17T20:21:37.864Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:37.864Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-17T20:21:37.870Z","pid":6588,"hostname":"fv-az675-797","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-17T20:21:37.870Z","pid":6588,"hostname":"fv-az675-797","msg":"Trace file: "}
+{"level":30,"time":"2025-01-17T20:21:37.870Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newContext"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10682:24)
+    at PlaywrightServer.waitForPageLoadState (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10719:54)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:37.887Z","pid":6588,"hostname":"fv-az675-797","msg":"Changed active context"}
+{"level":30,"time":"2025-01-17T20:21:37.888Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-17T20:21:37.892Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2025-01-17T20:21:37.893Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method WaitForPageLoadState"}
+{"level":30,"time":"2025-01-17T20:21:37.925Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8712:11)
+    at takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8756:3)
+    at PlaywrightServer.takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:34)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:37.926Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:38.202Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-17T20:21:41.181Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:41.211Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:41.211Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:41.215Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:41.215Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:41.220Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:41.749Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-17T20:21:41.749Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:41.749Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-17T20:21:41.754Z","pid":6588,"hostname":"fv-az675-797","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-17T20:21:41.754Z","pid":6588,"hostname":"fv-az675-797","msg":"Trace file: "}
+{"level":30,"time":"2025-01-17T20:21:41.753Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newContext"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10682:24)
+    at PlaywrightServer.waitForPageLoadState (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10719:54)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:41.781Z","pid":6588,"hostname":"fv-az675-797","msg":"Changed active context"}
+{"level":30,"time":"2025-01-17T20:21:41.781Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-17T20:21:41.785Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2025-01-17T20:21:41.785Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method WaitForPageLoadState"}
+{"level":30,"time":"2025-01-17T20:21:41.824Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8712:11)
+    at takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8756:3)
+    at PlaywrightServer.takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:34)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:41.824Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:41.852Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-17T20:21:44.709Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:44.738Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:44.738Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:44.741Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:44.741Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:44.746Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:45.301Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-17T20:21:45.302Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:45.301Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-17T20:21:45.306Z","pid":6588,"hostname":"fv-az675-797","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-17T20:21:45.306Z","pid":6588,"hostname":"fv-az675-797","msg":"Trace file: "}
+{"level":30,"time":"2025-01-17T20:21:45.306Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newContext"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10682:24)
+    at PlaywrightServer.waitForPageLoadState (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10719:54)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:45.371Z","pid":6588,"hostname":"fv-az675-797","msg":"Changed active context"}
+{"level":30,"time":"2025-01-17T20:21:45.371Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-17T20:21:45.375Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2025-01-17T20:21:45.375Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method WaitForPageLoadState"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8712:11)
+    at takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8756:3)
+    at PlaywrightServer.takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:34)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:45.439Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:45.440Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:45.484Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-17T20:21:48.257Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:48.284Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:48.284Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:48.288Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:48.288Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:48.292Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:48.835Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-17T20:21:48.835Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:48.835Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-17T20:21:48.840Z","pid":6588,"hostname":"fv-az675-797","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-17T20:21:48.840Z","pid":6588,"hostname":"fv-az675-797","msg":"Trace file: "}
+{"level":30,"time":"2025-01-17T20:21:48.840Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newContext"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10682:24)
+    at PlaywrightServer.waitForPageLoadState (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10719:54)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:48.865Z","pid":6588,"hostname":"fv-az675-797","msg":"Changed active context"}
+{"level":30,"time":"2025-01-17T20:21:48.865Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-17T20:21:48.869Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2025-01-17T20:21:48.869Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method WaitForPageLoadState"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8712:11)
+    at takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8756:3)
+    at PlaywrightServer.takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:34)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:48.923Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:48.923Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:48.951Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-17T20:21:51.797Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:51.825Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:51.825Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:51.828Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:51.828Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:51.832Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:52.373Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding browser to stack: firefox, version: 125.0.1"}
+{"level":30,"time":"2025-01-17T20:21:52.374Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-01-17T20:21:52.373Z","pid":6588,"hostname":"fv-az675-797","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-01-17T20:21:52.378Z","pid":6588,"hostname":"fv-az675-797","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-01-17T20:21:52.378Z","pid":6588,"hostname":"fv-az675-797","msg":"Trace file: "}
+{"level":30,"time":"2025-01-17T20:21:52.378Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method newContext"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10682:24)
+    at PlaywrightServer.waitForPageLoadState (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10719:54)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:52.404Z","pid":6588,"hostname":"fv-az675-797","msg":"Changed active context"}
+{"level":30,"time":"2025-01-17T20:21:52.404Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method newContext"}
+{"level":30,"time":"2025-01-17T20:21:52.407Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2025-01-17T20:21:52.408Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method WaitForPageLoadState"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8712:11)
+    at takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:8756:3)
+    at PlaywrightServer.takeScreenshot (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10691:34)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:52.443Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:52.444Z","pid":6588,"hostname":"fv-az675-797","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-01-17T20:21:52.472Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-17T20:21:55.336Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:55.364Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10062:15)
+    at PlaywrightServer.getActiveBrowser (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10678:59)
+    at PlaywrightServer.setTimeout (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\index.js:10915:57)
+    at Object.onReceiveHalfClose (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1273:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:534:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:576:14)
+    at ServerHttp2Stream.<anonymous> (C:\hostedtoolcache\windows\Python\3.12.8\x64\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-01-17T20:21:55.364Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:55.391Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:55.391Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-01-17T20:21:55.424Z","pid":6588,"hostname":"fv-az675-797","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-01-17T20:21:55.425Z","pid":6588,"hostname":"fv-az675-797","msg":"End of node method closeAllBrowsers"}
