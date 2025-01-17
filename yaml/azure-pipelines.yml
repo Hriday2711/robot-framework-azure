@@ -114,3 +114,4 @@ steps:
       git push -u origin main -f
 
     displayName: "Pushing Azure Results to GitHub Repo"
+    condition: always()
