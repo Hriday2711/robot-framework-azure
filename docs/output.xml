@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.8 on win32)" generated="2025-01-17T20:21:35.165222" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.8 on win32)" generated="2025-01-17T20:26:41.849217" rpa="false" schemaversion="5">
 <suite id="s1" name="Magento Home Page CI Test execution" source="D:\a\1\s\Tests">
 <suite id="s1-s1" name="HomePage" source="D:\a\1\s\Tests\HomePage.robot">
 <test id="s1-s1-t1" name="TC01 - Verify Page Title of Home Page" line="13">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="Set Browser Timeout" owner="Browser">
-<arg>scope=Global</arg>
-<arg>timeout=30secs</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-01-17T20:21:36.607963" elapsed="0.235883"/>
-</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:21:36.843846" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\70d08920-fa26-43d0-9b0f-3d56c2ffd928"}</msg>
-<msg time="2025-01-17T20:21:37.861005" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\70d08920-fa26-43d0-9b0f-3d56c2ffd928"}</msg>
+<msg time="2025-01-17T20:26:43.599739" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\841042ca-d793-4e03-9185-262e6bc6b303"}</msg>
+<msg time="2025-01-17T20:26:44.922894" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\841042ca-d793-4e03-9185-262e6bc6b303"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:36.843846" elapsed="1.017159"/>
+<status status="PASS" start="2025-01-17T20:26:43.599739" elapsed="1.323155"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:21:37.861005" level="INFO">{
+<msg time="2025-01-17T20:26:44.922894" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -34,82 +26,85 @@
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   }
 }</msg>
-<msg time="2025-01-17T20:21:37.892465" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:21:37.892465" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-01-17T20:26:45.580119" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:26:45.580119" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:37.861005" elapsed="0.031460"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-01-17T20:21:37.892465" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
-<msg time="2025-01-17T20:21:37.939357" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:21:37.939357" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:21:37.939357" level="FAIL">Error: No page open.</msg>
-<arg>state=domcontentloaded</arg>
-<arg>timeout=30secs</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="FAIL" start="2025-01-17T20:21:37.892465" elapsed="0.298333">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:26:44.922894" elapsed="0.657225"/>
 </kw>
 <kw name="New Page" owner="Browser">
+<msg time="2025-01-17T20:27:00.751207" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:27:00.751207" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:27:00.751207" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2025-01-17T20:21:38.190798" elapsed="0.000000"/>
+<status status="FAIL" start="2025-01-17T20:26:45.580119" elapsed="15.245135">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:21:36.606919" elapsed="1.583879">Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:26:43.599739" elapsed="17.225515">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:21:36.606396" elapsed="1.584402">Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:26:43.599739" elapsed="17.226025">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:21:41.174133" level="INFO">Closed all browsers</msg>
+<msg time="2025-01-17T20:27:02.100367" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:21:38.190798" elapsed="2.983335"/>
+<status status="PASS" start="2025-01-17T20:27:00.826347" elapsed="1.274545"/>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
 <tag>MEC-1</tag>
-<status status="FAIL" start="2025-01-17T20:21:36.602162" elapsed="4.571971">Setup failed:
-Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:26:43.599739" elapsed="18.501153">Setup failed:
+TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </test>
 <test id="s1-s1-t2" name="TC02 - Select Brand Logo Icon on Home Page" line="19">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="Set Browser Timeout" owner="Browser">
-<arg>scope=Global</arg>
-<arg>timeout=30secs</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-01-17T20:21:41.222483" elapsed="0.000550"/>
-</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:21:41.223541" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\c939a1a2-1cc9-468a-9cfb-ec81ace2260c"}</msg>
-<msg time="2025-01-17T20:21:41.755918" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\c939a1a2-1cc9-468a-9cfb-ec81ace2260c"}</msg>
+<msg time="2025-01-17T20:27:02.136737" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\a8b1428c-730d-4644-bbd5-34b2c6473f3d"}</msg>
+<msg time="2025-01-17T20:27:02.829690" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\a8b1428c-730d-4644-bbd5-34b2c6473f3d"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:41.223541" elapsed="0.532377"/>
+<status status="PASS" start="2025-01-17T20:27:02.136737" elapsed="0.692953"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:21:41.755918" level="INFO">{
+<msg time="2025-01-17T20:27:02.829690" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -119,82 +114,85 @@ Error: No page open.</status>
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   }
 }</msg>
-<msg time="2025-01-17T20:21:41.787551" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:21:41.787551" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-01-17T20:27:02.892188" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:27:02.892188" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:41.755918" elapsed="0.031633"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-01-17T20:21:41.787551" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
-<msg time="2025-01-17T20:21:41.850070" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:21:41.850070" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:21:41.850070" level="FAIL">Error: No page open.</msg>
-<arg>state=domcontentloaded</arg>
-<arg>timeout=30secs</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="FAIL" start="2025-01-17T20:21:41.787551" elapsed="0.062519">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:02.829690" elapsed="0.062498"/>
 </kw>
 <kw name="New Page" owner="Browser">
+<msg time="2025-01-17T20:27:14.259881" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:27:14.260879" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:27:14.260879" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2025-01-17T20:21:41.850070" elapsed="0.000000"/>
+<status status="FAIL" start="2025-01-17T20:27:02.892188" elapsed="11.369695">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:21:41.221862" elapsed="0.628208">Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:27:02.136737" elapsed="12.126143">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:21:41.221862" elapsed="0.628208">Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:27:02.136737" elapsed="12.126143">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:21:44.704394" level="INFO">Closed all browsers</msg>
+<msg time="2025-01-17T20:27:16.004744" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:21:41.850070" elapsed="2.866821"/>
+<status status="PASS" start="2025-01-17T20:27:14.263881" elapsed="1.741371"/>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
 <tag>MEC-2</tag>
-<status status="FAIL" start="2025-01-17T20:21:41.205480" elapsed="3.511411">Setup failed:
-Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:27:02.136737" elapsed="13.868524">Setup failed:
+TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </test>
 <test id="s1-s1-t3" name="TC03 - Verify Navigation to Login Page" line="27">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="Set Browser Timeout" owner="Browser">
-<arg>scope=Global</arg>
-<arg>timeout=30secs</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-01-17T20:21:44.746497" elapsed="0.000000"/>
-</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:21:44.746497" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\0cb931d1-52ae-430f-ac80-6027cdffab51"}</msg>
-<msg time="2025-01-17T20:21:45.304049" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\0cb931d1-52ae-430f-ac80-6027cdffab51"}</msg>
+<msg time="2025-01-17T20:27:16.041720" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\231ea6aa-9833-4ff6-83a3-241ccf153aab"}</msg>
+<msg time="2025-01-17T20:27:16.750519" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\231ea6aa-9833-4ff6-83a3-241ccf153aab"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:44.746497" elapsed="0.557552"/>
+<status status="PASS" start="2025-01-17T20:27:16.041720" elapsed="0.708799"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:21:45.304049" level="INFO">{
+<msg time="2025-01-17T20:27:16.750519" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -204,82 +202,123 @@ Error: No page open.</status>
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   }
 }</msg>
-<msg time="2025-01-17T20:21:45.367132" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:21:45.367132" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-01-17T20:27:16.797869" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:27:16.797869" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:45.304049" elapsed="0.063083"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-01-17T20:21:45.367132" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
-<msg time="2025-01-17T20:21:45.476528" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:21:45.476528" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:21:45.476528" level="FAIL">Error: No page open.</msg>
-<arg>state=domcontentloaded</arg>
-<arg>timeout=30secs</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="FAIL" start="2025-01-17T20:21:45.367132" elapsed="0.109396">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:16.750519" elapsed="0.047350"/>
 </kw>
 <kw name="New Page" owner="Browser">
+<msg time="2025-01-17T20:27:20.983846" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2025-01-17T20:21:45.476528" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-17T20:27:16.797869" elapsed="4.186977"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:21:44.746497" elapsed="0.730031">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:16.041720" elapsed="4.943126"/>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:21:44.746497" elapsed="0.730031">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:16.041720" elapsed="4.943126"/>
+</kw>
+<kw name="Select Sign In link on Home Page" owner="HomePage_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-17T20:27:20.993845" level="INFO">Clicking on Sign In link on Magento Home Page</msg>
+<arg>Clicking on Sign In link on Magento Home Page</arg>
+<arg>console=true</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-17T20:27:20.993845" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-17T20:27:20.995846" level="INFO">Clicks the element 'xpath=(//li[@class='authorization-link']//a)[1]'.</msg>
+<arg>${sign_In_link_locator_homePage}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-17T20:27:20.994845" elapsed="1.316187"/>
+</kw>
+<doc>Click on Sign In link on Magento Home Page and verify user navigation to Sign In Page</doc>
+<status status="PASS" start="2025-01-17T20:27:20.992844" elapsed="1.318188"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-01-17T20:27:22.313029" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2025-01-17T20:27:22.513704" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>state=domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2025-01-17T20:27:22.312030" elapsed="0.202674"/>
+</kw>
+<kw name="Verify Page Title" owner="BaseFile">
+<kw name="Get Title" owner="Browser">
+<msg time="2025-01-17T20:27:22.531706" level="INFO">Title: 'Customer Login'</msg>
+<msg time="2025-01-17T20:27:22.531706" level="INFO">${actual_title} = Customer Login</msg>
+<var>${actual_title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-17T20:27:22.515703" elapsed="0.016003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-17T20:27:22.532705" level="INFO">Current page title is: Customer Login</msg>
+<arg>Current page title is: ${actual_title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-17T20:27:22.531706" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>${expected_title}</arg>
+<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-17T20:27:22.532705" elapsed="0.001000"/>
+</kw>
+<arg>${Login_Page_Title}</arg>
+<doc>Keyword to Verify the Page Title with the expected title</doc>
+<status status="PASS" start="2025-01-17T20:27:22.514704" elapsed="0.019001"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-17T20:27:22.660162" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-17T20:27:22.534704" elapsed="0.126461"/>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:21:48.255384" level="INFO">Closed all browsers</msg>
+<msg time="2025-01-17T20:27:24.344153" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:21:45.476528" elapsed="2.778856"/>
+<status status="PASS" start="2025-01-17T20:27:22.662162" elapsed="1.681991"/>
 </kw>
 <doc>Select Sign In link on Home Page &amp; verify user navigation to Login page</doc>
 <tag>HomePage</tag>
 <tag>MEC-3</tag>
-<status status="FAIL" start="2025-01-17T20:21:44.735977" elapsed="3.519407">Setup failed:
-Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:16.038711" elapsed="8.305959"/>
 </test>
 <test id="s1-s1-t4" name="TC04 - Verify Navigation to 'Create an Account' Page" line="35">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="Set Browser Timeout" owner="Browser">
-<arg>scope=Global</arg>
-<arg>timeout=30secs</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-01-17T20:21:48.285040" elapsed="0.000000"/>
-</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:21:48.285040" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\c9cb8e7b-5dcb-423e-a6bb-99958c87b94c"}</msg>
-<msg time="2025-01-17T20:21:48.834501" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\c9cb8e7b-5dcb-423e-a6bb-99958c87b94c"}</msg>
+<msg time="2025-01-17T20:27:24.384798" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\336c6f92-a4f1-42ce-9059-acf3b98c3cf6"}</msg>
+<msg time="2025-01-17T20:27:25.138384" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\336c6f92-a4f1-42ce-9059-acf3b98c3cf6"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:48.285040" elapsed="0.549461"/>
+<status status="PASS" start="2025-01-17T20:27:24.384798" elapsed="0.753586"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:21:48.834501" level="INFO">{
+<msg time="2025-01-17T20:27:25.138384" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -289,82 +328,85 @@ Error: No page open.</status>
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   }
 }</msg>
-<msg time="2025-01-17T20:21:48.868040" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:21:48.868040" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-01-17T20:27:25.217072" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:27:25.217072" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:48.834501" elapsed="0.033539"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-01-17T20:21:48.868040" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
-<msg time="2025-01-17T20:21:48.944570" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:21:48.944570" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:21:48.944570" level="FAIL">Error: No page open.</msg>
-<arg>state=domcontentloaded</arg>
-<arg>timeout=30secs</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="FAIL" start="2025-01-17T20:21:48.868040" elapsed="0.076530">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:25.138384" elapsed="0.078688"/>
 </kw>
 <kw name="New Page" owner="Browser">
+<msg time="2025-01-17T20:27:37.154182" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-01-17T20:27:37.154182" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
+<msg time="2025-01-17T20:27:37.154182" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2025-01-17T20:21:48.944570" elapsed="0.000000"/>
+<status status="FAIL" start="2025-01-17T20:27:25.217072" elapsed="11.939113">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:21:48.285040" elapsed="0.659530">Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:27:24.384798" elapsed="12.771387">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:21:48.285040" elapsed="0.659530">Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:27:24.384798" elapsed="12.771387">TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:21:51.793179" level="INFO">Closed all browsers</msg>
+<msg time="2025-01-17T20:27:39.338503" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:21:48.944570" elapsed="2.848609"/>
+<status status="PASS" start="2025-01-17T20:27:37.157185" elapsed="2.181847"/>
 </kw>
 <doc>Select 'Create an Account' link on Home Page &amp; verify user navigation to 'Create an Account' page</doc>
 <tag>HomePage</tag>
 <tag>MEC-4</tag>
-<status status="FAIL" start="2025-01-17T20:21:48.285040" elapsed="3.508139">Setup failed:
-Error: No page open.</status>
+<status status="FAIL" start="2025-01-17T20:27:24.366262" elapsed="14.972770">Setup failed:
+TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+
+Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
 </test>
 <test id="s1-s1-t5" name="TC05 - Verify Navigation to 'What's New' Page" line="43">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
-<kw name="Set Browser Timeout" owner="Browser">
-<arg>scope=Global</arg>
-<arg>timeout=30secs</arg>
-<tag>Config</tag>
-<tag>Setter</tag>
-<doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-01-17T20:21:51.823231" elapsed="0.000000"/>
-</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:21:51.823231" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\2bc145ff-e1e4-414d-bc10-a0fb76c4e79b"}</msg>
-<msg time="2025-01-17T20:21:52.377444" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\2bc145ff-e1e4-414d-bc10-a0fb76c4e79b"}</msg>
+<msg time="2025-01-17T20:27:39.403986" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\22a26f39-e84a-4119-a307-1b4337b69ff9"}</msg>
+<msg time="2025-01-17T20:27:40.171200" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\22a26f39-e84a-4119-a307-1b4337b69ff9"}</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:51.823231" elapsed="0.554213"/>
+<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="0.767214"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:21:52.377444" level="INFO">{
+<msg time="2025-01-17T20:27:40.171200" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -374,78 +416,127 @@ Error: No page open.</status>
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   }
 }</msg>
-<msg time="2025-01-17T20:21:52.409298" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:21:52.409298" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-01-17T20:27:40.265664" level="INFO">Successfully created context. </msg>
+<msg time="2025-01-17T20:27:40.265664" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:21:52.377444" elapsed="0.031854"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-01-17T20:21:52.409298" level="INFO">Waiting page load to state to receive domcontentloaded in 30000.0</msg>
-<msg time="2025-01-17T20:21:52.471772" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:21:52.471772" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:21:52.471772" level="FAIL">Error: No page open.</msg>
-<arg>state=domcontentloaded</arg>
-<arg>timeout=30secs</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="FAIL" start="2025-01-17T20:21:52.409298" elapsed="0.062474">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:40.171200" elapsed="0.094464"/>
 </kw>
 <kw name="New Page" owner="Browser">
+<msg time="2025-01-17T20:27:45.811279" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="NOT RUN" start="2025-01-17T20:21:52.471772" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-17T20:27:40.265664" elapsed="5.545615"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:21:51.823231" elapsed="0.648541">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="6.407293"/>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:21:51.823231" elapsed="0.648541">Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="6.407293"/>
+</kw>
+<kw name="Select 'Whats New' link on Home Page" owner="HomePage_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-17T20:27:45.813276" level="INFO">Selecting the 'Whats New' link on Home Page</msg>
+<arg>Selecting the 'Whats New' link on Home Page</arg>
+<arg>console=true</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-17T20:27:45.813276" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-01-17T20:27:45.814280" level="INFO">Clicks the element 'xpath=//a//span[text()="What's New"]'.</msg>
+<arg>${whats_new_link_locator_homePage}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-01-17T20:27:45.813276" elapsed="1.352119"/>
+</kw>
+<doc>Select 'Whats New' link on Home Page</doc>
+<status status="PASS" start="2025-01-17T20:27:45.812279" elapsed="1.354115"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-01-17T20:27:47.169394" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2025-01-17T20:27:47.429290" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>state=domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2025-01-17T20:27:47.166394" elapsed="0.262896"/>
+</kw>
+<kw name="Verify Page Title" owner="BaseFile">
+<kw name="Get Title" owner="Browser">
+<msg time="2025-01-17T20:27:47.448892" level="INFO">Title: "What's New"</msg>
+<msg time="2025-01-17T20:27:47.449890" level="INFO">${actual_title} = What's New</msg>
+<var>${actual_title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-17T20:27:47.431290" elapsed="0.018600"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-17T20:27:47.449890" level="INFO">Current page title is: What's New</msg>
+<arg>Current page title is: ${actual_title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-17T20:27:47.449890" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>${expected_title}</arg>
+<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-17T20:27:47.450892" elapsed="0.000000"/>
+</kw>
+<arg>${Whats_New_Page_Title}</arg>
+<doc>Keyword to Verify the Page Title with the expected title</doc>
+<status status="PASS" start="2025-01-17T20:27:47.430290" elapsed="0.020602"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-01-17T20:27:47.693163" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-01-17T20:27:47.450892" elapsed="0.242271"/>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:21:55.342929" level="INFO">Closed all browsers</msg>
+<msg time="2025-01-17T20:27:49.587986" level="INFO">Closed all browsers</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:21:52.471772" elapsed="2.871663"/>
+<status status="PASS" start="2025-01-17T20:27:47.694166" elapsed="1.894330"/>
 </kw>
 <doc>Select 'Whats New' link on Home Page &amp; Verify user navigation for 'Whats New' page</doc>
 <tag>HomePage</tag>
 <tag>MEC-5</tag>
-<status status="FAIL" start="2025-01-17T20:21:51.823231" elapsed="3.520347">Setup failed:
-Error: No page open.</status>
+<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="10.184510"/>
 </test>
-<status status="FAIL" start="2025-01-17T20:21:35.197945" elapsed="20.167894"/>
+<status status="FAIL" start="2025-01-17T20:26:41.880891" elapsed="67.737420"/>
 </suite>
-<status status="FAIL" start="2025-01-17T20:21:35.167281" elapsed="20.228066"/>
+<status status="FAIL" start="2025-01-17T20:26:41.849217" elapsed="67.816521"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="5" skip="0">All Tests</stat>
+<stat pass="2" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="5" skip="0">HomePage</stat>
+<stat pass="2" fail="3" skip="0">HomePage</stat>
 <stat pass="0" fail="1" skip="0">MEC-1</stat>
 <stat pass="0" fail="1" skip="0">MEC-2</stat>
-<stat pass="0" fail="1" skip="0">MEC-3</stat>
+<stat pass="1" fail="0" skip="0">MEC-3</stat>
 <stat pass="0" fail="1" skip="0">MEC-4</stat>
-<stat pass="0" fail="1" skip="0">MEC-5</stat>
+<stat pass="1" fail="0" skip="0">MEC-5</stat>
 </tag>
 <suite>
-<stat pass="0" fail="5" skip="0" id="s1" name="Magento Home Page CI Test execution">Magento Home Page CI Test execution</stat>
-<stat pass="0" fail="5" skip="0" id="s1-s1" name="HomePage">Magento Home Page CI Test execution.HomePage</stat>
+<stat pass="2" fail="3" skip="0" id="s1" name="Magento Home Page CI Test execution">Magento Home Page CI Test execution</stat>
+<stat pass="2" fail="3" skip="0" id="s1-s1" name="HomePage">Magento Home Page CI Test execution.HomePage</stat>
 </suite>
 </statistics>
 <errors>
