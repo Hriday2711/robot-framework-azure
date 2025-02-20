@@ -35,7 +35,7 @@ steps:
 
   # Task to Install and Use the Latest Python version on the Agent Machine
   - task: UsePythonVersion@0
-    displayName: "Use Python 3.x"
+    displayName: "Use Python 3.12.1"
     condition: always()
 
   # Task to Install the Robot framework libraries and dependencies on the Agent machine
