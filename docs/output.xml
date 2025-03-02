@@ -1,544 +1,611 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.8 on win32)" generated="2025-01-17T20:26:41.849217" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-02T22:08:18.004517" rpa="false" schemaversion="5">
 <suite id="s1" name="Magento Home Page CI Test execution" source="D:\a\1\s\Tests">
 <suite id="s1-s1" name="HomePage" source="D:\a\1\s\Tests\HomePage.robot">
 <test id="s1-s1-t1" name="TC01 - Verify Page Title of Home Page" line="13">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:26:43.599739" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\841042ca-d793-4e03-9185-262e6bc6b303"}</msg>
-<msg time="2025-01-17T20:26:44.922894" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\841042ca-d793-4e03-9185-262e6bc6b303"}</msg>
+<msg time="2025-03-02T22:08:18.320277" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\7db3b536-790c-4b30-b50c-f821dfcac226"}</msg>
+<msg time="2025-03-02T22:08:21.510405" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:26:43.599739" elapsed="1.323155"/>
+<status status="FAIL" start="2025-03-02T22:08:18.318796" elapsed="3.196169">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:26:44.922894" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  }
-}</msg>
-<msg time="2025-01-17T20:26:45.580119" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:26:45.580119" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:26:44.922894" elapsed="0.657225"/>
+<status status="NOT RUN" start="2025-03-02T22:08:21.515288" elapsed="0.000174"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-01-17T20:27:00.751207" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:27:00.751207" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:27:00.751207" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="FAIL" start="2025-01-17T20:26:45.580119" elapsed="15.245135">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="NOT RUN" start="2025-03-02T22:08:21.515622" elapsed="0.000121"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:26:43.599739" elapsed="17.225515">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="FAIL" start="2025-03-02T22:08:18.317488" elapsed="3.198469">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:26:43.599739" elapsed="17.226025">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="FAIL" start="2025-03-02T22:08:18.316921" elapsed="3.199182">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:27:02.100367" level="INFO">Closed all browsers</msg>
+<msg time="2025-03-02T22:08:21.544984" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:27:00.826347" elapsed="1.274545"/>
+<status status="FAIL" start="2025-03-02T22:08:21.516396" elapsed="0.030463">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
 <tag>MEC-1</tag>
-<status status="FAIL" start="2025-01-17T20:26:43.599739" elapsed="18.501153">Setup failed:
-TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+<status status="FAIL" start="2025-03-02T22:08:18.315637" elapsed="3.231453">Setup failed:
 
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper
+
+Also teardown failed:
+
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </test>
 <test id="s1-s1-t2" name="TC02 - Select Brand Logo Icon on Home Page" line="19">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:27:02.136737" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\a8b1428c-730d-4644-bbd5-34b2c6473f3d"}</msg>
-<msg time="2025-01-17T20:27:02.829690" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\a8b1428c-730d-4644-bbd5-34b2c6473f3d"}</msg>
+<msg time="2025-03-02T22:08:21.581246" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\914a658a-c8bc-45ac-ba14-cbffa41b2138"}</msg>
+<msg time="2025-03-02T22:08:21.614430" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:02.136737" elapsed="0.692953"/>
+<status status="FAIL" start="2025-03-02T22:08:21.580246" elapsed="0.036693">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:27:02.829690" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  }
-}</msg>
-<msg time="2025-01-17T20:27:02.892188" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:27:02.892188" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:02.829690" elapsed="0.062498"/>
+<status status="NOT RUN" start="2025-03-02T22:08:21.617327" elapsed="0.000187"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-01-17T20:27:14.259881" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:27:14.260879" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:27:14.260879" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="FAIL" start="2025-01-17T20:27:02.892188" elapsed="11.369695">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="NOT RUN" start="2025-03-02T22:08:21.617691" elapsed="0.000127"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:27:02.136737" elapsed="12.126143">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="FAIL" start="2025-03-02T22:08:21.579752" elapsed="0.038241">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:27:02.136737" elapsed="12.126143">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="FAIL" start="2025-03-02T22:08:21.579216" elapsed="0.038922">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:27:16.004744" level="INFO">Closed all browsers</msg>
+<msg time="2025-03-02T22:08:21.647280" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:27:14.263881" elapsed="1.741371"/>
+<status status="FAIL" start="2025-03-02T22:08:21.618462" elapsed="0.030745">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
 <tag>MEC-2</tag>
-<status status="FAIL" start="2025-01-17T20:27:02.136737" elapsed="13.868524">Setup failed:
-TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+<status status="FAIL" start="2025-03-02T22:08:21.578209" elapsed="0.071151">Setup failed:
 
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper
+
+Also teardown failed:
+
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </test>
 <test id="s1-s1-t3" name="TC03 - Verify Navigation to Login Page" line="27">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:27:16.041720" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\231ea6aa-9833-4ff6-83a3-241ccf153aab"}</msg>
-<msg time="2025-01-17T20:27:16.750519" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\231ea6aa-9833-4ff6-83a3-241ccf153aab"}</msg>
+<msg time="2025-03-02T22:08:21.680247" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\b8a4f440-e6d0-4811-9773-f9855990b587"}</msg>
+<msg time="2025-03-02T22:08:21.707805" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:16.041720" elapsed="0.708799"/>
+<status status="FAIL" start="2025-03-02T22:08:21.679258" elapsed="0.031127">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:27:16.750519" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  }
-}</msg>
-<msg time="2025-01-17T20:27:16.797869" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:27:16.797869" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:16.750519" elapsed="0.047350"/>
+<status status="NOT RUN" start="2025-03-02T22:08:21.710775" elapsed="0.000150"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-01-17T20:27:20.983846" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-01-17T20:27:16.797869" elapsed="4.186977"/>
+<status status="NOT RUN" start="2025-03-02T22:08:21.711100" elapsed="0.000125"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-01-17T20:27:16.041720" elapsed="4.943126"/>
+<status status="FAIL" start="2025-03-02T22:08:21.678737" elapsed="0.032691">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-01-17T20:27:16.041720" elapsed="4.943126"/>
-</kw>
-<kw name="Select Sign In link on Home Page" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-01-17T20:27:20.993845" level="INFO">Clicking on Sign In link on Magento Home Page</msg>
-<arg>Clicking on Sign In link on Magento Home Page</arg>
-<arg>console=true</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-17T20:27:20.993845" elapsed="0.000000"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-01-17T20:27:20.995846" level="INFO">Clicks the element 'xpath=(//li[@class='authorization-link']//a)[1]'.</msg>
-<arg>${sign_In_link_locator_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-01-17T20:27:20.994845" elapsed="1.316187"/>
-</kw>
-<doc>Click on Sign In link on Magento Home Page and verify user navigation to Sign In Page</doc>
-<status status="PASS" start="2025-01-17T20:27:20.992844" elapsed="1.318188"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-01-17T20:27:22.313029" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-01-17T20:27:22.513704" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>state=domcontentloaded</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-01-17T20:27:22.312030" elapsed="0.202674"/>
-</kw>
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-01-17T20:27:22.531706" level="INFO">Title: 'Customer Login'</msg>
-<msg time="2025-01-17T20:27:22.531706" level="INFO">${actual_title} = Customer Login</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-01-17T20:27:22.515703" elapsed="0.016003"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-01-17T20:27:22.532705" level="INFO">Current page title is: Customer Login</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-17T20:27:22.531706" elapsed="0.000999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-01-17T20:27:22.532705" elapsed="0.001000"/>
-</kw>
-<arg>${Login_Page_Title}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-01-17T20:27:22.514704" elapsed="0.019001"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2025-01-17T20:27:22.660162" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-01-17T20:27:22.534704" elapsed="0.126461"/>
+<status status="FAIL" start="2025-03-02T22:08:21.678150" elapsed="0.033422">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:27:24.344153" level="INFO">Closed all browsers</msg>
+<msg time="2025-03-02T22:08:21.745432" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:27:22.662162" elapsed="1.681991"/>
+<status status="FAIL" start="2025-03-02T22:08:21.711926" elapsed="0.035631">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Select Sign In link on Home Page &amp; verify user navigation to Login page</doc>
 <tag>HomePage</tag>
 <tag>MEC-3</tag>
-<status status="PASS" start="2025-01-17T20:27:16.038711" elapsed="8.305959"/>
+<status status="FAIL" start="2025-03-02T22:08:21.677188" elapsed="0.070608">Setup failed:
+
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper
+
+Also teardown failed:
+
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </test>
 <test id="s1-s1-t4" name="TC04 - Verify Navigation to 'Create an Account' Page" line="35">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:27:24.384798" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\336c6f92-a4f1-42ce-9059-acf3b98c3cf6"}</msg>
-<msg time="2025-01-17T20:27:25.138384" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\336c6f92-a4f1-42ce-9059-acf3b98c3cf6"}</msg>
+<msg time="2025-03-02T22:08:21.780166" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\61501a70-a3c9-41f8-8e64-cb0b8201f0d8"}</msg>
+<msg time="2025-03-02T22:08:21.805188" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:24.384798" elapsed="0.753586"/>
+<status status="FAIL" start="2025-03-02T22:08:21.779181" elapsed="0.027550">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:27:25.138384" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  }
-}</msg>
-<msg time="2025-01-17T20:27:25.217072" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:27:25.217072" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:25.138384" elapsed="0.078688"/>
+<status status="NOT RUN" start="2025-03-02T22:08:21.807024" elapsed="0.000304"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-01-17T20:27:37.154182" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-01-17T20:27:37.154182" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-01-17T20:27:37.154182" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="FAIL" start="2025-01-17T20:27:25.217072" elapsed="11.939113">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="NOT RUN" start="2025-03-02T22:08:21.807519" elapsed="0.000172"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-01-17T20:27:24.384798" elapsed="12.771387">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="FAIL" start="2025-03-02T22:08:21.778411" elapsed="0.029425">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-01-17T20:27:24.384798" elapsed="12.771387">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
-
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+<status status="FAIL" start="2025-03-02T22:08:21.777752" elapsed="0.030210">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:27:39.338503" level="INFO">Closed all browsers</msg>
+<msg time="2025-03-02T22:08:21.836740" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:27:37.157185" elapsed="2.181847"/>
+<status status="FAIL" start="2025-03-02T22:08:21.808270" elapsed="0.031666">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Select 'Create an Account' link on Home Page &amp; verify user navigation to 'Create an Account' page</doc>
 <tag>HomePage</tag>
 <tag>MEC-4</tag>
-<status status="FAIL" start="2025-01-17T20:27:24.366262" elapsed="14.972770">Setup failed:
-TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  [2m- navigating to "https://magento.softwaretestingboard.com/", waiting until "load"[22m
+<status status="FAIL" start="2025-03-02T22:08:21.776954" elapsed="0.063157">Setup failed:
 
-Tip: Use "Set Browser Timeout" for increasing the timeout.</status>
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper
+
+Also teardown failed:
+
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </test>
 <test id="s1-s1-t5" name="TC05 - Verify Navigation to 'What's New' Page" line="43">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-01-17T20:27:39.403986" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\22a26f39-e84a-4119-a307-1b4337b69ff9"}</msg>
-<msg time="2025-01-17T20:27:40.171200" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\22a26f39-e84a-4119-a307-1b4337b69ff9"}</msg>
+<msg time="2025-03-02T22:08:21.874877" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\8a624038-7f70-4111-abae-6ea806ab010d"}</msg>
+<msg time="2025-03-02T22:08:21.900438" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="0.767214"/>
+<status status="FAIL" start="2025-03-02T22:08:21.873322" elapsed="0.028809">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-01-17T20:27:40.171200" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  }
-}</msg>
-<msg time="2025-01-17T20:27:40.265664" level="INFO">Successfully created context. </msg>
-<msg time="2025-01-17T20:27:40.265664" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-01-17T20:27:40.171200" elapsed="0.094464"/>
+<status status="NOT RUN" start="2025-03-02T22:08:21.902355" elapsed="0.000149"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-01-17T20:27:45.811279" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-01-17T20:27:40.265664" elapsed="5.545615"/>
+<status status="NOT RUN" start="2025-03-02T22:08:21.902666" elapsed="0.000121"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="6.407293"/>
+<status status="FAIL" start="2025-03-02T22:08:21.872724" elapsed="0.030221">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="6.407293"/>
-</kw>
-<kw name="Select 'Whats New' link on Home Page" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-01-17T20:27:45.813276" level="INFO">Selecting the 'Whats New' link on Home Page</msg>
-<arg>Selecting the 'Whats New' link on Home Page</arg>
-<arg>console=true</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-17T20:27:45.813276" elapsed="0.000000"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-01-17T20:27:45.814280" level="INFO">Clicks the element 'xpath=//a//span[text()="What's New"]'.</msg>
-<arg>${whats_new_link_locator_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-01-17T20:27:45.813276" elapsed="1.352119"/>
-</kw>
-<doc>Select 'Whats New' link on Home Page</doc>
-<status status="PASS" start="2025-01-17T20:27:45.812279" elapsed="1.354115"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-01-17T20:27:47.169394" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-01-17T20:27:47.429290" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>state=domcontentloaded</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-01-17T20:27:47.166394" elapsed="0.262896"/>
-</kw>
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-01-17T20:27:47.448892" level="INFO">Title: "What's New"</msg>
-<msg time="2025-01-17T20:27:47.449890" level="INFO">${actual_title} = What's New</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-01-17T20:27:47.431290" elapsed="0.018600"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-01-17T20:27:47.449890" level="INFO">Current page title is: What's New</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-17T20:27:47.449890" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-01-17T20:27:47.450892" elapsed="0.000000"/>
-</kw>
-<arg>${Whats_New_Page_Title}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-01-17T20:27:47.430290" elapsed="0.020602"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2025-01-17T20:27:47.693163" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-01-17T20:27:47.450892" elapsed="0.242271"/>
+<status status="FAIL" start="2025-03-02T22:08:21.872190" elapsed="0.031037">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-01-17T20:27:49.587986" level="INFO">Closed all browsers</msg>
+<msg time="2025-03-02T22:08:21.929404" level="FAIL">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-17T20:27:47.694166" elapsed="1.894330"/>
+<status status="FAIL" start="2025-03-02T22:08:21.903523" elapsed="0.027879">
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </kw>
 <doc>Select 'Whats New' link on Home Page &amp; Verify user navigation for 'Whats New' page</doc>
 <tag>HomePage</tag>
 <tag>MEC-5</tag>
-<status status="PASS" start="2025-01-17T20:27:39.403986" elapsed="10.184510"/>
+<status status="FAIL" start="2025-03-02T22:08:21.871421" elapsed="0.060124">Setup failed:
+
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper
+
+Also teardown failed:
+
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</status>
 </test>
-<status status="FAIL" start="2025-01-17T20:26:41.880891" elapsed="67.737420"/>
+<status status="FAIL" start="2025-03-02T22:08:18.047400" elapsed="3.915862"/>
 </suite>
-<status status="FAIL" start="2025-01-17T20:26:41.849217" elapsed="67.816521"/>
+<status status="FAIL" start="2025-03-02T22:08:18.006732" elapsed="3.984784"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="3" skip="0">All Tests</stat>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="3" skip="0">HomePage</stat>
+<stat pass="0" fail="5" skip="0">HomePage</stat>
 <stat pass="0" fail="1" skip="0">MEC-1</stat>
 <stat pass="0" fail="1" skip="0">MEC-2</stat>
-<stat pass="1" fail="0" skip="0">MEC-3</stat>
+<stat pass="0" fail="1" skip="0">MEC-3</stat>
 <stat pass="0" fail="1" skip="0">MEC-4</stat>
-<stat pass="1" fail="0" skip="0">MEC-5</stat>
+<stat pass="0" fail="1" skip="0">MEC-5</stat>
 </tag>
 <suite>
-<stat pass="2" fail="3" skip="0" id="s1" name="Magento Home Page CI Test execution">Magento Home Page CI Test execution</stat>
-<stat pass="2" fail="3" skip="0" id="s1-s1" name="HomePage">Magento Home Page CI Test execution.HomePage</stat>
+<stat name="Magento Home Page CI Test execution" id="s1" pass="0" fail="5" skip="0">Magento Home Page CI Test execution</stat>
+<stat name="HomePage" id="s1-s1" pass="0" fail="5" skip="0">Magento Home Page CI Test execution.HomePage</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-03-02T22:08:21.577059" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2025-03-02T22:08:21.676582" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2025-03-02T22:08:21.776213" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2025-03-02T22:08:21.870802" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2025-03-02T22:08:21.962022" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
+<msg time="2025-03-02T22:08:21.990707" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper</msg>
 </errors>
 </robot>
