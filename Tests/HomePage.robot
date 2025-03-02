@@ -54,5 +54,10 @@ MEC6 - Verify Navigation to 'Sale' Page
     [Tags]    HomePage
     Select 'Sale' link on Home Page
     Wait For Load State    state=domcontentloaded
-    Verify Page Title    ${Whats_New_Page_Title}
+    Verify Page Title    ${Sale_Page_Title}
     Take Screenshot
+
+MEC7 - Hover over Women Dropdown link and verify the list content is visible on Home Page
+    [Documentation]    Hover over the Woman's Dropdown link and verify the options in the dropdown list
+    [Tags]    HomePage
+    Hover over the Women Dropdown link on Home Page and verify if list is visible on UI
