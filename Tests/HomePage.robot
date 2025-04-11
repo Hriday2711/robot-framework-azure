@@ -1,5 +1,6 @@
 *** Settings ***
 Library    Browser
+Library    SSHLibrary
 Resource    ../Keywords/HomePage_Keywords.robot
 Test Setup    Launch the Magento E-Commerce HomePage
 Test Teardown    Close Browser    ALL

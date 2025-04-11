@@ -1,117 +1,145 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# # Starter pipeline
+# # Start with a minimal pipeline that you can customize to build and deploy your code.
+# # Add steps that build, run tests, deploy, and more:
+# # https://aka.ms/yaml
 
-trigger:
-  branches:
-    include:
-      - main
+# trigger:
+#   branches:
+#     include:
+#       - main
+
+# pool:
+#   vmImage: windows-latest
+
+# steps:
+#   # Task to Remove the Old CI Test Execution results from the Results folder in the GitHub Repository
+#   - powershell: |
+#       cd .
+#       git config --global user.email "hridaybhogayata4@gmail.com"
+#       git config --global user.name "Hriday2711"
+
+#       # Set or update the remote URL
+#       if (git remote | findstr origin) {
+#         git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+#       } else {
+#         git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+#       }
+#       # Check out or create the 'main' branch
+#        if (!(git branch --list main)) {
+#        git checkout -b main
+#        }
+#        git status
+#        git rm -r ./docs/**.html
+
+#     displayName: "Removing old Test Results from the GitHub Repository"
+
+#   # Task to Install and Use the Latest Python version on the Agent Machine
+#   - task: UsePythonVersion@0
+#     displayName: "Use Python 3.12.1"
+#     condition: always()
+
+#   # Task to Install the Robot framework libraries and dependencies on the Agent machine
+#   - script: |
+#       pip install -r Requirements.txt
+#       rfbrowser init
+#     displayName: "Install Robot Dependencies and Browser Library"
+#     continueOnError: true
+#     condition: always()
+
+#   # # Task to Install the Chrome Browser on Agent Machine
+#   # - script: |
+#   #     npm install @puppeteer/browsers@latest
+#   #     npx @puppeteer/browsers install chrome@121.0.6167.86
+#   #     echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
+
+#   #   displayName: "Install Chrome"
+
+#   # # Task to Install the Chrome Driver required for CI Test execution Run
+#   # - script: |
+#   #     npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
+#   #     echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
+#   #   displayName: "Install Chrome Driver"
+
+#   # Task to Run the Automation tests located in the Robot Framework
+#   - powershell: |
+#       # Run the initial Robot Framework tests
+#       robot --name "$(CI_TEST_EXECUTION_NAME)" --reporttitle "$(CI_REPORT_TITLE)" --logtitle "$(CI_LOGFILE_TITLE)" --variable BROWSER:"$(BROWSER)" --include "$(TEST_TAGS)" --outputdir docs Tests/
+#       exit 0
+#     displayName: "Run Robot Framework Tests"
+#     continueOnError: true
+#     condition: always()
+
+#   # Task to Generate the Robot-Metrics Test Report for the CI Test Execution Run
+#   - powershell: |
+#       # Generate the Robot-Metrics Azure CI Test Execution Report
+#       robotmetrics --inputpath ./docs --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results.html
+#       exit 0
+#     displayName: "Generate Robot-Metrics Azure CI Test Execution Report"
+#     continueOnError: true
+#     condition: always()
+
+#   # Task to Publish the Pipeline Artifact generated after the completion of Azure CI Test Execution Run
+#   - task: PublishPipelineArtifact@1
+#     displayName: "Publish Pipeline Artifact"
+#     inputs:
+#       targetPath: "./docs/Azure_CI_Test_Execution_Results.html"
+#       artifact: "Azure CI Test Execution Results"
+#       publishLocation: pipeline
+#     continueOnError: true
+#     condition: always()
+
+#   # Task to Upload the Latest Azure CI Test Execution Results to GitHub Repository
+#   - powershell: |
+#       cd .
+#       # git config --global user.email "hridaybhogayata4@gmail.com"
+#       # git config --global user.name "Hriday2711"
+
+#       # # Set or update the remote URL
+#       # if (git remote | findstr origin) {
+#       #   git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+#       # } else {
+#       #   git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
+#       # }
+
+#       # # Check out or create the 'main' branch
+#       # if (!(git branch --list main)) {
+#       # git checkout -b main
+#       # }
+
+#       git status
+#       git add ./docs/* -f
+#       git commit -m "Azure CI Test Results $(Build.BuildID) [skip ci]"
+
+#       # Pushing the update to GitHub Repository
+#       git push -u origin main -f
+
+#     displayName: "Pushing Azure Results to GitHub Repo"
+#     condition: always()
+
+trigger: none
+pr: none
 
 pool:
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
+
+variables:
+  PROJECT_PATH: "$(System.DefaultWorkingDirectory)"
 
 steps:
-  # Task to Remove the Old CI Test Execution results from the Results folder in the GitHub Repository
-  - powershell: |
-      cd .
-      git config --global user.email "hridaybhogayata4@gmail.com"
-      git config --global user.name "Hriday2711"
-
-      # Set or update the remote URL
-      if (git remote | findstr origin) {
-        git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      } else {
-        git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      }
-      # Check out or create the 'main' branch
-       if (!(git branch --list main)) {
-       git checkout -b main
-       }
-       git status
-       git rm -r ./docs/**.html
-
-    displayName: "Removing old Test Results from the GitHub Repository"
-
-  # Task to Install and Use the Latest Python version on the Agent Machine
   - task: UsePythonVersion@0
-    displayName: "Use Python 3.12.1"
-    condition: always()
-
-  # Task to Install the Robot framework libraries and dependencies on the Agent machine
-  - script: |
-      pip install -r Requirements.txt
-      rfbrowser init
-    displayName: "Install Robot Dependencies and Browser Library"
-    continueOnError: true
-    condition: always()
-
-  # # Task to Install the Chrome Browser on Agent Machine
-  # - script: |
-  #     npm install @puppeteer/browsers@latest
-  #     npx @puppeteer/browsers install chrome@121.0.6167.86
-  #     echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
-
-  #   displayName: "Install Chrome"
-
-  # # Task to Install the Chrome Driver required for CI Test execution Run
-  # - script: |
-  #     npx @puppeteer/browsers install chromedriver@121.0.6167  --path  C:\Users\VssAdministrator\AppData\Roaming\Python\Python312\Scripts
-  #     echo "##vso[task.prependpath]${Agent.ToolsDirectory}"
-  #   displayName: "Install Chrome Driver"
-
-  # Task to Run the Automation tests located in the Robot Framework
-  - powershell: |
-      # Run the initial Robot Framework tests
-      robot --name "$(CI_TEST_EXECUTION_NAME)" --reporttitle "$(CI_REPORT_TITLE)" --logtitle "$(CI_LOGFILE_TITLE)" --variable BROWSER:"$(BROWSER)" --include "$(TEST_TAGS)" --outputdir docs Tests/
-      exit 0
-    displayName: "Run Robot Framework Tests"
-    continueOnError: true
-    condition: always()
-
-  # Task to Generate the Robot-Metrics Test Report for the CI Test Execution Run
-  - powershell: |
-      # Generate the Robot-Metrics Azure CI Test Execution Report
-      robotmetrics --inputpath ./docs --output output.xml --metrics-report-name Azure_CI_Test_Execution_Results.html
-      exit 0
-    displayName: "Generate Robot-Metrics Azure CI Test Execution Report"
-    continueOnError: true
-    condition: always()
-
-  # Task to Publish the Pipeline Artifact generated after the completion of Azure CI Test Execution Run
-  - task: PublishPipelineArtifact@1
-    displayName: "Publish Pipeline Artifact"
     inputs:
-      targetPath: "./docs/Azure_CI_Test_Execution_Results.html"
-      artifact: "Azure CI Test Execution Results"
-      publishLocation: pipeline
-    continueOnError: true
-    condition: always()
+      versionSpec: "3.x"
+    displayName: "Use Python 3"
 
-  # Task to Upload the Latest Azure CI Test Execution Results to GitHub Repository
-  - powershell: |
-      cd .
-      # git config --global user.email "hridaybhogayata4@gmail.com"
-      # git config --global user.name "Hriday2711"
+  - script: |
+      python3 -m pip install --upgrade pip
+      pip3 install ansible
+    displayName: "Install Ansible"
 
-      # # Set or update the remote URL
-      # if (git remote | findstr origin) {
-      #   git remote set-url origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      # } else {
-      #   git remote add origin https://$(GITHUB_PAT)@github.com/Hriday2711/robot-framework-azure.git
-      # }
+  - script: |
+      ansible-playbook playbook.yml
+    displayName: "Run Ansible Playbook"
+    env:
+      PROJECT_PATH: $(PROJECT_PATH)
+      GITHUB_PAT: $(GITHUB_PAT) # store this as a secret variable in pipeline
 
-      # # Check out or create the 'main' branch
-      # if (!(git branch --list main)) {
-      # git checkout -b main
-      # }
-
-      git status
-      git add ./docs/* -f
-      git commit -m "Azure CI Test Results $(Build.BuildID) [skip ci]"
-
-      # Pushing the update to GitHub Repository
-      git push -u origin main -f
-
-    displayName: "Pushing Azure Results to GitHub Repo"
-    condition: always()

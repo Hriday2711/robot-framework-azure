@@ -1,0 +1,72 @@
+---
+- name: Run Robot Framework CI using Ansible
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    project_path: "{{ lookup('env','PROJECT_PATH') }}"
+    requirements_file: "{{ project_path }}/Requirements.txt"
+    docs_path: "{{ project_path }}/docs"
+    tests_path: "{{ project_path }}/Tests"
+    browser: chrome
+    test_tags: smoke
+    ci_name: Azure_CI_Execution
+    report_title: Azure_CI_Report
+    log_title: Azure_CI_Logfile
+
+  tasks:
+    - name: Upgrade pip
+      pip:
+        name: pip
+        state: latest
+
+    - name: Install Python dependencies from requirements.txt
+      pip:
+        requirements: "{{ requirements_file }}"
+
+    - name: Initialize Robot Framework Browser
+      shell: rfbrowser init
+      args:
+        chdir: "{{ project_path }}"
+
+    - name: Remove old Robot result files
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop:
+        - "{{ docs_path }}/report.html"
+        - "{{ docs_path }}/log.html"
+        - "{{ docs_path }}/output.xml"
+
+    - name: Run Robot Framework tests
+      shell: |
+        robot --name "{{ ci_name }}" \
+              --reporttitle "{{ report_title }}" \
+              --logtitle "{{ log_title }}" \
+              --variable BROWSER:{{ browser }} \
+              --include "{{ test_tags }}" \
+              --outputdir "{{ docs_path }}" "{{ tests_path }}"
+      args:
+        chdir: "{{ project_path }}"
+
+    - name: Generate Robot Metrics Report
+      shell: |
+        robotmetrics --inputpath "{{ docs_path }}" \
+                     --output output.xml \
+                     --metrics-report-name Azure_CI_Test_Execution_Results.html
+      args:
+        chdir: "{{ docs_path }}"
+
+    - name: Push results to GitHub
+      shell: |
+        git config --global user.email "hridaybhogayata4@gmail.com"
+        git config --global user.name "Hriday2711"
+        git remote set-url origin https://{{ github_pat }}@github.com/Hriday2711/robot-framework-azure.git
+        git add {{ docs_path }}/*
+        git commit -m "Azure Ansible CI Test Results"
+        git push origin main
+      environment:
+        github_pat: "{{ lookup('env', 'GITHUB_PAT') }}"
+      args:
+        chdir: "{{ project_path }}"
+      ignore_errors: yes
