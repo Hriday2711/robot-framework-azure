@@ -13,6 +13,7 @@
     ci_name: Azure_CI_Execution
     report_title: Azure_CI_Report
     log_title: Azure_CI_Logfile
+    ansible_python_interpreter: /usr/local/bin/python3
 
   pre_tasks:
     - name: Ensure setuptools is installed on Debian
@@ -27,6 +28,10 @@
       when: ansible_os_family == "Darwin"
 
   tasks:
+    - name: Show Python path
+      debug:
+        var: ansible_facts['python']
+
     - name: Upgrade pip
       pip:
         name: pip3
