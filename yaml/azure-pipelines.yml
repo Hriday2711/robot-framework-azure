@@ -120,11 +120,11 @@ trigger: none
 pr: none
 
 pool:
-  vmImage: ubuntu-latest
+  name: Mac Self-Hosted
 
-  variables:
-    AWX_URL: http://127.0.0.1:31506 # Change to your AWX URL
-    JOB_TEMPLATE_ID: 9
+variables:
+  AWX_URL: http://127.0.0.1:31506 # Change to your AWX URL
+  JOB_TEMPLATE_ID: 9
 
 steps:
   - task: UsePythonVersion@0
@@ -137,3 +137,7 @@ steps:
         -H "Authorization: Bearer $(AWX_TOKEN)" \
         -H "Content-Type: application/json"
     displayName: "Trigger AWX Job Template"
+    env:
+      AWX_TOKEN: $(AWX_TOKEN)
+      PROJECT_PATH: $(Build.SourcesDirectory)
+      GITHUB_PAT: $(GITHUB_PAT)
