@@ -29,7 +29,7 @@
   tasks:
     - name: Upgrade pip
       pip:
-        name: pip
+        name: pip3
         state: latest
 
     - name: Install Python dependencies from requirements.txt
