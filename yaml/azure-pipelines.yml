@@ -122,8 +122,9 @@ pr: none
 pool:
   vmImage: ubuntu-latest
 
-variables:
-  PROJECT_PATH: "$(System.DefaultWorkingDirectory)"
+  variables:
+    AWX_URL: http://127.0.0.1:31506 # Change to your AWX URL
+    JOB_TEMPLATE_ID: 9
 
 steps:
   - task: UsePythonVersion@0
@@ -132,14 +133,7 @@ steps:
     displayName: "Use Python 3"
 
   - script: |
-      python3 -m pip install --upgrade pip
-      pip3 install ansible
-    displayName: "Install Ansible"
-
-  - script: |
-      ansible-playbook playbook.yml
-    displayName: "Run Ansible Playbook"
-    env:
-      PROJECT_PATH: $(PROJECT_PATH)
-      GITHUB_PAT: $(GITHUB_PAT) # store this as a secret variable in pipeline
-
+      curl -k -X POST "$(AWX_URL)/api/v2/job_templates/$(JOB_TEMPLATE_ID)/launch/" \
+        -H "Authorization: Bearer $(AWX_TOKEN)" \
+        -H "Content-Type: application/json"
+    displayName: "Trigger AWX Job Template"
