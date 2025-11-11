@@ -1,882 +1,1027 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-02T23:18:13.906995" rpa="false" schemaversion="5">
-<suite id="s1" name="Magento Home Page CI Test execution" source="D:\a\1\s\Tests">
-<suite id="s1-s1" name="HomePage" source="D:\a\1\s\Tests\HomePage.robot">
-<test id="s1-s1-t1" name="MEC1 - Verify Page Title of Home Page" line="14">
+<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-11-10T23:57:12.417285" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/app/Tests">
+<suite id="s1-s1" name="API" source="/app/Tests/API">
+<suite id="s1-s1-s1" name="API" source="/app/Tests/API/API.robot">
+<test id="s1-s1-s1-t1" name="Get List of All the Products" line="46">
+<kw name="Get the list of All the Products from API">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-11-10T23:57:13.072588" level="INFO">GET Request : url=https://automationexercise.com/api/productsList 
+ path_url=/api/productsList 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-11-10T23:57:13.072713" level="INFO">GET Response : url=https://automationexercise.com/api/productsList 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Nov 2025 23:57:13 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'GET, DELETE, POST, PUT, OPTIONS', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TJhz0Ust3242g1VMz8ztsP2uePsVL9qz7GUvhdsU%2FmPFK5EkX2daN9wQXBvVcCkDSmLjFb6HG95PsahVPqJMWthUzeJoHnUteujrOU%2BtOMCX%2F7aZl%2B8%3D"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '99c97dabecd83a53-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 200, "products": [{"id": 1, "name": "Blue Top", "price": "Rs. 500", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 2, "name": "Men Tshirt", "price": "Rs. 400", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 3, "name": "Sleeveless Dress", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 4, "name": "Stylish Dress", "price": "Rs. 1500", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 5, "name": "Winter Top", "price": "Rs. 600", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 6, "name": "Summer White Top", "price": "Rs. 400", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 7, "name": "Madame Top For Women", "price": "Rs. 1000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 8, "name": "Fancy Green Top", "price": "Rs. 700", "brand": "Polo", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 11, "name": "Sleeves Printed Top - White", "price": "Rs. 499", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 12, "name": "Half Sleeves Top Schiffli Detailing - Pink", "price": "Rs. 359", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 13, "name": "Frozen Tops For Kids", "price": "Rs. 278", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 14, "name": "Full Sleeves Top Cherry - Pink", "price": "Rs. 679", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 15, "name": "Printed Off Shoulder Top - White", "price": "Rs. 315", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 16, "name": "Sleeves Top and Short - Blue &amp; Pink", "price": "Rs. 478", "brand": "Babyhug", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 18, "name": "Little Girls Mr. Panda Shirt", "price": "Rs. 1200", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 19, "name": "Sleeveless Unicorn Patch Gown - Pink", "price": "Rs. 1050", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 20, "name": "Cotton Mull Embroidered Dress", "price": "Rs. 1190", "brand": "Kookie Kids", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 21, "name": "Blue Cotton Indie Mickey Dress", "price": "Rs. 1530", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 22, "name": "Long Maxi Tulle Fancy Dress Up Outfits -Pink", "price": "Rs. 1600", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 23, "name": "Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi", "price": "Rs. 1100", "brand": "Biba", "category": {"usertype": {"usertype": "Kids"}, "category": "Dress"}}, {"id": 24, "name": "Colour Blocked Shirt \u2013 Sky Blue", "price": "Rs. 849", "brand": "Allen Solly Junior", "category": {"usertype": {"usertype": "Kids"}, "category": "Tops &amp; Shirts"}}, {"id": 28, "name": "Pure Cotton V-Neck T-Shirt", "price": "Rs. 1299", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 29, "name": "Green Side Placket Detail T-Shirt", "price": "Rs. 1000", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 30, "name": "Premium Polo T-Shirts", "price": "Rs. 1500", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 31, "name": "Pure Cotton Neon Green Tshirt", "price": "Rs. 850", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}, {"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 38, "name": "Rose Pink Embroidered Maxi Dress", "price": "Rs. 2300", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Dress"}}, {"id": 39, "name": "Cotton Silk Hand Block Print Saree", "price": "Rs. 3000", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 40, "name": "Rust Red Linen Saree", "price": "Rs. 3500", "brand": "Biba", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 41, "name": "Beautiful Peacock Blue Cotton Linen Saree", "price": "Rs. 5000", "brand": "Madame", "category": {"usertype": {"usertype": "Women"}, "category": "Saree"}}, {"id": 42, "name": "Lace Top For Women", "price": "Rs. 1400", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Women"}, "category": "Tops"}}, {"id": 43, "name": "GRAPHIC DESIGN MEN T SHIRT - BLUE", "price": "Rs. 1389", "brand": "Mast &amp; Harbour", "category": {"usertype": {"usertype": "Men"}, "category": "Tshirts"}}]} 
+ </msg>
+<msg time="2025-11-10T23:57:13.072872" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/productsList</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-11-10T23:57:12.582746" elapsed="0.490148"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-11-10T23:57:13.074022" elapsed="0.000055"/>
+</return>
+<msg time="2025-11-10T23:57:13.074241" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<doc>This keyword retrieves the list of all products from the API and returns the response.</doc>
+<status status="PASS" start="2025-11-10T23:57:12.582175" elapsed="0.492085"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.075433" level="INFO">{'responseCode': 200, 'products': [{'id': 1, 'name': 'Blue Top', 'price': 'Rs. 500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 2, 'name': 'Men Tshirt', 'price': 'Rs. 400', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 3, 'name': 'Sleeveless Dress', 'price': 'Rs. 1000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 4, 'name': 'Stylish Dress', 'price': 'Rs. 1500', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 5, 'name': 'Winter Top', 'price': 'Rs. 600', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 6, 'name': 'Summer White Top', 'price': 'Rs. 400', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 7, 'name': 'Madame Top For Women', 'price': 'Rs. 1000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 8, 'name': 'Fancy Green Top', 'price': 'Rs. 700', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 11, 'name': 'Sleeves Printed Top - White', 'price': 'Rs. 499', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 12, 'name': 'Half Sleeves Top Schiffli Detailing - Pink', 'price': 'Rs. 359', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 13, 'name': 'Frozen Tops For Kids', 'price': 'Rs. 278', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 14, 'name': 'Full Sleeves Top Cherry - Pink', 'price': 'Rs. 679', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 15, 'name': 'Printed Off Shoulder Top - White', 'price': 'Rs. 315', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 16, 'name': 'Sleeves Top and Short - Blue &amp; Pink', 'price': 'Rs. 478', 'brand': 'Babyhug', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 18, 'name': 'Little Girls Mr. Panda Shirt', 'price': 'Rs. 1200', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 19, 'name': 'Sleeveless Unicorn Patch Gown - Pink', 'price': 'Rs. 1050', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 20, 'name': 'Cotton Mull Embroidered Dress', 'price': 'Rs. 1190', 'brand': 'Kookie Kids', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 21, 'name': 'Blue Cotton Indie Mickey Dress', 'price': 'Rs. 1530', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 22, 'name': 'Long Maxi Tulle Fancy Dress Up Outfits -Pink', 'price': 'Rs. 1600', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 23, 'name': 'Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi', 'price': 'Rs. 1100', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Dress'}}, {'id': 24, 'name': 'Colour Blocked Shirt – Sky Blue', 'price': 'Rs. 849', 'brand': 'Allen Solly Junior', 'category': {'usertype': {'usertype': 'Kids'}, 'category': 'Tops &amp; Shirts'}}, {'id': 28, 'name': 'Pure Cotton V-Neck T-Shirt', 'price': 'Rs. 1299', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 29, 'name': 'Green Side Placket Detail T-Shirt', 'price': 'Rs. 1000', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 30, 'name': 'Premium Polo T-Shirts', 'price': 'Rs. 1500', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 31, 'name': 'Pure Cotton Neon Green Tshirt', 'price': 'Rs. 850', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}, {'id': 33, 'name': 'Soft Stretch Jeans', 'price': 'Rs. 799', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 35, 'name': 'Regular Fit Straight Jeans', 'price': 'Rs. 1200', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 37, 'name': 'Grunt Blue Slim Fit Jeans', 'price': 'Rs. 1400', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 38, 'name': 'Rose Pink Embroidered Maxi Dress', 'price': 'Rs. 2300', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Dress'}}, {'id': 39, 'name': 'Cotton Silk Hand Block Print Saree', 'price': 'Rs. 3000', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 40, 'name': 'Rust Red Linen Saree', 'price': 'Rs. 3500', 'brand': 'Biba', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 41, 'name': 'Beautiful Peacock Blue Cotton Linen Saree', 'price': 'Rs. 5000', 'brand': 'Madame', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Saree'}}, {'id': 42, 'name': 'Lace Top For Women', 'price': 'Rs. 1400', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Women'}, 'category': 'Tops'}}, {'id': 43, 'name': 'GRAPHIC DESIGN MEN T SHIRT - BLUE', 'price': 'Rs. 1389', 'brand': 'Mast &amp; Harbour', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Tshirts'}}]}</msg>
+<arg>${response.json()}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.074814" elapsed="0.000763"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:13.099876" level="INFO">${responseCode} = [200]</msg>
+<var>${responseCode}</var>
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:13.075664" elapsed="0.024254"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.100463" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${responseCode[0]}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.100072" elapsed="0.000433"/>
+</kw>
+<doc>This test case retrieves the list of all products from the API and verifies the response status code.</doc>
+<tag>API-01</tag>
+<status status="PASS" start="2025-11-10T23:57:12.581325" elapsed="0.519284"/>
+</test>
+<test id="s1-s1-s1-t2" name="POST To All Products List API" line="54">
+<kw name="POST To All Products List API">
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-11-10T23:57:13.241787" level="INFO">POST Request : url=https://automationexercise.com/api/productsList 
+ path_url=/api/productsList 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-11-10T23:57:13.241877" level="INFO">POST Response : url=https://automationexercise.com/api/productsList 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Nov 2025 23:57:13 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'GET, DELETE, POST, PUT, OPTIONS', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lqWN%2BcI8mZafXIY%2FJ7ldRBBBJcWBBhTJ%2FqVTQdTxP1ZBDh5okDOceL1%2FCS4kmHvFGav39YCGE6mfcbMp3e2z3HZwQmvLz%2FCkwX0X0HtO828Xr6GpX04%3D"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '99c97daecc1cec72-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 405, "message": "This request method is not supported."} 
+ </msg>
+<msg time="2025-11-10T23:57:13.242218" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/productsList</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.101659" elapsed="0.140589"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-11-10T23:57:13.242313" elapsed="0.000040"/>
+</return>
+<msg time="2025-11-10T23:57:13.242465" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<doc>This keyword sends a POST request to the products list API and returns the response.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.101233" elapsed="0.141252"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.242989" level="INFO">Response status code is 200.</msg>
+<arg>Response status code is ${response.status_code}.</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.242600" elapsed="0.000457"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:13.258772" level="INFO">${responseCode} = [405]</msg>
+<var>${responseCode}</var>
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:13.243151" elapsed="0.015662"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:13.273401" level="INFO">${responseMessage} = ['This request method is not supported.']</msg>
+<var>${responseMessage}</var>
+<arg>${response.json()}</arg>
+<arg>message</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:13.258975" elapsed="0.014472"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.274060" level="INFO">Response message is: This request method is not supported.</msg>
+<arg>Response message is: ${responseMessage[0]}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.273599" elapsed="0.000536"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.274551" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${responseCode[0]}</arg>
+<arg>405</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.274224" elapsed="0.000373"/>
+</kw>
+<doc>This test case sends a POST request to the products list API and verifies the response status code.</doc>
+<tag>API-02</tag>
+<status status="PASS" start="2025-11-10T23:57:13.100781" elapsed="0.174091"/>
+</test>
+<test id="s1-s1-s1-t3" name="Get List of All the Brands" line="64">
+<kw name="GET All Brands List from API">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-11-10T23:57:13.419891" level="INFO">GET Request : url=https://automationexercise.com/api/brandsList 
+ path_url=/api/brandsList 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-11-10T23:57:13.420016" level="INFO">GET Response : url=https://automationexercise.com/api/brandsList 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Nov 2025 23:57:13 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'GET, DELETE, POST, PUT, OPTIONS', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=7fWnNIOaEw8fcv8GEsyO5kPYoofhAuP0pFCuwQlu7NAnXhz1hzblh5r7P0nGZnjNVhZxQFTR2IjkGMrkDLHGE40BazvOC6O7vdzPjaUPmLK495XQj98%3D"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '99c97dafd8f1bf5d-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 200, "brands": [{"id": 1, "brand": "Polo"}, {"id": 2, "brand": "H&amp;M"}, {"id": 3, "brand": "Madame"}, {"id": 4, "brand": "Madame"}, {"id": 5, "brand": "Mast &amp; Harbour"}, {"id": 6, "brand": "H&amp;M"}, {"id": 7, "brand": "Madame"}, {"id": 8, "brand": "Polo"}, {"id": 11, "brand": "Babyhug"}, {"id": 12, "brand": "Babyhug"}, {"id": 13, "brand": "Allen Solly Junior"}, {"id": 14, "brand": "Kookie Kids"}, {"id": 15, "brand": "Babyhug"}, {"id": 16, "brand": "Babyhug"}, {"id": 18, "brand": "Kookie Kids"}, {"id": 19, "brand": "Allen Solly Junior"}, {"id": 20, "brand": "Kookie Kids"}, {"id": 21, "brand": "Biba"}, {"id": 22, "brand": "Biba"}, {"id": 23, "brand": "Biba"}, {"id": 24, "brand": "Allen Solly Junior"}, {"id": 28, "brand": "H&amp;M"}, {"id": 29, "brand": "Polo"}, {"id": 30, "brand": "Polo"}, {"id": 31, "brand": "H&amp;M"}, {"id": 33, "brand": "Polo"}, {"id": 35, "brand": "H&amp;M"}, {"id": 37, "brand": "Polo"}, {"id": 38, "brand": "Madame"}, {"id": 39, "brand": "Biba"}, {"id": 40, "brand": "Biba"}, {"id": 41, "brand": "Madame"}, {"id": 42, "brand": "Mast &amp; Harbour"}, {"id": 43, "brand": "Mast &amp; Harbour"}]} 
+ </msg>
+<msg time="2025-11-10T23:57:13.420128" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/brandsList</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.275928" elapsed="0.144226"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-11-10T23:57:13.420216" elapsed="0.000036"/>
+</return>
+<msg time="2025-11-10T23:57:13.420358" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<doc>This keyword retrieves the list of all brands from the API and returns the response.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.275711" elapsed="0.144664"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.420911" level="INFO">{'responseCode': 200, 'brands': [{'id': 1, 'brand': 'Polo'}, {'id': 2, 'brand': 'H&amp;M'}, {'id': 3, 'brand': 'Madame'}, {'id': 4, 'brand': 'Madame'}, {'id': 5, 'brand': 'Mast &amp; Harbour'}, {'id': 6, 'brand': 'H&amp;M'}, {'id': 7, 'brand': 'Madame'}, {'id': 8, 'brand': 'Polo'}, {'id': 11, 'brand': 'Babyhug'}, {'id': 12, 'brand': 'Babyhug'}, {'id': 13, 'brand': 'Allen Solly Junior'}, {'id': 14, 'brand': 'Kookie Kids'}, {'id': 15, 'brand': 'Babyhug'}, {'id': 16, 'brand': 'Babyhug'}, {'id': 18, 'brand': 'Kookie Kids'}, {'id': 19, 'brand': 'Allen Solly Junior'}, {'id': 20, 'brand': 'Kookie Kids'}, {'id': 21, 'brand': 'Biba'}, {'id': 22, 'brand': 'Biba'}, {'id': 23, 'brand': 'Biba'}, {'id': 24, 'brand': 'Allen Solly Junior'}, {'id': 28, 'brand': 'H&amp;M'}, {'id': 29, 'brand': 'Polo'}, {'id': 30, 'brand': 'Polo'}, {'id': 31, 'brand': 'H&amp;M'}, {'id': 33, 'brand': 'Polo'}, {'id': 35, 'brand': 'H&amp;M'}, {'id': 37, 'brand': 'Polo'}, {'id': 38, 'brand': 'Madame'}, {'id': 39, 'brand': 'Biba'}, {'id': 40, 'brand': 'Biba'}, {'id': 41, 'brand': 'Madame'}, {'id': 42, 'brand': 'Mast &amp; Harbour'}, {'id': 43, 'brand': 'Mast &amp; Harbour'}]}</msg>
+<arg>${response.json()}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.420479" elapsed="0.000867"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:13.437147" level="INFO">${responseCode} = [200]</msg>
+<var>${responseCode}</var>
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:13.421508" elapsed="0.015678"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.437709" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${responseCode[0]}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.437331" elapsed="0.000429"/>
+</kw>
+<doc>This test case retrieves the list of all brands from the API and verifies the response status code.</doc>
+<tag>API-03</tag>
+<status status="PASS" start="2025-11-10T23:57:13.275052" elapsed="0.162799"/>
+</test>
+<test id="s1-s1-s1-t4" name="PUT To All Brands List" line="72">
+<kw name="PUT To All Brands List API">
+<kw name="PUT" owner="RequestsLibrary">
+<msg time="2025-11-10T23:57:13.823171" level="INFO">PUT Request : url=https://automationexercise.com/api/brandsList 
+ path_url=/api/brandsList 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-11-10T23:57:13.823253" level="INFO">PUT Response : url=https://automationexercise.com/api/brandsList 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Nov 2025 23:57:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'GET, DELETE, POST, PUT, OPTIONS', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=VbRAhqqWzRNFvQj%2F65892TGgpg5%2BYcfk3R1y52R85oYydcL7SsnBQo0tDne8Ylz%2B9G89q7QW4orKm%2BhTsyZVvdZ63aOmKRClbXST5Lks3czCyeqs"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '99c97db0eb00a1e6-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 405, "message": "This request method is not supported."} 
+ </msg>
+<msg time="2025-11-10T23:57:13.823366" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/brandsList</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a PUT request.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.438698" elapsed="0.384690"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-11-10T23:57:13.823452" elapsed="0.000041"/>
+</return>
+<msg time="2025-11-10T23:57:13.823599" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<doc>This keyword sends a PUT request to the brands list API and returns the response.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.438483" elapsed="0.385136"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.824115" level="INFO">Response status code is 200.</msg>
+<arg>Response status code is ${response.status_code}.</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.823727" elapsed="0.000457"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:13.838247" level="INFO">${responseCode} = [405]</msg>
+<var>${responseCode}</var>
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:13.824276" elapsed="0.014005"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:13.852358" level="INFO">${responseMessage} = ['This request method is not supported.']</msg>
+<var>${responseMessage}</var>
+<arg>${response.json()}</arg>
+<arg>message</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:13.838394" elapsed="0.014001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.852976" level="INFO">Response message is: This request method is not supported.</msg>
+<arg>Response message is: ${responseMessage[0]}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.852531" elapsed="0.000521"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.853454" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${responseCode[0]}</arg>
+<arg>405</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.853149" elapsed="0.000401"/>
+</kw>
+<doc>This test case sends a PUT request to the brands list API and verifies the response status code.</doc>
+<tag>API-04</tag>
+<status status="PASS" start="2025-11-10T23:57:13.438026" elapsed="0.415615"/>
+</test>
+<test id="s1-s1-s1-t5" name="POST To Search Product" line="82">
+<kw name="Search a Product by sending POST request to API">
+<if>
+<branch type="IF" condition="${no_search_product}==True">
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:13.854625" elapsed="0.000017"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${jsonData}</var>
+<arg>none=none</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:13.854710" elapsed="0.000017"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${encodedJson}</var>
+<arg>urllib.parse.urlencode(${jsonData})</arg>
+<arg>urllib.parse</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:13.854799" elapsed="0.000011"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/searchProduct</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=200</arg>
+<arg>data=${encodedJson}</arg>
+<doc>Sends a POST request.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:13.854879" elapsed="0.000015"/>
+</kw>
+<status status="NOT RUN" start="2025-11-10T23:57:13.854478" elapsed="0.000446"/>
+</branch>
+<branch type="ELSE">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.855204" level="INFO">${headers} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.855022" elapsed="0.000481"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.855934" level="INFO">${jsonData} = {'search_product': 'Jeans'}</msg>
+<var>${jsonData}</var>
+<arg>search_product=${search_product}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.855676" elapsed="0.000302"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-10T23:57:13.856342" level="INFO">${encodedJson} = search_product=Jeans</msg>
+<var>${encodedJson}</var>
+<arg>urllib.parse.urlencode(${jsonData})</arg>
+<arg>urllib.parse</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.856074" elapsed="0.000287"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-11-10T23:57:14.232442" level="INFO">POST Request : url=https://automationexercise.com/api/searchProduct 
+ path_url=/api/searchProduct 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '20'} 
+ body=search_product=Jeans 
+ </msg>
+<msg time="2025-11-10T23:57:14.232533" level="INFO">POST Response : url=https://automationexercise.com/api/searchProduct 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Nov 2025 23:57:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'GET, DELETE, POST, PUT, OPTIONS', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=wEcoH6Bcny2Uq7Qd5QI4%2BA%2BxQo%2FANdBV9u22UCGmWO6bgFxdFwrTrFZ4iiuuekulTYvv5nqM8ovLumnEl2Y8Wongkfu9htcoKd4fngAa8MdXeWEo3%2FA%3D"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '99c97db37b1436d8-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 200, "products": [{"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}]} 
+ </msg>
+<msg time="2025-11-10T23:57:14.232666" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/searchProduct</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=200</arg>
+<arg>data=${encodedJson}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.856442" elapsed="0.376247"/>
+</kw>
+<status status="PASS" start="2025-11-10T23:57:13.854952" elapsed="0.377795"/>
+</branch>
+<status status="PASS" start="2025-11-10T23:57:13.854454" elapsed="0.378318"/>
+</if>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-11-10T23:57:14.232805" elapsed="0.000047"/>
+</return>
+<msg time="2025-11-10T23:57:14.232968" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<doc>This keyword sends a POST request to the search product API and returns the response.</doc>
+<status status="PASS" start="2025-11-10T23:57:13.854289" elapsed="0.378694"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.233494" level="INFO">Response status code is 200.</msg>
+<arg>Response status code is ${response.status_code}.</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.233100" elapsed="0.000468"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:14.249172" level="INFO">${responseCode} = [200]</msg>
+<var>${responseCode}</var>
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:14.233670" elapsed="0.015547"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.249746" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${responseCode[0]}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.249361" elapsed="0.000436"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.250240" level="INFO">{'responseCode': 200, 'products': [{'id': 33, 'name': 'Soft Stretch Jeans', 'price': 'Rs. 799', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 35, 'name': 'Regular Fit Straight Jeans', 'price': 'Rs. 1200', 'brand': 'H&amp;M', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}, {'id': 37, 'name': 'Grunt Blue Slim Fit Jeans', 'price': 'Rs. 1400', 'brand': 'Polo', 'category': {'usertype': {'usertype': 'Men'}, 'category': 'Jeans'}}]}</msg>
+<arg>${response.json()}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.249880" elapsed="0.000432"/>
+</kw>
+<doc>This test case sends a POST request to the search product API and verifies the response status code.</doc>
+<tag>API-05</tag>
+<status status="PASS" start="2025-11-10T23:57:13.853766" elapsed="0.396640"/>
+</test>
+<test id="s1-s1-s1-t6" name="POST To Search Product with search-product Parameter" line="91">
+<kw name="Search a Product by sending POST request to API">
+<if>
+<branch type="IF" condition="${no_search_product}==True">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.251903" level="INFO">${headers} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.251654" elapsed="0.000313"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.252295" level="INFO">${jsonData} = {'none': 'none'}</msg>
+<var>${jsonData}</var>
+<arg>none=none</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.252111" elapsed="0.000205"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.252652" level="INFO">${encodedJson} = none=none</msg>
+<var>${encodedJson}</var>
+<arg>urllib.parse.urlencode(${jsonData})</arg>
+<arg>urllib.parse</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.252401" elapsed="0.000277"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-11-10T23:57:14.367149" level="INFO">POST Request : url=https://automationexercise.com/api/searchProduct 
+ path_url=/api/searchProduct 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '9'} 
+ body=none=none 
+ </msg>
+<msg time="2025-11-10T23:57:14.367243" level="INFO">POST Response : url=https://automationexercise.com/api/searchProduct 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Nov 2025 23:57:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'GET, DELETE, POST, PUT, OPTIONS', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=0y9Qf2SrqpS8%2FkN7uiRa8htr0s9Ck7S88sd6uhn%2F2rsX6tKa01uC9QBoMirWKFNbu7yk9zmXnhQMG24J48RzFRMA19erMtmaFXU58M2ZEewdSisFHlU%3D"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '99c97db5fce236da-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 400, "message": "Bad request, search_product parameter is missing in POST request."} 
+ </msg>
+<msg time="2025-11-10T23:57:14.367585" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/searchProduct</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=200</arg>
+<arg>data=${encodedJson}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.252756" elapsed="0.114852"/>
+</kw>
+<status status="PASS" start="2025-11-10T23:57:14.251519" elapsed="0.116146"/>
+</branch>
+<branch type="ELSE">
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:14.367834" elapsed="0.000022"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${jsonData}</var>
+<arg>search_product=${search_product}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:14.367933" elapsed="0.000034"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${encodedJson}</var>
+<arg>urllib.parse.urlencode(${jsonData})</arg>
+<arg>urllib.parse</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:14.368036" elapsed="0.000009"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/searchProduct</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=200</arg>
+<arg>data=${encodedJson}</arg>
+<doc>Sends a POST request.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:14.368096" elapsed="0.000015"/>
+</kw>
+<status status="NOT RUN" start="2025-11-10T23:57:14.367693" elapsed="0.000481"/>
+</branch>
+<status status="PASS" start="2025-11-10T23:57:14.251499" elapsed="0.116704"/>
+</if>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-11-10T23:57:14.368240" elapsed="0.000031"/>
+</return>
+<msg time="2025-11-10T23:57:14.368390" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>no_search_product=True</arg>
+<doc>This keyword sends a POST request to the search product API and returns the response.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.251329" elapsed="0.117085"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.368874" level="INFO">Response status code is 200.</msg>
+<arg>Response status code is ${response.status_code}.</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.368498" elapsed="0.000462"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:14.383159" level="INFO">${responseCode} = [400]</msg>
+<var>${responseCode}</var>
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:14.369051" elapsed="0.014144"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.383746" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${responseCode[0]}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.383323" elapsed="0.000471"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:14.398483" level="INFO">${responseMessage} = ['Bad request, search_product parameter is missing in POST request.']</msg>
+<var>${responseMessage}</var>
+<arg>${response.json()}</arg>
+<arg>message</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:14.383885" elapsed="0.014641"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.399162" level="INFO">Response message is: Bad request, search_product parameter is missing in POST request.</msg>
+<arg>Response message is: ${responseMessage[0]}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.398671" elapsed="0.000573"/>
+</kw>
+<doc>This test case sends a POST request to the search product API without a specific search term and verifies the response status code.</doc>
+<tag>API-06</tag>
+<status status="PASS" start="2025-11-10T23:57:14.250554" elapsed="0.148783"/>
+</test>
+<test id="s1-s1-s1-t7" name="Create a User Account via API" line="101">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.400136" level="INFO">${headers} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.399876" elapsed="0.000279"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.400436" level="INFO">${jsonData} = {'name': 'Bhumi', 'email': 'bhumibhogayata99@gmail.com', 'password': 'Hab@271197', 'title': 'Mrs', 'birth_date': '10', 'birth_month': 'May', 'birth_year': '1995', 'firstname': 'Bhumi', 'lastname': 'Bh...</msg>
+<var>${jsonData}</var>
+<arg>name=Bhumi</arg>
+<arg>email=bhumibhogayata99@gmail.com</arg>
+<arg>password=Hab@271197</arg>
+<arg>title=Mrs</arg>
+<arg>birth_date=10</arg>
+<arg>birth_month=May</arg>
+<arg>birth_year=1995</arg>
+<arg>firstname=Bhumi</arg>
+<arg>lastname=Bhogayata</arg>
+<arg>company=ABC Pvt Ltd</arg>
+<arg>address1=123, Main Street</arg>
+<arg>address2=Apt 4B</arg>
+<arg>country=India</arg>
+<arg>state=Gujarat</arg>
+<arg>city=Ahmedabad</arg>
+<arg>zipcode=380015</arg>
+<arg>mobile_number=9876543210</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.400231" elapsed="0.000222"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.400713" level="INFO">User details are {'name': 'Bhumi', 'email': 'bhumibhogayata99@gmail.com', 'password': 'Hab@271197', 'title': 'Mrs', 'birth_date': '10', 'birth_month': 'May', 'birth_year': '1995', 'firstname': 'Bhumi', 'lastname': 'Bhogayata', 'company': 'ABC Pvt Ltd', 'address1': '123, Main Street', 'address2': 'Apt 4B', 'country': 'India', 'state': 'Gujarat', 'city': 'Ahmedabad', 'zipcode': '380015', 'mobile_number': '9876543210'}.</msg>
+<arg>User details are ${jsonData}.</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.400560" elapsed="0.000207"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.401198" level="INFO">${encodedJson} = name=Bhumi&amp;email=bhumibhogayata99%40gmail.com&amp;password=Hab%40271197&amp;title=Mrs&amp;birth_date=10&amp;birth_month=May&amp;birth_year=1995&amp;firstname=Bhumi&amp;lastname=Bhogayata&amp;company=ABC+Pvt+Ltd&amp;address1=123%2C+Main+...</msg>
+<var>${encodedJson}</var>
+<arg>urllib.parse.urlencode(${jsonData})</arg>
+<arg>urllib.parse</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.400847" elapsed="0.000375"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-11-10T23:57:14.543517" level="INFO">POST Request : url=https://automationexercise.com/api/createAccount 
+ path_url=/api/createAccount 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '305'} 
+ body=name=Bhumi&amp;email=bhumibhogayata99%40gmail.com&amp;password=Hab%40271197&amp;title=Mrs&amp;birth_date=10&amp;birth_month=May&amp;birth_year=1995&amp;firstname=Bhumi&amp;lastname=Bhogayata&amp;company=ABC+Pvt+Ltd&amp;address1=123%2C+Main+Street&amp;address2=Apt+4B&amp;country=India&amp;state=Gujarat&amp;city=Ahmedabad&amp;zipcode=380015&amp;mobile_number=9876543210 
+ </msg>
+<msg time="2025-11-10T23:57:14.543602" level="INFO">POST Response : url=https://automationexercise.com/api/createAccount 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 10 Nov 2025 23:57:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept,Cookie,Accept-Encoding', 'referrer-policy': 'same-origin', 'x-frame-options': 'DENY', 'x-content-type-options': 'nosniff', 'allow': 'OPTIONS, POST', 'x-powered-by': 'Phusion Passenger(R) 6.0.23', 'status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3pTDyxX82OkEICfequsxI1RZEQBUGv7jkwIyb0SxbnkVIyrltmp59%2FmN5x1tw0zXPCeMMsxUNRVdckKDhT%2B28bn2KiwCWdFLxnaQLDkW2Gbza0og8u8%3D"}]}', 'Server': 'cloudflare', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '99c97db6f9903a53-YYZ', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 400, "message": "Email already exists!"} 
+ </msg>
+<msg time="2025-11-10T23:57:14.543701" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=https://automationexercise.com/api/createAccount</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=200</arg>
+<arg>data=${encodedJson}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.401533" elapsed="0.142184"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.544219" level="INFO">Response status code is 200.</msg>
+<arg>Response status code is ${response.status_code}.</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-10T23:57:14.543843" elapsed="0.000432"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-11-10T23:57:14.557384" level="INFO">${responseCode} = [400]</msg>
+<var>${responseCode}</var>
+<arg>${response.json()}</arg>
+<arg>responseCode</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-11-10T23:57:14.544351" elapsed="0.013062"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-11-10T23:57:14.557835" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2025-11-10T23:57:14.557906" level="FAIL">400 != 201</msg>
+<arg>${responseCode[0]}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2025-11-10T23:57:14.557518" elapsed="0.000447">400 != 201</status>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<var>${responseMessage}</var>
+<arg>${response.json()}</arg>
+<arg>message</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:14.558046" elapsed="0.000013"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Response message is: ${responseMessage[0]}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:14.558117" elapsed="0.000010"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${response.json()}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-11-10T23:57:14.558176" elapsed="0.000008"/>
+</kw>
+<doc>This test case creates a user account via the API and verifies the response status code.</doc>
+<tag>API-07</tag>
+<status status="FAIL" start="2025-11-10T23:57:14.399482" elapsed="0.158800">400 != 201</status>
+</test>
+<status status="FAIL" start="2025-11-10T23:57:12.433082" elapsed="2.125473"/>
+</suite>
+<status status="FAIL" start="2025-11-10T23:57:12.432109" elapsed="2.126982"/>
+</suite>
+<suite id="s1-s2" name="HomePage" source="/app/Tests/HomePage.robot">
+<test id="s1-s2-t1" name="MEC1 - Verify Page Title of Home Page" line="15">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-02T23:18:14.114519" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\d304bf59-a294-4d4d-b6de-18dbb30ec362"}</msg>
-<msg time="2025-03-02T23:18:14.180932" level="INFO">Starting Browser process C:\hostedtoolcache\windows\Python\3.13.2\x64\Lib\site-packages\Browser\wrapper\index.js using port 64959</msg>
-<msg time="2025-03-02T23:18:14.181205" level="INFO">Node startup parameters: ['node', 'C:\\hostedtoolcache\\windows\\Python\\3.13.2\\x64\\Lib\\site-packages\\Browser\\wrapper\\index.js', '64959']</msg>
-<msg time="2025-03-02T23:18:17.439192" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\temp\\d304bf59-a294-4d4d-b6de-18dbb30ec362"}</msg>
+<msg time="2025-11-10T23:57:14.690376" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/app/docs/browser/traces/temp/f2508781-eeb2-4965-be29-c8b1a856a0b4"}</msg>
+<msg time="2025-11-10T23:57:14.691084" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:14.113572" elapsed="3.325918"/>
+<status status="FAIL" start="2025-11-10T23:57:14.689930" elapsed="0.002865">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-03-02T23:18:17.442201" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2025-03-02T23:18:17.479642" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-02T23:18:17.479758" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:17.439818" elapsed="0.040054"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.692962" elapsed="0.000047"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-02T23:18:30.924733" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-03-02T23:18:30.924898" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-03-02T23:18:30.925421" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  - navigating to "https://magento.softwaretestingboard.com/", waiting until "load"
-</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="FAIL" start="2025-03-02T23:18:17.480128" elapsed="13.453878">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  - navigating to "https://magento.softwaretestingboard.com/", waiting until "load"
-</status>
+<status status="NOT RUN" start="2025-11-10T23:57:14.693081" elapsed="0.000031"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="FAIL" start="2025-03-02T23:18:14.112691" elapsed="16.821662">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  - navigating to "https://magento.softwaretestingboard.com/", waiting until "load"
-</status>
+<status status="FAIL" start="2025-11-10T23:57:14.689523" elapsed="0.003670">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="FAIL" start="2025-03-02T23:18:14.112142" elapsed="16.822371">TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  - navigating to "https://magento.softwaretestingboard.com/", waiting until "load"
-</status>
+<status status="FAIL" start="2025-11-10T23:57:14.689057" elapsed="0.004198">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-03-02T23:18:32.314005" level="INFO">Closed all browsers</msg>
+<msg time="2025-11-10T23:57:14.693918" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-02T23:18:30.935003" elapsed="1.379260"/>
+<status status="FAIL" start="2025-11-10T23:57:14.693394" elapsed="0.000648">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
-<status status="FAIL" start="2025-03-02T23:18:14.111109" elapsed="18.203299">Setup failed:
-TimeoutError: page.goto: Timeout 10000ms exceeded.
-Call log:
-  - navigating to "https://magento.softwaretestingboard.com/", waiting until "load"
-</status>
+<status status="FAIL" start="2025-11-10T23:57:14.688612" elapsed="0.005487">Setup failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'
+
+Also teardown failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </test>
-<test id="s1-s1-t2" name="MEC2 - Select Brand Logo Icon on Home Page" line="20">
+<test id="s1-s2-t2" name="MEC2 - Select Brand Logo Icon on Home Page" line="21">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-02T23:18:32.350065" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\31166853-291a-443f-b5d3-3bb69a6ace2b"}</msg>
-<msg time="2025-03-02T23:18:33.596983" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\temp\\31166853-291a-443f-b5d3-3bb69a6ace2b"}</msg>
+<msg time="2025-11-10T23:57:14.696363" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/app/docs/browser/traces/temp/29c8c1a8-9ac1-4dc2-bb47-e9d916a42962"}</msg>
+<msg time="2025-11-10T23:57:14.696751" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:32.349190" elapsed="1.248749"/>
+<status status="FAIL" start="2025-11-10T23:57:14.695960" elapsed="0.001105">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-03-02T23:18:33.601918" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2025-03-02T23:18:33.710580" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-02T23:18:33.710703" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:33.598258" elapsed="0.112546"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.697211" elapsed="0.000049"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-02T23:18:37.049909" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-02T23:18:33.711042" elapsed="3.339251"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.697331" elapsed="0.000033"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-03-02T23:18:32.348722" elapsed="4.701785"/>
+<status status="FAIL" start="2025-11-10T23:57:14.695714" elapsed="0.001724">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-03-02T23:18:32.348178" elapsed="4.702416"/>
-</kw>
-<kw name="Select the Brand Logo Icon on HomePage" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:18:37.052248" level="INFO">Clicking on Brand logo icon on Homepage</msg>
-<arg>Clicking on Brand logo icon on Homepage</arg>
-<arg>console=true</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:18:37.051639" elapsed="0.000779"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-03-02T23:18:37.053268" level="INFO">Clicks the element 'css=a.logo'.</msg>
-<arg>${brand_logo_locator_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-02T23:18:37.052597" elapsed="1.042939"/>
-</kw>
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-02T23:18:38.123250" level="INFO">Title: 'Home Page'</msg>
-<msg time="2025-03-02T23:18:38.123504" level="INFO">${actual_title} = Home Page</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.099229" elapsed="0.024313"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:18:38.124276" level="INFO">Current page title is: Home Page</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.123790" elapsed="0.000648"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.124810" elapsed="0.000712"/>
-</kw>
-<arg>${Magento_E-commerce_HomePageTitle}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-03-02T23:18:38.097993" elapsed="0.027646"/>
-</kw>
-<doc>Click on the Brand Logo Icon on HomePage</doc>
-<status status="PASS" start="2025-03-02T23:18:37.050877" elapsed="1.074843"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-03-02T23:18:38.126572" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-03-02T23:18:38.259125" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>state=domcontentloaded</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.125858" elapsed="0.133506"/>
-</kw>
-<kw name="Verify the Title of Magento E-Commerce HomePage" owner="HomePage_Keywords">
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-02T23:18:38.269447" level="INFO">Title: 'Home Page'</msg>
-<msg time="2025-03-02T23:18:38.269654" level="INFO">${actual_title} = Home Page</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.262004" elapsed="0.007755"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:18:38.270391" level="INFO">Current page title is: Home Page</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.270015" elapsed="0.000453"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.270644" elapsed="0.000438"/>
-</kw>
-<arg>${Magento_E-commerce_HomePageTitle}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-03-02T23:18:38.261419" elapsed="0.009766"/>
-</kw>
-<doc>Method to verify the title of Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-03-02T23:18:38.260027" elapsed="0.011230"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2025-03-02T23:18:38.513730" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.271394" elapsed="0.242582"/>
+<status status="FAIL" start="2025-11-10T23:57:14.695483" elapsed="0.002016">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-03-02T23:18:39.892959" level="INFO">Closed all browsers</msg>
+<msg time="2025-11-10T23:57:14.698189" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-02T23:18:38.514310" elapsed="1.378914"/>
+<status status="FAIL" start="2025-11-10T23:57:14.697636" elapsed="0.000668">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Test to Verify the Page Title of Magento E-Commerce Home Page</doc>
 <tag>HomePage</tag>
-<status status="PASS" start="2025-03-02T23:18:32.344461" elapsed="7.548914"/>
+<status status="FAIL" start="2025-11-10T23:57:14.695087" elapsed="0.003278">Setup failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'
+
+Also teardown failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </test>
-<test id="s1-s1-t3" name="MEC3 - Verify Navigation to Login Page" line="28">
+<test id="s1-s2-t3" name="MEC3 - Verify Navigation to Login Page" line="29">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-02T23:18:39.931994" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\0e85b5cf-b36f-4b71-942d-613d90a1a055"}</msg>
-<msg time="2025-03-02T23:18:41.335619" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\temp\\0e85b5cf-b36f-4b71-942d-613d90a1a055"}</msg>
+<msg time="2025-11-10T23:57:14.700266" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/app/docs/browser/traces/temp/159edd9a-49fb-4b5c-bb81-b665c10a90ea"}</msg>
+<msg time="2025-11-10T23:57:14.701024" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:39.931149" elapsed="1.404726"/>
+<status status="FAIL" start="2025-11-10T23:57:14.699876" elapsed="0.001356">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-03-02T23:18:41.338381" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2025-03-02T23:18:41.384650" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-02T23:18:41.384761" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:41.336171" elapsed="0.048683"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.701401" elapsed="0.000043"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-02T23:18:44.729319" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-02T23:18:41.385089" elapsed="3.344554"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.701585" elapsed="0.000069"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-03-02T23:18:39.930706" elapsed="4.799108"/>
+<status status="FAIL" start="2025-11-10T23:57:14.699660" elapsed="0.002064">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-03-02T23:18:39.930210" elapsed="4.799700"/>
-</kw>
-<kw name="Select Sign In link on Home Page" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:18:44.731148" level="INFO">Clicking on Sign In link on Magento Home Page</msg>
-<arg>Clicking on Sign In link on Magento Home Page</arg>
-<arg>console=true</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:18:44.730841" elapsed="0.000423"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-03-02T23:18:44.732018" level="INFO">Clicks the element 'xpath=(//li[@class='authorization-link']//a)[1]'.</msg>
-<arg>${sign_In_link_locator_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-02T23:18:44.731419" elapsed="0.969315"/>
-</kw>
-<doc>Click on Sign In link on Magento Home Page and verify user navigation to Sign In Page</doc>
-<status status="PASS" start="2025-03-02T23:18:44.730324" elapsed="0.970742"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-03-02T23:18:45.702442" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-03-02T23:18:45.819331" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>state=domcontentloaded</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-03-02T23:18:45.701442" elapsed="0.118121"/>
-</kw>
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-02T23:18:45.831626" level="INFO">Title: 'Customer Login'</msg>
-<msg time="2025-03-02T23:18:45.831818" level="INFO">${actual_title} = Customer Login</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-02T23:18:45.820498" elapsed="0.011355"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:18:45.832436" level="INFO">Current page title is: Customer Login</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:18:45.832081" elapsed="0.000420"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-02T23:18:45.832658" elapsed="0.000401"/>
-</kw>
-<arg>${Login_Page_Title}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-03-02T23:18:45.819897" elapsed="0.013265"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2025-03-02T23:18:45.932551" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-03-02T23:18:45.833309" elapsed="0.099481"/>
+<status status="FAIL" start="2025-11-10T23:57:14.699372" elapsed="0.002407">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-03-02T23:18:47.266132" level="INFO">Closed all browsers</msg>
+<msg time="2025-11-10T23:57:14.702816" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-02T23:18:45.933112" elapsed="1.333276"/>
+<status status="FAIL" start="2025-11-10T23:57:14.701904" elapsed="0.001181">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Select Sign In link on Home Page &amp; verify user navigation to Login page</doc>
 <tag>HomePage</tag>
-<status status="PASS" start="2025-03-02T23:18:39.927483" elapsed="7.339034"/>
+<status status="FAIL" start="2025-11-10T23:57:14.698884" elapsed="0.004288">Setup failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'
+
+Also teardown failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </test>
-<test id="s1-s1-t4" name="MEC4 - Verify Navigation to 'Create an Account' Page" line="36">
+<test id="s1-s2-t4" name="MEC4 - Verify Navigation to 'Create an Account' Page" line="37">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-02T23:18:47.297970" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\eab67be9-b712-44ee-82de-2b53da7da69a"}</msg>
-<msg time="2025-03-02T23:18:48.628400" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\temp\\eab67be9-b712-44ee-82de-2b53da7da69a"}</msg>
+<msg time="2025-11-10T23:57:14.705881" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/app/docs/browser/traces/temp/6a660305-7b6e-45ca-bb40-f16b58df8bc6"}</msg>
+<msg time="2025-11-10T23:57:14.706494" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:47.297102" elapsed="1.331552"/>
+<status status="FAIL" start="2025-11-10T23:57:14.705373" elapsed="0.001301">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-03-02T23:18:48.631790" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2025-03-02T23:18:48.685599" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-02T23:18:48.685725" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:48.629028" elapsed="0.056803"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.706837" elapsed="0.000065"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-02T23:18:52.167560" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-02T23:18:48.686095" elapsed="3.481755"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.706991" elapsed="0.000032"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-03-02T23:18:47.296646" elapsed="4.871357"/>
+<status status="FAIL" start="2025-11-10T23:57:14.705155" elapsed="0.001944">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-03-02T23:18:47.296155" elapsed="4.871927"/>
-</kw>
-<kw name="Select 'Create an Account' link on Home Page" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:18:52.169200" level="INFO">Clicking on 'Create an Account' link on Home Page</msg>
-<arg>Clicking on 'Create an Account' link on Home Page</arg>
-<arg>console=true</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:18:52.168885" elapsed="0.001378"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-03-02T23:18:52.171134" level="INFO">Clicks the element 'xpath=(//li//a[text()='Create an Account'])[1]'.</msg>
-<arg>${create-an-account-link_locator_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-02T23:18:52.170476" elapsed="1.133310"/>
-</kw>
-<doc>Click on 'Create an Account' link on Home Page</doc>
-<status status="PASS" start="2025-03-02T23:18:52.168342" elapsed="1.135742"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-03-02T23:18:53.305590" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-03-02T23:18:53.455553" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>state=domcontentloaded</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-03-02T23:18:53.304450" elapsed="0.151352"/>
-</kw>
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-02T23:18:53.478476" level="INFO">Title: 'Create New Customer Account'</msg>
-<msg time="2025-03-02T23:18:53.478677" level="INFO">${actual_title} = Create New Customer Account</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-02T23:18:53.461141" elapsed="0.017569"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:18:53.479337" level="INFO">Current page title is: Create New Customer Account</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:18:53.478950" elapsed="0.000464"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-02T23:18:53.479585" elapsed="0.000433"/>
-</kw>
-<arg>${Create-an-Account_Page_Title}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-03-02T23:18:53.460447" elapsed="0.019683"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2025-03-02T23:18:53.578256" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-03-02T23:18:53.480278" elapsed="0.098224"/>
+<status status="FAIL" start="2025-11-10T23:57:14.704851" elapsed="0.002309">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-03-02T23:18:55.092142" level="INFO">Closed all browsers</msg>
+<msg time="2025-11-10T23:57:14.707956" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-02T23:18:53.578822" elapsed="1.513576"/>
+<status status="FAIL" start="2025-11-10T23:57:14.707315" elapsed="0.000752">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Select 'Create an Account' link on Home Page &amp; verify user navigation to 'Create an Account' page</doc>
 <tag>HomePage</tag>
-<status status="PASS" start="2025-03-02T23:18:47.293666" elapsed="7.798856"/>
+<status status="FAIL" start="2025-11-10T23:57:14.704273" elapsed="0.003852">Setup failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'
+
+Also teardown failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </test>
-<test id="s1-s1-t5" name="MEC5 - Verify Navigation to 'What's New' Page" line="44">
+<test id="s1-s2-t5" name="MEC5 - Verify Navigation to 'What's New' Page" line="45">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-02T23:18:55.125399" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\918a370d-66d1-440d-a992-3ec5150b290a"}</msg>
-<msg time="2025-03-02T23:18:56.509695" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\temp\\918a370d-66d1-440d-a992-3ec5150b290a"}</msg>
+<msg time="2025-11-10T23:57:14.709957" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/app/docs/browser/traces/temp/eb24fd54-c3c5-4902-a941-d1f7e6fae8c3"}</msg>
+<msg time="2025-11-10T23:57:14.710342" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:55.124430" elapsed="1.385509"/>
+<status status="FAIL" start="2025-11-10T23:57:14.709565" elapsed="0.000929">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-03-02T23:18:56.512300" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2025-03-02T23:18:56.610436" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-02T23:18:56.610556" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:18:56.510201" elapsed="0.100454"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.710674" elapsed="0.000063"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-02T23:19:00.232809" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-02T23:18:56.610955" elapsed="3.622152"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.710824" elapsed="0.000035"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-03-02T23:18:55.123906" elapsed="5.109443"/>
+<status status="FAIL" start="2025-11-10T23:57:14.709359" elapsed="0.001587">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-03-02T23:18:55.123318" elapsed="5.110254"/>
-</kw>
-<kw name="Select 'Whats New' link on Home Page" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:19:00.234913" level="INFO">Selecting the 'Whats New' link on Home Page</msg>
-<arg>Selecting the 'Whats New' link on Home Page</arg>
-<arg>console=true</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:19:00.234395" elapsed="0.000639"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-03-02T23:19:00.235816" level="INFO">Clicks the element 'xpath=//a//span[text()="What's New"]'.</msg>
-<arg>${whats_new_link_locator_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-02T23:19:00.235193" elapsed="0.858555"/>
-</kw>
-<doc>Select 'Whats New' link on Home Page</doc>
-<status status="PASS" start="2025-03-02T23:19:00.233841" elapsed="0.860105"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-03-02T23:19:01.094874" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-03-02T23:19:01.294314" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>state=domcontentloaded</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-03-02T23:19:01.094143" elapsed="0.200418"/>
-</kw>
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-02T23:19:01.309069" level="INFO">Title: "What's New"</msg>
-<msg time="2025-03-02T23:19:01.309281" level="INFO">${actual_title} = What's New</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-02T23:19:01.295508" elapsed="0.013808"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:19:01.309920" level="INFO">Current page title is: What's New</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:19:01.309542" elapsed="0.000444"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-02T23:19:01.310143" elapsed="0.000416"/>
-</kw>
-<arg>${Whats_New_Page_Title}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-03-02T23:19:01.294879" elapsed="0.015854"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2025-03-02T23:19:01.515746" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-4.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-4.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-03-02T23:19:01.310879" elapsed="0.205180"/>
+<status status="FAIL" start="2025-11-10T23:57:14.709119" elapsed="0.001890">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-03-02T23:19:02.739189" level="INFO">Closed all browsers</msg>
+<msg time="2025-11-10T23:57:14.711758" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-02T23:19:01.516485" elapsed="1.222957"/>
+<status status="FAIL" start="2025-11-10T23:57:14.711159" elapsed="0.000709">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Select 'Whats New' link on Home Page &amp; Verify user navigation for 'Whats New' page</doc>
 <tag>HomePage</tag>
-<status status="PASS" start="2025-03-02T23:18:55.120482" elapsed="7.619086"/>
+<status status="FAIL" start="2025-11-10T23:57:14.708753" elapsed="0.003177">Setup failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'
+
+Also teardown failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </test>
-<test id="s1-s1-t6" name="MEC6 - Verify Navigation to 'Sale' Page" line="52">
+<test id="s1-s2-t6" name="MEC6 - Verify Navigation to 'Sale' Page" line="53">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-02T23:19:02.771557" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\8df79275-2a0d-43fa-9c66-755bf902af7e"}</msg>
-<msg time="2025-03-02T23:19:04.067925" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\temp\\8df79275-2a0d-43fa-9c66-755bf902af7e"}</msg>
+<msg time="2025-11-10T23:57:14.713998" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/app/docs/browser/traces/temp/06d3492f-533d-476a-aaa9-f771b10ce16d"}</msg>
+<msg time="2025-11-10T23:57:14.714458" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:19:02.770719" elapsed="1.297465"/>
+<status status="FAIL" start="2025-11-10T23:57:14.713324" elapsed="0.001298">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-03-02T23:19:04.070726" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2025-03-02T23:19:04.121663" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-02T23:19:04.121785" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:19:04.068450" elapsed="0.053435"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.715080" elapsed="0.000066"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-02T23:19:07.489115" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-02T23:19:04.122117" elapsed="3.367339"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.715221" elapsed="0.000029"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-03-02T23:19:02.770275" elapsed="4.719343"/>
+<status status="FAIL" start="2025-11-10T23:57:14.713100" elapsed="0.002229">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-03-02T23:19:02.769780" elapsed="4.722296"/>
-</kw>
-<kw name="Select 'Sale' link on Home Page" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:19:07.493321" level="INFO">Selecting the 'Sale' link on Home Page</msg>
-<arg>Selecting the 'Sale' link on Home Page</arg>
-<arg>console=True</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:19:07.493010" elapsed="0.000439"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-03-02T23:19:07.494211" level="INFO">Clicks the element 'xpath=//a//span[text()="Sale"]'.</msg>
-<arg>${sale_link_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-02T23:19:07.493608" elapsed="0.832516"/>
-</kw>
-<doc>Select 'Sale' link on Home Page</doc>
-<status status="PASS" start="2025-03-02T23:19:07.492478" elapsed="0.833978"/>
-</kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-03-02T23:19:08.328597" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-03-02T23:19:08.471248" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>state=domcontentloaded</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-03-02T23:19:08.326795" elapsed="0.144703"/>
-</kw>
-<kw name="Verify Page Title" owner="BaseFile">
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-02T23:19:08.490287" level="INFO">Title: 'Sale'</msg>
-<msg time="2025-03-02T23:19:08.490474" level="INFO">${actual_title} = Sale</msg>
-<var>${actual_title}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-02T23:19:08.472711" elapsed="0.017796"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:19:08.491086" level="INFO">Current page title is: Sale</msg>
-<arg>Current page title is: ${actual_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:19:08.490721" elapsed="0.000430"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${actual_title}</arg>
-<arg>${expected_title}</arg>
-<arg>Actual Page title is: ${actual_title} and expected page title is: ${expected_title}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-02T23:19:08.491302" elapsed="0.000401"/>
-</kw>
-<arg>${Sale_Page_Title}</arg>
-<doc>Keyword to Verify the Page Title with the expected title</doc>
-<status status="PASS" start="2025-03-02T23:19:08.471956" elapsed="0.019854"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2025-03-02T23:19:08.660193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-5.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-5.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-03-02T23:19:08.491953" elapsed="0.168645"/>
+<status status="FAIL" start="2025-11-10T23:57:14.712851" elapsed="0.002538">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-03-02T23:19:09.968214" level="INFO">Closed all browsers</msg>
+<msg time="2025-11-10T23:57:14.716383" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-02T23:19:08.661025" elapsed="1.307439"/>
+<status status="FAIL" start="2025-11-10T23:57:14.715545" elapsed="0.000976">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Select 'Sale' link on Home Page &amp; Verify user navigation to 'Sale' page</doc>
 <tag>HomePage</tag>
-<status status="PASS" start="2025-03-02T23:19:02.767088" elapsed="7.201531"/>
+<status status="FAIL" start="2025-11-10T23:57:14.712469" elapsed="0.004122">Setup failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'
+
+Also teardown failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </test>
-<test id="s1-s1-t7" name="MEC7 - Hover over Women Dropdown link and verify the list content is visible on Home Page" line="60">
+<test id="s1-s2-t7" name="MEC7 - Hover over Women Dropdown link and verify the list content is visible on Home Page" line="61">
 <kw name="Launch the Magento E-Commerce HomePage" owner="HomePage_Keywords" type="SETUP">
 <kw name="Launch Magento Application" owner="BaseFile">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-02T23:19:10.000629" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\1\\s\\docs\\browser\\traces\\temp\\c137c609-2522-44dd-a09e-af5eccc31064"}</msg>
-<msg time="2025-03-02T23:19:11.332101" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\1\\s\\docs\\browser\\traces\\temp\\c137c609-2522-44dd-a09e-af5eccc31064"}</msg>
+<msg time="2025-11-10T23:57:14.718809" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/app/docs/browser/traces/temp/be8bf022-ad18-4479-9f60-bd87d39c8ed4"}</msg>
+<msg time="2025-11-10T23:57:14.719234" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>${browser}</arg>
 <arg>false</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:19:09.999768" elapsed="1.332592"/>
+<status status="FAIL" start="2025-11-10T23:57:14.718407" elapsed="0.001026">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2025-03-02T23:19:11.334715" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2025-03-02T23:19:11.385458" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-02T23:19:11.385580" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-03-02T23:19:11.332624" elapsed="0.053059"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.719606" elapsed="0.000062"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-02T23:19:14.904271" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-02T23:19:11.385943" elapsed="3.518621"/>
+<status status="NOT RUN" start="2025-11-10T23:57:14.719744" elapsed="0.000032"/>
 </kw>
 <arg>${BROWSER}</arg>
 <arg>${APP_URL}</arg>
 <doc>Launches the Magento Application into the desired browser for test execution</doc>
-<status status="PASS" start="2025-03-02T23:19:09.999313" elapsed="4.905410"/>
+<status status="FAIL" start="2025-11-10T23:57:14.718174" elapsed="0.001680">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Method to Launch the Magento E-Commerce Home Page</doc>
-<status status="PASS" start="2025-03-02T23:19:09.998786" elapsed="4.906022"/>
-</kw>
-<kw name="Hover over the Women Dropdown link on Home Page and verify if list is visible on UI" owner="HomePage_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-03-02T23:19:14.905847" level="INFO">Hovering over the Woman's dropdown link on Home Page</msg>
-<arg>Hovering over the Woman's dropdown link on Home Page</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-03-02T23:19:14.905588" elapsed="0.000331"/>
-</kw>
-<kw name="Hover" owner="Browser">
-<arg>${women_link_homePage}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves the virtual mouse and scrolls to the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-02T23:19:14.906068" elapsed="0.246594"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-03-02T23:19:21.217421" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-02T23:19:21.217652" level="INFO">See also file:///D:/a/1/s/docs/playwright-log.txt for additional details.</msg>
-<msg time="2025-03-02T23:19:21.217834" level="FAIL"> Women dropdown list is not visible on upon hovering on Home Page</msg>
-<arg>${women_dropdownList_homePage}</arg>
-<arg>state=visible</arg>
-<arg>timeout=5 seconds</arg>
-<arg>message= Women dropdown list is not visible on upon hovering on Home Page</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="FAIL" start="2025-03-02T23:19:15.152989" elapsed="6.067967"> Women dropdown list is not visible on upon hovering on Home Page</status>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>${women_dropdownListItem_Tops_homePage}</arg>
-<arg>state=visible</arg>
-<arg>timeout=5 seconds</arg>
-<arg>message= Tops dropdown list item is not displayed under Women dropdown on Home Page</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2025-03-02T23:19:21.221258" elapsed="0.000242"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>${women_dropdownListItem_Bottoms_homePage}</arg>
-<arg>state=visible</arg>
-<arg>timeout=5 seconds</arg>
-<arg>message= Bottoms dropdown list item is not displayed under Women dropdown on Home Page</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2025-03-02T23:19:21.221728" elapsed="0.000170"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="NOT RUN" start="2025-03-02T23:19:21.222144" elapsed="0.000119"/>
-</kw>
-<doc>Hover over the "Woman's" dropdown link on Home Page</doc>
-<status status="FAIL" start="2025-03-02T23:19:14.905077" elapsed="6.317346"> Women dropdown list is not visible on upon hovering on Home Page</status>
+<status status="FAIL" start="2025-11-10T23:57:14.717825" elapsed="0.002096">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-03-02T23:19:23.915203" level="INFO">Closed all browsers</msg>
+<msg time="2025-11-10T23:57:14.720791" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 <arg>ALL</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-02T23:19:21.222691" elapsed="2.692773"/>
+<status status="FAIL" start="2025-11-10T23:57:14.720102" elapsed="0.000812">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </kw>
 <doc>Hover over the Woman's Dropdown link and verify the options in the dropdown list</doc>
 <tag>HomePage</tag>
-<status status="FAIL" start="2025-03-02T23:19:09.996135" elapsed="13.919482"> Women dropdown list is not visible on upon hovering on Home Page</status>
+<status status="FAIL" start="2025-11-10T23:57:14.717241" elapsed="0.003749">Setup failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'
+
+Also teardown failed:
+Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</status>
 </test>
-<status status="FAIL" start="2025-03-02T23:18:13.938162" elapsed="70.006005"/>
+<status status="FAIL" start="2025-11-10T23:57:14.559371" elapsed="0.162237"/>
 </suite>
-<status status="FAIL" start="2025-03-02T23:18:13.908614" elapsed="70.063880"/>
+<status status="FAIL" start="2025-11-10T23:57:12.418784" elapsed="2.303684"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="2" skip="0">All Tests</stat>
+<stat pass="6" fail="8" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="5" fail="2" skip="0">HomePage</stat>
+<stat pass="1" fail="0" skip="0">API-01</stat>
+<stat pass="1" fail="0" skip="0">API-02</stat>
+<stat pass="1" fail="0" skip="0">API-03</stat>
+<stat pass="1" fail="0" skip="0">API-04</stat>
+<stat pass="1" fail="0" skip="0">API-05</stat>
+<stat pass="1" fail="0" skip="0">API-06</stat>
+<stat pass="0" fail="1" skip="0">API-07</stat>
+<stat pass="0" fail="7" skip="0">HomePage</stat>
 </tag>
 <suite>
-<stat name="Magento Home Page CI Test execution" id="s1" pass="5" fail="2" skip="0">Magento Home Page CI Test execution</stat>
-<stat name="HomePage" id="s1-s1" pass="5" fail="2" skip="0">Magento Home Page CI Test execution.HomePage</stat>
+<stat name="Tests" id="s1" pass="6" fail="8" skip="0">Tests</stat>
+<stat name="API" id="s1-s1" pass="6" fail="1" skip="0">Tests.API</stat>
+<stat name="API" id="s1-s1-s1" pass="6" fail="1" skip="0">Tests.API.API</stat>
+<stat name="HomePage" id="s1-s2" pass="0" fail="7" skip="0">Tests.HomePage</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-11-10T23:57:14.694552" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
+<msg time="2025-11-10T23:57:14.698696" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
+<msg time="2025-11-10T23:57:14.704007" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
+<msg time="2025-11-10T23:57:14.708438" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
+<msg time="2025-11-10T23:57:14.712277" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
+<msg time="2025-11-10T23:57:14.717017" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
+<msg time="2025-11-10T23:57:14.721336" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
+<msg time="2025-11-10T23:57:14.722123" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [Errno 2] No such file or directory: 'node'</msg>
 </errors>
 </robot>

@@ -123,21 +123,46 @@ pool:
   name: Mac Self-Hosted
 
 variables:
-  AWX_URL: http://127.0.0.1:49748 # Change to your AWX URL
-  JOB_TEMPLATE_ID: 9
+  IMAGE_NAME: rf-azure:$(Build.BuildId)
+  DOCKER_CONTEXT: $(Build.SourcesDirectory)
 
 steps:
+  - checkout: self
+
   - task: UsePythonVersion@0
     inputs:
       versionSpec: "3.x"
     displayName: "Use Python 3"
 
   - script: |
-      curl -k -X POST "$(AWX_URL)/api/v2/job_templates/$(JOB_TEMPLATE_ID)/launch/" \
-        -H "Authorization: Bearer $(AWX_TOKEN)" \
-        -H "Content-Type: application/json"
-    displayName: "Trigger AWX Job Template"
-    env:
-      AWX_TOKEN: $(AWX_TOKEN)
-      PROJECT_PATH: $(Build.SourcesDirectory)
-      GITHUB_PAT: $(GITHUB_PAT)
+      echo "Building Docker image: $(IMAGE_NAME)"
+      docker build -t $(IMAGE_NAME) $(DOCKER_CONTEXT)
+    displayName: "Build Docker image"
+    condition: always()
+
+  - script: |
+      echo "Preparing docs output directory"
+      mkdir -p $(Build.SourcesDirectory)/docs
+      echo "Running Robot Framework tests inside Docker container"
+      docker run --rm \
+        -v $(Build.SourcesDirectory)/docs:/app/docs \
+        -v $(Build.SourcesDirectory):/app:ro \
+        -w /app \
+        $(IMAGE_NAME)
+    displayName: "Run Robot Framework tests inside Docker"
+    continueOnError: true
+    condition: always()
+
+  - script: |
+      echo "Publishing Robot reports (if present)"
+      ls -la $(Build.SourcesDirectory)/docs || true
+    displayName: "List generated reports"
+    condition: always()
+
+  - task: PublishPipelineArtifact@1
+    displayName: "Publish test reports"
+    inputs:
+      targetPath: "$(Build.SourcesDirectory)/docs"
+      artifact: "robot-tests-docs"
+      publishLocation: "pipeline"
+    condition: always()
