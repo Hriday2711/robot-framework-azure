@@ -134,14 +134,28 @@ steps:
       versionSpec: "3.x"
     displayName: "Use Python 3"
 
+  - script: |
+      echo "Ensure Docker context is usable on the agent"
+      # show existing contexts for debugging
+      docker context ls || true
+      # try to switch to the default context; if it does not exist, attempt to create it pointing at the local socket
+      if ! docker context inspect default >/dev/null 2>&1; then
+        echo "default context not found, creating one that uses /var/run/docker.sock"
+        docker context create default --description default --docker "host=unix:///var/run/docker.sock" || true
+      fi
+      docker context use default || true
+      docker --version || true
+    displayName: "Ensure Docker context"
+    condition: always()
+
   - task: Docker@2
     displayName: "Build Docker image"
     inputs:
       command: build
-      dockerfile: "$(Build.SourcesDirectory)/Dockerfile"
+      dockerfile: "Dockerfile"
       repository: "rf-azure"
       tags: "$(Build.BuildId)"
-      buildContext: "$(Build.SourcesDirectory)"
+      buildContext: "."
     condition: always()
 
   - script: |
