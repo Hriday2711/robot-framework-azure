@@ -120,7 +120,7 @@ trigger: none
 pr: none
 
 pool:
-  name: Mac Self-Hosted
+  vmImage: ubuntu-latest
 
 variables:
   IMAGE_NAME: rf-azure:$(Build.BuildId)
